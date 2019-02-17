@@ -74,7 +74,7 @@ assign MIO_EN = ~OE;
 
 // You need to make your own datapath module and connect everything to the datapath
 // Be careful about whether Reset is active high or low
-datapath d0 (.*);
+datapath d0 (/* Please fill in the signals.... */);
 
 // Our SRAM and I/O controller
 Mem2IO memory_subsystem(
@@ -95,7 +95,5 @@ ISDU state_controller(
     .Opcode(IR[15:12]), .IR_5(IR[5]), .IR_11(IR[11]),
     .Mem_CE(CE), .Mem_UB(UB), .Mem_LB(LB), .Mem_OE(OE), .Mem_WE(WE)
 );
-
-assign LED = IR; // week2
 
 endmodule
