@@ -45,6 +45,13 @@ assign result = result_comb;
 
  end
     
+//always_ff @ ( posedge Clk) begin 
+//	if(~Reset) begin 
+//		X = 1b'0;
+//	end
+//
+//
+//end
     /* Decoders for HEX drivers and output registers
      * Note that the hex drivers are calculated one cycle after Sum so
      * that they have minimal interfere with timing (fmax) analysis.
@@ -63,7 +70,7 @@ assign result = result_comb;
     
 
 	  
-	 Multiplier mult_inst(.S(S), .Clk(Clk), .Reset(~Reset), .ClearA_LoadB(~ClearA_LoadB), .Exe(~Run), .Aval(dev8), .Bval(dev88), .X(X_comb), .result(result_comb));
+	 Multiplier mult_inst(.S(S), .Clk(Clk), .Reset(~Reset), .ClearA_LoadB(~ClearA_LoadB), .Exe(~Run), .Aval(dev8), .Bval(dev88), .X(X), .result(result_comb));
 
 
     HexDriver Ahex0_inst

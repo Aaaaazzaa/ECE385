@@ -1,4 +1,4 @@
-module operation(	input logic Add, Sub,
+module operation(	input logic Add, Sub, M,
 						input logic [7:0]A, S,
 						
 						output logic [7:0]NewA,
@@ -10,14 +10,19 @@ module operation(	input logic Add, Sub,
 	always_comb 
 	// force comb with all modules inside as pure comb (aasume always ready)
 	begin
-		if(Sub)
-		begin
+		if(Sub & M) begin
 			// take the 2's complement of S
 			S_ = ~ S;
 			Cin_ = 1'b1; 
 		end
-		else begin
+		
+		else if (Add & M)begin
 			S_ = S;
+			Cin_ = 1'b0;
+		end
+		
+		else begin
+			S_ = 8'h00;
 			Cin_ = 1'b0;
 		end
 	end
