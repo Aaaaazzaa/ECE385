@@ -41,7 +41,7 @@ logic [1:0] PCMUX, ADDR2MUX, ALUK;
 logic DRMUX, SR1MUX, SR2MUX, ADDR1MUX;
 logic MIO_EN;
 
-logic [15:0]  ;
+logic [15:0] MDR_In;
 logic [15:0] MAR, MDR, IR, PC;
 logic [15:0] Data_from_SRAM, Data_to_SRAM;
 
