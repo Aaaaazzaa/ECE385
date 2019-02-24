@@ -32,13 +32,6 @@ module datapath (	input logic Clk,
 						// changing MDR MAR is control by this module
 						// pyhical mem interaction happens here
 	logic [15:0] BUS, PC_out_PCMUX, MDR_out_MUX;
-	logic [15:0] SR1_Out, SR2_Out, SR2MUX_Out, SEXTIR4; // output of regfile, use this
-	// SR1_Out _yes_; SR2_Out yes__
-	logic [2:0] DRMUX_Out;
-	logic [2:0] SR1MUX_Out;
-	logic [15:0] AddrGen_Out; // output of addrgen, use this
-	logic N, Z, P;
-	logic [15:0] result; // result of ALU, use this
 
 	always_comb begin // BUS MUX // In : GateSig controlled PC/ALU/MDR/MAR; Out: BUS
 	unique case({GatePC, GateMDR, GateALU, GateMARMUX})
@@ -49,9 +42,9 @@ module datapath (	input logic Clk,
 		// IR <- MDR
 			BUS = MDR; // BUG: MDR_In
 		4'b0010:
-			BUS = result;
+			BUS = 16'h0000; // week2
 		4'b0001:
-			BUS = AddrGen_Out;
+			BUS = 16'h0000; // week2
 		default:
 			BUS = 16'bXXXXXXXXXXXXXXXX;
 		endcase
@@ -62,7 +55,7 @@ module datapath (	input logic Clk,
 	if (MIO_EN)
 		MDR_out_MUX = MDR_In;
 	else
-		MDR_out_MUX = BUS;
+		MDR_out_MUX = 16'h0000; // week2
 	end
 
 	bit16Reg reg_PC  (.Clk, .Reset, .LdEn(LD_PC),  .In(PC_out_PCMUX), .Out(PC));
@@ -71,18 +64,17 @@ module datapath (	input logic Clk,
 	bit16Reg reg_MAR (.Clk, .Reset, .LdEn(LD_MAR), .In(BUS), 			.Out(MAR));
 
 	// Start of (Blue) Reg File
-
+			logic [2:0] DRMUX_Out;
 			// implied DRMUX
 			always_comb begin
 				case (DRMUX)
 					1'b0:
 						DRMUX_Out = IR[11:9];
-					1'b1:
+					0'b0:
 						DRMUX_Out = 3'b111;
-				endcase
 			end
 
-
+			logic [2:0] SR1MUX_Out;
 			// implied SR1MUX
 			always_comb begin
 				case (SR1MUX)
@@ -90,28 +82,28 @@ module datapath (	input logic Clk,
 						SR1MUX_Out = IR[8:6];
 					1'b1:
 						SR1MUX_Out = IR[11:9];
-				endcase
 			end
 
-
-			RegFile REGFILE_inst(.LD_REG, .Clk, .Reset, .Reg_In(BUS), .DRMUX_Out, .SR2(IR[2:0]), .SR1MUX_Out, .SR1_Out, .SR2_Out );
+			logic [15:0] SR1_Out, SR1_Out; // output of regfile, use this
+			// SR1_Out _yes_; SR2_Out __
+			RegFile REGFILE_inst(.LD_REG, .CLk, .Reset, .Reg_In(BUS), .DRMUX_Out, .SR2(IR[2:0]), .SR1MUX_Out, .SR1_Out, .SR2_Out );
 	// End of (Blue) Reg File
 
 
 	// Start of (Pink) PCGen
-			PCGenerator PC_inst(.*, .PC_in_PCMUX(PC), .PC_out_PCMUX); //week2
+			PCGenerator PC_inst(.PCMUX, .PC_in_PCMUX(PC), .PC_out_PCMUX); //week2
 	// End of (Pink) PCGen
 
 
 	// Start of (Green) AddrGen
-
-			AddrGenerator Addr_inst(.*, .Addr_Out(AddrGen_Out));
+			logic [15:0] AddrGen_Out; // output of addrgen, use this
+			AddrGenerator Addr_inst(.*);
 	// End of (Green) AddrGen
 
 
 
 	// Start of (Purple) setCC
-
+			logic N, Z, P;
 			setCC setCC_inst(.*, .basis(BUS));
 			always_ff @ (posedge Clk) begin
 				if(LD_BEN) begin
@@ -124,19 +116,5 @@ module datapath (	input logic Clk,
 
 	// End of (Purple) setCC
 
-	// start of (yellow) ALU
-			ALU ALU_inst (.ALUK, .A(SR1_Out), .B(SR2MUX_Out), .result);
-	// end of (yellow) ALU
-
-	// Start of (Red)
-			// implied SR2MUX
-			SEXT #(4) sext4_inst (IR[4:0], SEXTIR4);
-			always_comb begin
-				if(SR2MUX)
-					SR2MUX_Out = SEXTIR4;
-				else
-					SR2MUX_Out = SR2_Out;
-			end
-	// End of (Red)
 
 endmodule
