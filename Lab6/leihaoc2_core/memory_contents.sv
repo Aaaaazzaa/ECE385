@@ -26,20 +26,23 @@ task memory_contents(output logic[15:0] mem_array[0:size-1]);
 // See SLC3_2.sv for all the functions you can use to create instructions.
 // Note that if you do this, remember to turn "init_external" in test_memory.sv to 1 for
 // any of your modifications to take effect.
+    // Instruction                                // RTL description          // Expected result
+   mem_array[   0 ] =    opCLR(R0);
+   mem_array[   1 ] =    opADDi(R1, R0, -4);      // R1 <- R0 + 12            // R1 = 12
+   mem_array[   2 ] =    opADDi(R1, R1, 1);       // R3 <= R0 - 15            // R3 = -15
 
-   mem_array[   0 ] =    opCLR(R0)                ;       // Clear the register so it can be used as a base
-   mem_array[   1 ] =    opLDR(R1, R0, inSW)      ;       // Load switches
-   mem_array[   2 ] =    opJMP(R1)                ;       // Jump to the start of a program
-   
-                                                          // Basic I/O test 1
-   mem_array[   3 ] =    opLDR(R1, R0, inSW)      ;       // Load switches
-   mem_array[   4 ] =    opSTR(R1, R0, outHEX)    ;       // Output
-   mem_array[   5 ] =    opBR(nzp, -3)            ;       // Repeat
+   mem_array[   3 ] =    opBR(nz, -2);       // R5 <- R1 + R3            // R5 = -3
+
+   mem_array[   4 ] =    opJSR(2);           // Mem[10] <- R5            // Mem[10] = -3
+   mem_array[   5 ] =    opJMP(R7);       // R7 <- Mem[10]            // R7 = Mem[10]
 
                                                           // Basic I/O test 2
-   mem_array[   6 ] =    opPSE(12'h801)           ;       // Checkpoint 1 - prepare to input
-   mem_array[   7 ] =    opLDR(R1, R0, inSW)      ;       // Load switches
-   mem_array[   8 ] =    opSTR(R1, R0, outHEX)    ;       // Output
+   mem_array[   6 ] =    opADDi(R3, R0, 15);                  // Checkpoint 1 - prepare to input
+   mem_array[   7 ] =    opBR(nzp, 3);      // Load switches
+
+
+
+   mem_array[   8 ] =    opADDi(R3, R0, -16);       // Output
    mem_array[   9 ] =    opPSE(12'hC02)           ;       // Checkpoint 2 - read output, prepare to input
    mem_array[  10 ] =    opBR(nzp, -4)            ;       // Repeat
 

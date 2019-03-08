@@ -299,7 +299,7 @@ module ISDU (   input logic         Clk,
 				end
 			S_16_1:
 				begin
-					Mem_WE = 1'b0; // active low
+					Mem_WE = 1'b0; // active low // do nothing
 				end
 			S_16_2:
 				begin
