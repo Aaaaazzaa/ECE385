@@ -50,7 +50,7 @@ module  ball ( input         Clk,                // 50 MHz clock
             Ball_X_Pos <= Ball_X_Center;
             Ball_Y_Pos <= Ball_Y_Center;
             Ball_X_Motion <= 10'd0;
-            Ball_Y_Motion <= Ball_Y_Step;
+            Ball_Y_Motion <= 10'd0;
         end
         else
         begin
@@ -79,53 +79,146 @@ module  ball ( input         Clk,                // 50 MHz clock
 						begin
 							Ball_X_Motion_in=10'd0;
 							if( Ball_Y_Pos + Ball_Size >= Ball_Y_Max )  
-								 Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1);  
-							else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size )  
+								begin
+								 Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1); 
+								 Ball_X_Motion_in = 10'd0;
+								end
+							else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size ) 
+								begin
 								 Ball_Y_Motion_in = Ball_Y_Step;
+								 Ball_X_Motion_in = 10'd0;
+								end
 							else if ( Ball_X_Pos + Ball_Size >= Ball_X_Max )
+								begin
 								 Ball_X_Motion_in = (~(Ball_X_Step) + 1'b1);
+								 Ball_Y_Motion_in = 10'd0;
+								end
 							else if ( Ball_X_Pos <= Ball_X_Min + Ball_Size )
+								begin
 								 Ball_X_Motion_in = Ball_X_Step;
-							else	Ball_Y_Motion_in=(~10'd1)+1;
+								 Ball_Y_Motion_in = 10'd0;
+								end
+							else
+								begin
+								 Ball_Y_Motion_in=(~10'd1)+1;
+								 Ball_X_Motion_in=10'd0;
+								end
 						end
 					8'h04:
 						begin
 							Ball_Y_Motion_in=10'd0;
 							if( Ball_Y_Pos + Ball_Size >= Ball_Y_Max )  
-								 Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1);  
-							else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size )  
+								begin
+								 Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1); 
+								 Ball_X_Motion_in = 10'd0;
+								end
+							else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size ) 
+								begin
 								 Ball_Y_Motion_in = Ball_Y_Step;
+								 Ball_X_Motion_in = 10'd0;
+								end
 							else if ( Ball_X_Pos + Ball_Size >= Ball_X_Max )
+								begin
 								 Ball_X_Motion_in = (~(Ball_X_Step) + 1'b1);
+								 Ball_Y_Motion_in = 10'd0;
+								end
 							else if ( Ball_X_Pos <= Ball_X_Min + Ball_Size )
+								begin
 								 Ball_X_Motion_in = Ball_X_Step;
-							else	Ball_X_Motion_in=(~10'd1)+1;
+								 Ball_Y_Motion_in = 10'd0;
+								end
+							else
+								begin
+								 Ball_X_Motion_in=(~10'd1)+1;
+								 Ball_Y_Motion_in=10'd0;
+								end
 						end
 					8'h16:
 						begin
 							Ball_X_Motion_in=10'd0;
 							if( Ball_Y_Pos + Ball_Size >= Ball_Y_Max )  
-								 Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1);  
-							else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size )  
+								begin
+								 Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1); 
+								 Ball_X_Motion_in = 10'd0;
+								end
+							else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size ) 
+								begin
 								 Ball_Y_Motion_in = Ball_Y_Step;
+								 Ball_X_Motion_in = 10'd0;
+								end
 							else if ( Ball_X_Pos + Ball_Size >= Ball_X_Max )
+								begin
 								 Ball_X_Motion_in = (~(Ball_X_Step) + 1'b1);
+								 Ball_Y_Motion_in = 10'd0;
+								end
 							else if ( Ball_X_Pos <= Ball_X_Min + Ball_Size )
+								begin
 								 Ball_X_Motion_in = Ball_X_Step;
-							else	Ball_Y_Motion_in=10'd1;
+								 Ball_Y_Motion_in = 10'd0;
+								end
+							else
+								begin
+								 Ball_Y_Motion_in=10'd1;
+								 Ball_X_Motion_in=10'd0;
+								end
 						end
 					8'h07:
 						begin
 							Ball_Y_Motion_in=10'd0;
 							if( Ball_Y_Pos + Ball_Size >= Ball_Y_Max )  
-								 Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1);  
-							else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size )  
+								begin
+								 Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1); 
+								 Ball_X_Motion_in = 10'd0;
+								end
+							else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size ) 
+								begin
 								 Ball_Y_Motion_in = Ball_Y_Step;
+								 Ball_X_Motion_in = 10'd0;
+								end
 							else if ( Ball_X_Pos + Ball_Size >= Ball_X_Max )
+								begin
 								 Ball_X_Motion_in = (~(Ball_X_Step) + 1'b1);
+								 Ball_Y_Motion_in = 10'd0;
+								end
 							else if ( Ball_X_Pos <= Ball_X_Min + Ball_Size )
+								begin
 								 Ball_X_Motion_in = Ball_X_Step;
-							else	Ball_X_Motion_in=10'd1;
+								 Ball_Y_Motion_in = 10'd0;
+								end
+							else
+								begin
+								 Ball_X_Motion_in=10'd1;
+								 Ball_Y_Motion_in=10'd0;
+								end
+						end
+					default:
+						begin
+							if( Ball_Y_Pos + Ball_Size >= Ball_Y_Max )  
+								begin
+								 Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1); 
+								 Ball_X_Motion_in = 10'd0;
+								end
+							else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size ) 
+								begin
+								 Ball_Y_Motion_in = Ball_Y_Step;
+								 Ball_X_Motion_in = 10'd0;
+								end
+							else if ( Ball_X_Pos + Ball_Size >= Ball_X_Max )
+								begin
+								 Ball_X_Motion_in = (~(Ball_X_Step) + 1'b1);
+								 Ball_Y_Motion_in = 10'd0;
+								end
+							else if ( Ball_X_Pos <= Ball_X_Min + Ball_Size )
+								begin
+								 Ball_X_Motion_in = Ball_X_Step;
+								 Ball_Y_Motion_in = 10'd0;
+								end
+							else begin
+								 Ball_X_Pos_in = Ball_X_Pos;
+								 Ball_Y_Pos_in = Ball_Y_Pos;
+								 Ball_X_Motion_in = Ball_X_Motion;
+								 Ball_Y_Motion_in = Ball_Y_Motion;
+							end
 						end
 				endcase
             // Be careful when using comparators with "logic" datatype because compiler treats 
