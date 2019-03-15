@@ -1,0 +1,3 @@
+http://www.formaestudio.com/rijndaelinspector/archivos/Rijndael_Animation_v4_eng.swf (step-by-step encryption walk-though )
+http://coliru.stacked-crooked.com/ (online compiler, if you don't like debugging with Eclipse, something like (`gcc -x c -std=c89 -O2 -Werror -Wall -pedantic -pthread main.cpp && ./a.out`)
+http://www.edaplayground.com/ is very useful for testing out syntax/behavior of SystemVerilog code without booting up ModelSim. 
