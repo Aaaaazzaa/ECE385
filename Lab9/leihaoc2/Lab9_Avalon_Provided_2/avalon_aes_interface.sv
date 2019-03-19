@@ -21,10 +21,10 @@ Register Map:
 module avalon_aes_interface (
 	// Avalon Clock Input
 	input logic CLK,
-	
+
 	// Avalon Reset Input
 	input logic RESET,
-	
+
 	// Avalon-MM Slave Signals
 	input  logic AVL_READ,					// Avalon-MM Read
 	input  logic AVL_WRITE,					// Avalon-MM Write
@@ -33,10 +33,38 @@ module avalon_aes_interface (
 	input  logic [3:0] AVL_ADDR,			// Avalon-MM Address
 	input  logic [31:0] AVL_WRITEDATA,	// Avalon-MM Write Data
 	output logic [31:0] AVL_READDATA,	// Avalon-MM Read Data
-	
-	// Exported Conduit
-	output logic [31:0] EXPORT_DATA		// Exported Conduit Signal to LEDs
-);
 
+	// Exported Conduit
+	output logic [31:0] EXPORT_DATA		// Exported Conduit Signal to LEDs // keys?
+);
+	logic [31:0] RegFile [16];
+	logic [31:0] maskW;
+	// write
+	always_comb begin
+		unique case(AVL_BYTE_EN) begin
+			4'b1111:
+				maskW = 32'hffff;
+			4'b1100:
+				maskW = 32'hff00;
+			4'b0011:
+				maskW = 32'h00ff;
+			4'b1000:
+				maskW = 32'hf000;
+			4'b0100:
+				maskW = 32'h0f00;
+			4'b0010:
+				maskW = 32'h00f0;
+			4'b0001:
+				maskW = 32'h000f;
+			default:
+				maskW = 32'h0;
+		endcase
+		if (AVL_READ & AVL_CS) begin  // masked write
+			RegFile[AVL_ADDR] = AVL_WRITEDATA & maskW;
+		end
+		else if (AVL_READ & AVL_CS) begin // normal read
+			EXPORT_DATA = RegFile[AVL_ADDR];
+		end
+	end
 
 endmodule
