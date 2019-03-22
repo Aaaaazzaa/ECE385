@@ -82,6 +82,7 @@ module  ball ( input         Clk,                // 50 MHz clock
                 Ball_Y_Motion_in = (~(Ball_Y_Step) + 1'b1);  // 2's complement.
             else if ( Ball_Y_Pos <= Ball_Y_Min + Ball_Size )  // Ball is at the top edge, BOUNCE!
                 Ball_Y_Motion_in = Ball_Y_Step;
+
             // TODO: Add other boundary detections and handle keypress here.
             else begin // when bouncing disable keycode
               unique case (keycode)

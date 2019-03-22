@@ -41,7 +41,7 @@ module avalon_aes_interface (
 	logic [31:0] maskW;
 	// write
 	always_comb begin
-		unique case(AVL_BYTE_EN) begin
+		unique case(AVL_BYTE_EN)
 			4'b1111:
 				maskW = 32'hffff;
 			4'b1100:
@@ -59,7 +59,7 @@ module avalon_aes_interface (
 			default:
 				maskW = 32'h0;
 		endcase
-		if (AVL_READ & AVL_CS) begin  // masked write
+		if (AVL_WRITE & AVL_CS) begin  // masked write
 			RegFile[AVL_ADDR] = AVL_WRITEDATA & maskW;
 		end
 		else if (AVL_READ & AVL_CS) begin // normal read
