@@ -1,0 +1,18 @@
+17:14:03 **** Build of configuration Nios II for project Lab9 ****
+make all 
+Info: Building ../Lab9_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Lab9_bsp/
+[BSP build complete]
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Lab9_bsp//HAL/inc -I../Lab9_bsp/ -I../Lab9_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Linking Lab9.elf
+nios2-elf-g++  -T'../Lab9_bsp//linker.x' -msys-crt0='../Lab9_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Lab9_bsp/   -Wl,-Map=Lab9.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Lab9.elf obj/default/main.o -lm -msys-lib=m
+nios2-elf-insert Lab9.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0x98 --timestamp 1553546357 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab9_soc --quartus_project_dir "C:/ece385/lab9" --jdi ../..//output_files/Lab9.jdi --sopcinfo C:/ece385/lab9/software/Lab9_bsp/../../lab9_soc.sopcinfo
+Info: (Lab9.elf) 116 KBytes program size (code + initialized data).
+Info:            16258 KBytes free for stack + heap.
+Info: Creating Lab9.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source Lab9.elf >Lab9.objdump
+[Lab9 build complete]
+
+17:14:18 Build Finished (took 15s.219ms)
+
