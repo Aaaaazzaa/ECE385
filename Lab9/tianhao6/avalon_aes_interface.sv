@@ -21,10 +21,10 @@ Register Map:
 module avalon_aes_interface (
 	// Avalon Clock Input
 	input logic CLK,
-	
+
 	// Avalon Reset Input
 	input logic RESET,
-	
+
 	// Avalon-MM Slave Signals
 	input  logic AVL_READ,					// Avalon-MM Read
 	input  logic AVL_WRITE,					// Avalon-MM Write
@@ -33,12 +33,28 @@ module avalon_aes_interface (
 	input  logic [3:0] AVL_ADDR,			// Avalon-MM Address
 	input  logic [31:0] AVL_WRITEDATA,	// Avalon-MM Write Data
 	output logic [31:0] AVL_READDATA,	// Avalon-MM Read Data
-	
+
 	// Exported Conduit
 	output logic [31:0] EXPORT_DATA		// Exported Conduit Signal to LEDs
 );
+	logic AES_START, AES_DONE;
 	logic [31:0] RegFile[15:0];
 	logic [31:0] writemask;
+	always_ff @(posedge CLK)
+		begin
+			if(RegFile[14][0])
+				begin
+					AES_START <= 1'b1;
+				end
+			else
+				begin
+					AES_START <= 1'b0;
+				end
+		end
+	AES aes(.CLK,	.RESET,	.AES_START,	.AES_DONE,	.AES_KEY({RegFile[0],RegFile[1],RegFile[2],RegFile[3]}),
+					.AES_MSG_ENC({RegFile[4],RegFile[5],RegFile[6],RegFile[7]}),
+					.AES_MSG_DEC({RegFile[8],RegFile[9],RegFile[10],RegFile[11]}));
+	assign RegFile[15][0] = AES_DONE;				
 	always_comb
 		begin
 			if(AVL_READ & AVL_CS)
@@ -73,7 +89,7 @@ module avalon_aes_interface (
 
 		//assign writemask = 32'hffffffff;
 			if(AVL_WRITE & AVL_CS)
-				begin 
+				begin
 					RegFile[AVL_ADDR] = AVL_WRITEDATA & writemask;
 				end
 			if(RESET)
