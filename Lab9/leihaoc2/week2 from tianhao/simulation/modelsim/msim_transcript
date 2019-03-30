@@ -12,17 +12,17 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/Lab9_mealy_sm.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:01:08 on Mar 29,2019
+# Start time: 21:07:20 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/Lab9_mealy_sm.sv 
 # -- Compiling module Lab9_mealy_sm
 # 
 # Top level modules:
 # 	Lab9_mealy_sm
-# End time: 17:01:08 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:07:20 on Mar 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/SubBytes.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:01:08 on Mar 29,2019
+# Start time: 21:07:20 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/SubBytes.sv 
 # -- Compiling module SubBytes
 # -- Compiling module InvSubBytes
@@ -30,21 +30,21 @@
 # Top level modules:
 # 	SubBytes
 # 	InvSubBytes
-# End time: 17:01:08 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:07:21 on Mar 29,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvShiftRows.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:01:08 on Mar 29,2019
+# Start time: 21:07:21 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvShiftRows.sv 
 # -- Compiling module InvShiftRows
 # 
 # Top level modules:
 # 	InvShiftRows
-# End time: 17:01:08 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:07:21 on Mar 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:01:08 on Mar 29,2019
+# Start time: 21:07:21 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv 
 # -- Compiling module InvMixColumns
 # -- Compiling package InvMixColumns_sv_unit
@@ -55,38 +55,48 @@
 # 
 # Top level modules:
 # 	InvMixColumns
-# End time: 17:01:09 on Mar 29,2019, Elapsed time: 0:00:01
+# End time: 21:07:21 on Mar 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AddRoundKey.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:01:09 on Mar 29,2019
+# Start time: 21:07:21 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AddRoundKey.sv 
 # -- Compiling module AddRoundKey
 # 
 # Top level modules:
 # 	AddRoundKey
-# End time: 17:01:09 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:07:21 on Mar 29,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/stateISB.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:22 on Mar 29,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/stateISB.sv 
+# -- Compiling module stateISB
+# 
+# Top level modules:
+# 	stateISB
+# End time: 21:07:22 on Mar 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:01:09 on Mar 29,2019
+# Start time: 21:07:23 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv 
 # -- Compiling module KeyExpansion
 # -- Compiling module KeyExpansionOne
 # 
 # Top level modules:
 # 	KeyExpansion
-# End time: 17:01:09 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:07:23 on Mar 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:01:09 on Mar 29,2019
+# Start time: 21:07:23 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv 
 # -- Compiling module AES
 # 
 # Top level modules:
 # 	AES
-# End time: 17:01:09 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:07:23 on Mar 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlib lab9_soc
 # ** Warning: (vlib-34) Library already exists at "lab9_soc".
@@ -97,18 +107,18 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/testbench.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:01:10 on Mar 29,2019
+# Start time: 21:07:23 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 17:01:10 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:07:23 on Mar 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab9_soc -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab9_soc -voptargs=""+acc"" testbench 
-# Start time: 17:01:10 on Mar 29,2019
+# Start time: 21:07:23 on Mar 29,2019
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.AES
@@ -116,6 +126,7 @@
 # Loading work.KeyExpansion
 # Loading work.KeyExpansionOne
 # Loading work.SubBytes
+# Loading work.stateISB
 # Loading work.InvMixColumns
 # Loading work.InvMixColumns_sv_unit
 # Loading work.GF_Mul_9
@@ -124,14 +135,7 @@
 # Loading work.GF_Mul_e
 # Loading work.AddRoundKey
 # Loading work.InvShiftRows
-# ** Warning: (vsim-3015) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(71): [PCDPC] - Port size (32) does not match connection size (128) for port 'in'. The port definition is at: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv(15).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/inst/instIMC File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv
-# ** Warning: (vsim-3015) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(71): [PCDPC] - Port size (32) does not match connection size (128) for port 'out'. The port definition is at: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv(16).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/inst/instIMC File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv
-# ** Warning: (vsim-3839) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(91): Variable '/testbench/inst/msg', driven via a port connection, is multiply driven. See C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(71).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/inst File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv
-# ** Warning: (vsim-3839) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(89): Variable '/testbench/inst/msg', driven via a port connection, is multiply driven. See C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(71).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/inst File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv
+# Loading work.InvSubBytes
 # 
 # add wave *
 # view structure
@@ -139,11 +143,19 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1500 ns
-# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(76): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/inst
-# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(76): No condition is true in the unique/priority if/case statement.
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/inst
-# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 290 ns.
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 310 ns  Iteration: 2  Instance: /testbench/inst
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 330 ns  Iteration: 2  Instance: /testbench/inst
+restart -f; run 3000ns
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/inst
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 310 ns  Iteration: 2  Instance: /testbench/inst
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 330 ns  Iteration: 2  Instance: /testbench/inst
 do Lab9_run_msim_rtl_systemverilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -156,17 +168,17 @@ do Lab9_run_msim_rtl_systemverilog.do
 # 
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/Lab9_mealy_sm.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:02:27 on Mar 29,2019
+# Start time: 21:15:44 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/Lab9_mealy_sm.sv 
 # -- Compiling module Lab9_mealy_sm
 # 
 # Top level modules:
 # 	Lab9_mealy_sm
-# End time: 17:02:27 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:15:44 on Mar 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/SubBytes.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:02:27 on Mar 29,2019
+# Start time: 21:15:44 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/SubBytes.sv 
 # -- Compiling module SubBytes
 # -- Compiling module InvSubBytes
@@ -174,21 +186,21 @@ do Lab9_run_msim_rtl_systemverilog.do
 # Top level modules:
 # 	SubBytes
 # 	InvSubBytes
-# End time: 17:02:27 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:15:44 on Mar 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvShiftRows.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:02:27 on Mar 29,2019
+# Start time: 21:15:44 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvShiftRows.sv 
 # -- Compiling module InvShiftRows
 # 
 # Top level modules:
 # 	InvShiftRows
-# End time: 17:02:27 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:15:45 on Mar 29,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:02:27 on Mar 29,2019
+# Start time: 21:15:45 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv 
 # -- Compiling module InvMixColumns
 # -- Compiling package InvMixColumns_sv_unit
@@ -199,38 +211,48 @@ do Lab9_run_msim_rtl_systemverilog.do
 # 
 # Top level modules:
 # 	InvMixColumns
-# End time: 17:02:28 on Mar 29,2019, Elapsed time: 0:00:01
+# End time: 21:15:45 on Mar 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AddRoundKey.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:02:28 on Mar 29,2019
+# Start time: 21:15:45 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AddRoundKey.sv 
 # -- Compiling module AddRoundKey
 # 
 # Top level modules:
 # 	AddRoundKey
-# End time: 17:02:28 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:15:45 on Mar 29,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/stateISB.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:15:45 on Mar 29,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/stateISB.sv 
+# -- Compiling module stateISB
+# 
+# Top level modules:
+# 	stateISB
+# End time: 21:15:45 on Mar 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:02:28 on Mar 29,2019
+# Start time: 21:15:45 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv 
 # -- Compiling module KeyExpansion
 # -- Compiling module KeyExpansionOne
 # 
 # Top level modules:
 # 	KeyExpansion
-# End time: 17:02:28 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:15:46 on Mar 29,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:02:28 on Mar 29,2019
+# Start time: 21:15:46 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv 
 # -- Compiling module AES
 # 
 # Top level modules:
 # 	AES
-# End time: 17:02:28 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:15:46 on Mar 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlib lab9_soc
 # ** Warning: (vlib-34) Library already exists at "lab9_soc".
@@ -241,20 +263,20 @@ do Lab9_run_msim_rtl_systemverilog.do
 # 
 # vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/testbench.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:02:28 on Mar 29,2019
+# Start time: 21:15:46 on Mar 29,2019
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 17:02:28 on Mar 29,2019, Elapsed time: 0:00:00
+# End time: 21:15:46 on Mar 29,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab9_soc -voptargs="+acc"  testbench
-# End time: 17:02:30 on Mar 29,2019, Elapsed time: 0:01:20
-# Errors: 1, Warnings: 6
+# End time: 21:15:48 on Mar 29,2019, Elapsed time: 0:08:25
+# Errors: 0, Warnings: 6
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab9_soc -voptargs=""+acc"" testbench 
-# Start time: 17:02:30 on Mar 29,2019
+# Start time: 21:15:48 on Mar 29,2019
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.AES
@@ -262,6 +284,7 @@ do Lab9_run_msim_rtl_systemverilog.do
 # Loading work.KeyExpansion
 # Loading work.KeyExpansionOne
 # Loading work.SubBytes
+# Loading work.stateISB
 # Loading work.InvMixColumns
 # Loading work.InvMixColumns_sv_unit
 # Loading work.GF_Mul_9
@@ -270,14 +293,7 @@ do Lab9_run_msim_rtl_systemverilog.do
 # Loading work.GF_Mul_e
 # Loading work.AddRoundKey
 # Loading work.InvShiftRows
-# ** Warning: (vsim-3015) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(71): [PCDPC] - Port size (32) does not match connection size (128) for port 'in'. The port definition is at: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv(15).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/inst/instIMC File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv
-# ** Warning: (vsim-3015) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(71): [PCDPC] - Port size (32) does not match connection size (128) for port 'out'. The port definition is at: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv(16).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/inst/instIMC File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv
-# ** Warning: (vsim-3839) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(91): Variable '/testbench/inst/msg', driven via a port connection, is multiply driven. See C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(71).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/inst File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv
-# ** Warning: (vsim-3839) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(89): Variable '/testbench/inst/msg', driven via a port connection, is multiply driven. See C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(71).
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/inst File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv
+# Loading work.InvSubBytes
 # 
 # add wave *
 # view structure
@@ -285,133 +301,30 @@ do Lab9_run_msim_rtl_systemverilog.do
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1500 ns
-# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(76): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/inst
-# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(76): No condition is true in the unique/priority if/case statement.
-#    Time: 0 ps  Iteration: 1  Instance: /testbench/inst
-# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 290 ns.
-do Lab9_run_msim_rtl_systemverilog.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/Lab9_mealy_sm.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:03:42 on Mar 29,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/Lab9_mealy_sm.sv 
-# -- Compiling module Lab9_mealy_sm
-# 
-# Top level modules:
-# 	Lab9_mealy_sm
-# End time: 17:03:42 on Mar 29,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/SubBytes.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:03:42 on Mar 29,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/SubBytes.sv 
-# -- Compiling module SubBytes
-# -- Compiling module InvSubBytes
-# 
-# Top level modules:
-# 	SubBytes
-# 	InvSubBytes
-# End time: 17:03:42 on Mar 29,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvShiftRows.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:03:42 on Mar 29,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvShiftRows.sv 
-# -- Compiling module InvShiftRows
-# 
-# Top level modules:
-# 	InvShiftRows
-# End time: 17:03:42 on Mar 29,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:03:42 on Mar 29,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv 
-# -- Compiling module InvMixColumns
-# -- Compiling package InvMixColumns_sv_unit
-# -- Compiling module GF_Mul_9
-# -- Compiling module GF_Mul_b
-# -- Compiling module GF_Mul_d
-# -- Compiling module GF_Mul_e
-# 
-# Top level modules:
-# 	InvMixColumns
-# End time: 17:03:42 on Mar 29,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AddRoundKey.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:03:43 on Mar 29,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AddRoundKey.sv 
-# -- Compiling module AddRoundKey
-# 
-# Top level modules:
-# 	AddRoundKey
-# End time: 17:03:43 on Mar 29,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:03:43 on Mar 29,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv 
-# -- Compiling module KeyExpansion
-# -- Compiling module KeyExpansionOne
-# 
-# Top level modules:
-# 	KeyExpansion
-# End time: 17:03:43 on Mar 29,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:03:43 on Mar 29,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv 
-# -- Compiling module AES
-# 
-# Top level modules:
-# 	AES
-# End time: 17:03:43 on Mar 29,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlib lab9_soc
-# ** Warning: (vlib-34) Library already exists at "lab9_soc".
-# vmap lab9_soc lab9_soc
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap lab9_soc lab9_soc 
-# Modifying modelsim.ini
-# 
-# vlog -sv -work work +incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2\ from\ tianhao {C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/testbench.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 17:03:43 on Mar 29,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao" C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/testbench.sv 
-# -- Compiling module testbench
-# 
-# Top level modules:
-# 	testbench
-# End time: 17:03:43 on Mar 29,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab9_soc -voptargs="+acc"  testbench
-# End time: 17:03:45 on Mar 29,2019, Elapsed time: 0:01:15
-# Errors: 1, Warnings: 6
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab9_soc -voptargs=""+acc"" testbench 
-# Start time: 17:03:45 on Mar 29,2019
-# Loading sv_std.std
-# Loading work.testbench
-# Loading work.AES
-# Loading work.Lab9_mealy_sm
-# Loading work.KeyExpansion
-# Loading work.KeyExpansionOne
-# Loading work.SubBytes
-# 
-# add wave *
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 1500 ns
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 310 ns  Iteration: 2  Instance: /testbench/inst
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 330 ns  Iteration: 2  Instance: /testbench/inst
+restart -f; run 3000ns
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/inst
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 310 ns  Iteration: 2  Instance: /testbench/inst
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 330 ns  Iteration: 2  Instance: /testbench/inst
+restart -f; run 5000ns
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/inst
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 310 ns  Iteration: 2  Instance: /testbench/inst
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 330 ns  Iteration: 2  Instance: /testbench/inst
+restart -f; run 6000ns
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/inst
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 310 ns  Iteration: 2  Instance: /testbench/inst
+# ** Warning: (vsim-8315) C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv(107): No condition is true in the unique/priority if/case statement.
+#    Time: 330 ns  Iteration: 2  Instance: /testbench/inst

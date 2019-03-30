@@ -17,14 +17,102 @@ module AES (
 	output logic [127:0] AES_MSG_DEC
 );
 // IP core
-logic Cycle, Update, Clear;
+// mealy state machine
+logic Cycle, Update, Clear, Store, UpdateIMC, IMCDone;
+logic unsigned [2:0] IMCcnt;
 logic unsigned [3:0] round; // implied register
-always_ff @ (Update) begin // update round
-	round = round + 3'd1;
+logic [1:0] Sel;
+logic [31:0] outimc32;
+logic [31:0] outIMC [4];
+logic [127:0] outmux, outISB, outARK, outISR, roundkey;
+logic [127:0] msg; // implied register
+logic [1407:0] KeySchedule;
+always_ff @ (posedge CLK) begin
+	if(Clear | RESET) begin
+		round <= 4'b0;
+	end
+	else if (Update) begin
+		round <= round + 4'd1;
+		IMCcnt <= 4'b0;
+	end
+	else if (UpdateIMC) begin
+		outIMC[IMCcnt] = outimc32;
+		IMCcnt = IMCcnt + 2'd1;
+	end
 end
-assign Cycle = (round>=1) & (round<=9); 
-Lab9_mealy_sm sm(.*);
+assign Cycle = (round>=1) & (round<=8);
+assign IMCDone = (IMCcnt == 3);
+Lab9_mealy_sm sm(.clock(CLK), .reset(RESET), .SelL(Sel[0]), .SelH(Sel[1]), .*);
 
+// KeyExpansion
+KeyExpansion instKey (.clk(CLK), .Cipherkey(AES_KEY), .KeySchedule);
+// implied 11-1 MUX, Selcect roundkey
+always_comb begin
+	unique case(round)
+	4'd10:
+		roundkey = KeySchedule[1407 : 1280];
+	4'd9:
+		roundkey = KeySchedule[1279 : 1152];
+	4'd8:
+		roundkey = KeySchedule[1151 : 1024];
+	4'd7:
+		roundkey = KeySchedule[1023 : 896];
+	4'd6:
+		roundkey = KeySchedule[895  : 768];
+	4'd5:
+		roundkey = KeySchedule[767  : 640];
+	4'd4:
+		roundkey = KeySchedule[639  : 512];
+	4'd3:
+		roundkey = KeySchedule[511  : 384];
+	4'd2:
+		roundkey = KeySchedule[383  : 256];
+	4'd1:
+		roundkey = KeySchedule[255  : 128];
+	4'd0:
+		roundkey = KeySchedule[127  : 0];
+	default:
+		roundkey = 128'b1;
+	endcase
+end
+// implied 4-1 MUX, AESLU
+stateISB instISB (.clk(CLK), .state(msg), .result(outISB));
+InvMixColumns instIMC(.in(inimc), .out(outimc32));
+AddRoundKey instARK(.roundkey, .state(msg), .result(outARK));
+InvShiftRows instISR(.data_in(msg), .data_out(outISR));
 
+always_comb begin
+	unique case(Sel)
+	2'd0:
+		outmux = outARK;
+	2'd1:
+		outmux = outISB;
+	2'd2:
+		outmux = outISR;
+	2'd3:
+		outmux = {outIMC[3], outIMC[2], outIMC[1], outIMC[0]};
+	default:
+		outmux = 128'b1;
+	endcase
+end
+always_ff @ (posedge CLK) begin
+	if (Clear | RESET)
+		msg = AES_MSG_ENC;
+	else if(Store)
+		msg = outmux;
+end
 
+ // implied 4-1 MUX
+always_comb begin
+	unique case(IMCcnt)
+		2'b00:
+			inimc = msg[31:0];
+		2'b01:
+			inimc = msg[63:32];
+		2'b10:
+			inimc = msg[95:64];
+		2'b11:
+			inimc = msg[127:96];
+	endcase
+end
 endmodule
