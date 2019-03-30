@@ -1,0 +1,1153 @@
+Analysis & Synthesis report for Lab9
+Fri Mar 29 17:00:53 2019
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |AES|Lab9_mealy_sm:sm|fstate
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "InvMixColumns:instIMC"
+ 13. Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_9"
+ 14. Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_8"
+ 15. Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_7"
+ 16. Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_6"
+ 17. Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_5"
+ 18. Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_4"
+ 19. Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_3"
+ 20. Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_2"
+ 21. Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_1"
+ 22. Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_0"
+ 23. Post-Synthesis Netlist Statistics for Top Partition
+ 24. Elapsed Time Per Partition
+ 25. Analysis & Synthesis Messages
+ 26. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Fri Mar 29 17:00:53 2019       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; Lab9                                        ;
+; Top-level Entity Name              ; AES                                         ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 20                                          ;
+;     Total combinational functions  ; 20                                          ;
+;     Dedicated logic registers      ; 15                                          ;
+; Total registers                    ; 15                                          ;
+; Total pins                         ; 388                                         ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; AES                ; Lab9               ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+; Lab9_mealy_sm.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/Lab9_mealy_sm.sv ;         ;
+; SubBytes.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/SubBytes.sv      ;         ;
+; KeyExpansion.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv  ;         ;
+; InvShiftRows.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvShiftRows.sv  ;         ;
+; InvMixColumns.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv ;         ;
+; AES.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv           ;         ;
+; AddRoundKey.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AddRoundKey.sv   ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary               ;
++---------------------------------------------+-------------+
+; Resource                                    ; Usage       ;
++---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 20          ;
+;                                             ;             ;
+; Total combinational functions               ; 20          ;
+; Logic element usage by number of LUT inputs ;             ;
+;     -- 4 input functions                    ; 8           ;
+;     -- 3 input functions                    ; 4           ;
+;     -- <=2 input functions                  ; 8           ;
+;                                             ;             ;
+; Logic elements by mode                      ;             ;
+;     -- normal mode                          ; 20          ;
+;     -- arithmetic mode                      ; 0           ;
+;                                             ;             ;
+; Total registers                             ; 15          ;
+;     -- Dedicated logic registers            ; 15          ;
+;     -- I/O registers                        ; 0           ;
+;                                             ;             ;
+; I/O pins                                    ; 388         ;
+;                                             ;             ;
+; Embedded Multiplier 9-bit elements          ; 0           ;
+;                                             ;             ;
+; Maximum fan-out node                        ; RESET~input ;
+; Maximum fan-out                             ; 17          ;
+; Total fan-out                               ; 483         ;
+; Average fan-out                             ; 0.60        ;
++---------------------------------------------+-------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                          ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+---------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name   ; Entity Name   ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+---------------+--------------+
+; |AES                       ; 20 (8)              ; 15 (4)                    ; 0           ; 0            ; 0       ; 0         ; 388  ; 0            ; |AES                  ; AES           ; work         ;
+;    |Lab9_mealy_sm:sm|      ; 12 (12)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AES|Lab9_mealy_sm:sm ; Lab9_mealy_sm ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |AES|Lab9_mealy_sm:sm|fstate                                                                                                                           ;
++--------------+-------------+--------------+--------------+--------------+------------+------------+------------+------------+-------------+--------------+-------------+
+; Name         ; fstate.Done ; fstate.ARK10 ; fstate.ISB10 ; fstate.ISR10 ; fstate.IMC ; fstate.ARK ; fstate.ISB ; fstate.ISR ; fstate.ARK0 ; fstate.Reset ; fstate.Idle ;
++--------------+-------------+--------------+--------------+--------------+------------+------------+------------+------------+-------------+--------------+-------------+
+; fstate.Idle  ; 0           ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0           ; 0            ; 0           ;
+; fstate.Reset ; 0           ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0           ; 1            ; 1           ;
+; fstate.ARK0  ; 0           ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 1           ; 0            ; 1           ;
+; fstate.ISR   ; 0           ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 1          ; 0           ; 0            ; 1           ;
+; fstate.ISB   ; 0           ; 0            ; 0            ; 0            ; 0          ; 0          ; 1          ; 0          ; 0           ; 0            ; 1           ;
+; fstate.ARK   ; 0           ; 0            ; 0            ; 0            ; 0          ; 1          ; 0          ; 0          ; 0           ; 0            ; 1           ;
+; fstate.IMC   ; 0           ; 0            ; 0            ; 0            ; 1          ; 0          ; 0          ; 0          ; 0           ; 0            ; 1           ;
+; fstate.ISR10 ; 0           ; 0            ; 0            ; 1            ; 0          ; 0          ; 0          ; 0          ; 0           ; 0            ; 1           ;
+; fstate.ISB10 ; 0           ; 0            ; 1            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0           ; 0            ; 1           ;
+; fstate.ARK10 ; 0           ; 1            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0           ; 0            ; 1           ;
+; fstate.Done  ; 1           ; 0            ; 0            ; 0            ; 0          ; 0          ; 0          ; 0          ; 0           ; 0            ; 1           ;
++--------------+-------------+--------------+--------------+--------------+------------+------------+------------+------------+-------------+--------------+-------------+
+
+
++-------------------------------------------------------------+
+; Registers Removed During Synthesis                          ;
++----------------------------------------+--------------------+
+; Register name                          ; Reason for Removal ;
++----------------------------------------+--------------------+
+; Lab9_mealy_sm:sm|fstate~2              ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~3              ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~4              ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~5              ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~6              ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~7              ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~8              ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~9              ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~10             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~11             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~12             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~13             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~14             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~15             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~16             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~17             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~18             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~19             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~20             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~21             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~22             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~23             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~24             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~25             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~26             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~27             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~28             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~29             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~30             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~31             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~32             ; Lost fanout        ;
+; Lab9_mealy_sm:sm|fstate~33             ; Lost fanout        ;
+; Total Number of Removed Registers = 32 ;                    ;
++----------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 15    ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 4     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |AES|round[3]              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "InvMixColumns:instIMC"                                                                                                                                                               ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                              ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; in   ; Input  ; Warning  ; Input port expression (128 bits) is wider than the input port (32 bits) it drives.  The 96 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; out  ; Output ; Warning  ; Output or bidir port (32 bits) is smaller than the port expression (128 bits) it drives.  The 96 most-significant bit(s) in the port expression will be connected to GND.            ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_9" ;
++------------+-------+----------+----------------------------------------+
+; Port       ; Type  ; Severity ; Details                                ;
++------------+-------+----------+----------------------------------------+
+; Rcon[5..4] ; Input ; Info     ; Stuck at VCC                           ;
+; Rcon[2..1] ; Input ; Info     ; Stuck at VCC                           ;
+; Rcon[7..6] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[3]    ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[0]    ; Input ; Info     ; Stuck at GND                           ;
++------------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_8" ;
++------------+-------+----------+----------------------------------------+
+; Port       ; Type  ; Severity ; Details                                ;
++------------+-------+----------+----------------------------------------+
+; Rcon[4..3] ; Input ; Info     ; Stuck at VCC                           ;
+; Rcon[1..0] ; Input ; Info     ; Stuck at VCC                           ;
+; Rcon[7..5] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[2]    ; Input ; Info     ; Stuck at GND                           ;
++------------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_7" ;
++------------+-------+----------+----------------------------------------+
+; Port       ; Type  ; Severity ; Details                                ;
++------------+-------+----------+----------------------------------------+
+; Rcon[6..0] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[7]    ; Input ; Info     ; Stuck at VCC                           ;
++------------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_6" ;
++------------+-------+----------+----------------------------------------+
+; Port       ; Type  ; Severity ; Details                                ;
++------------+-------+----------+----------------------------------------+
+; Rcon[5..0] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[7]    ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[6]    ; Input ; Info     ; Stuck at VCC                           ;
++------------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_5" ;
++------------+-------+----------+----------------------------------------+
+; Port       ; Type  ; Severity ; Details                                ;
++------------+-------+----------+----------------------------------------+
+; Rcon[7..6] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[4..0] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[5]    ; Input ; Info     ; Stuck at VCC                           ;
++------------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_4" ;
++------------+-------+----------+----------------------------------------+
+; Port       ; Type  ; Severity ; Details                                ;
++------------+-------+----------+----------------------------------------+
+; Rcon[7..5] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[3..0] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[4]    ; Input ; Info     ; Stuck at VCC                           ;
++------------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_3" ;
++------------+-------+----------+----------------------------------------+
+; Port       ; Type  ; Severity ; Details                                ;
++------------+-------+----------+----------------------------------------+
+; Rcon[7..4] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[2..0] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[3]    ; Input ; Info     ; Stuck at VCC                           ;
++------------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_2" ;
++------------+-------+----------+----------------------------------------+
+; Port       ; Type  ; Severity ; Details                                ;
++------------+-------+----------+----------------------------------------+
+; Rcon[7..3] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[1..0] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[2]    ; Input ; Info     ; Stuck at VCC                           ;
++------------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_1" ;
++------------+-------+----------+----------------------------------------+
+; Port       ; Type  ; Severity ; Details                                ;
++------------+-------+----------+----------------------------------------+
+; Rcon[7..2] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[1]    ; Input ; Info     ; Stuck at VCC                           ;
+; Rcon[0]    ; Input ; Info     ; Stuck at GND                           ;
++------------+-------+----------+----------------------------------------+
+
+
++------------------------------------------------------------------------+
+; Port Connectivity Checks: "KeyExpansion:instKey|KeyExpansionOne:key_0" ;
++------------+-------+----------+----------------------------------------+
+; Port       ; Type  ; Severity ; Details                                ;
++------------+-------+----------+----------------------------------------+
+; Rcon[7..1] ; Input ; Info     ; Stuck at GND                           ;
+; Rcon[0]    ; Input ; Info     ; Stuck at VCC                           ;
++------------+-------+----------+----------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 388                         ;
+; cycloneiii_ff         ; 15                          ;
+;     ENA               ; 4                           ;
+;     plain             ; 11                          ;
+; cycloneiii_lcell_comb ; 21                          ;
+;     normal            ; 21                          ;
+;         0 data inputs ; 1                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.28                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Fri Mar 29 17:00:25 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab9 -c Lab9
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
+    Info (12023): Found entity 1: testbench File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/testbench.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_mealy_sm.sv
+    Info (12023): Found entity 1: Lab9_mealy_sm File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/Lab9_mealy_sm.sv Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/lab9_soc.v
+    Info (12023): Found entity 1: lab9_soc File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/lab9_soc.v Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_reset_controller.v
+    Info (12023): Found entity 1: altera_reset_controller File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_reset_controller.v Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_reset_synchronizer.v
+    Info (12023): Found entity 1: altera_reset_synchronizer File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_reset_synchronizer.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_irq_mapper.sv
+    Info (12023): Found entity 1: lab9_soc_irq_mapper File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_irq_mapper.sv Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0.v
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_avalon_st_adapter_006.v
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_avalon_st_adapter_006 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_avalon_st_adapter_006.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_avalon_st_adapter_006_error_adapter_0.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_avalon_st_adapter_006_error_adapter_0 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_avalon_st_adapter_006_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_avalon_st_adapter.v
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_avalon_st_adapter File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_avalon_st_adapter.v Line: 9
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0.sv Line: 66
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v
+    Info (12023): Found entity 1: altera_avalon_st_handshake_clock_crosser File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_avalon_st_handshake_clock_crosser.v Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_avalon_st_clock_crosser.v
+    Info (12023): Found entity 1: altera_avalon_st_clock_crosser File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_avalon_st_clock_crosser.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_avalon_st_pipeline_base.v
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_base File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_avalon_st_pipeline_base.v Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_std_synchronizer_nocut.v
+    Info (12023): Found entity 1: altera_std_synchronizer_nocut File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_std_synchronizer_nocut.v Line: 44
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_merlin_width_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_width_adapter File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_width_adapter.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_merlin_address_alignment.sv
+    Info (12023): Found entity 1: altera_merlin_address_alignment File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_address_alignment.sv Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_merlin_burst_uncompressor.sv
+    Info (12023): Found entity 1: altera_merlin_burst_uncompressor File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_burst_uncompressor.sv Line: 40
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_rsp_mux_001.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_rsp_mux_001 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_rsp_mux_001.sv Line: 51
+Info (12021): Found 2 design units, including 2 entities, in source file lab9_soc/synthesis/submodules/altera_merlin_arbitrator.sv
+    Info (12023): Found entity 1: altera_merlin_arbitrator File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_arbitrator.sv Line: 103
+    Info (12023): Found entity 2: altera_merlin_arb_adder File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_arbitrator.sv Line: 228
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_rsp_mux.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_rsp_mux File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_rsp_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_rsp_demux_002.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_rsp_demux_002 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_rsp_demux_002.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_rsp_demux.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_rsp_demux File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_rsp_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_cmd_mux_002.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_cmd_mux_002 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_cmd_mux_002.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_cmd_mux.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_cmd_mux File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_cmd_mux.sv Line: 51
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_cmd_demux_001.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_cmd_demux_001 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_cmd_demux_001.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_cmd_demux.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_cmd_demux File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_cmd_demux.sv Line: 43
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_merlin_burst_adapter.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_burst_adapter.sv Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_uncompressed_only File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_burst_adapter_uncmpr.sv Line: 39
+Info (12021): Found 5 design units, including 5 entities, in source file lab9_soc/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_burstwrap_increment File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 40
+    Info (12023): Found entity 2: altera_merlin_burst_adapter_adder File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 55
+    Info (12023): Found entity 3: altera_merlin_burst_adapter_subtractor File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 77
+    Info (12023): Found entity 4: altera_merlin_burst_adapter_min File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 98
+    Info (12023): Found entity 5: altera_merlin_burst_adapter_13_1 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_burst_adapter_13_1.sv Line: 264
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_merlin_burst_adapter_new.sv
+    Info (12023): Found entity 1: altera_merlin_burst_adapter_new File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_burst_adapter_new.sv Line: 25
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_incr_burst_converter.sv
+    Info (12023): Found entity 1: altera_incr_burst_converter File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_incr_burst_converter.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_wrap_burst_converter.sv
+    Info (12023): Found entity 1: altera_wrap_burst_converter File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_wrap_burst_converter.sv Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_default_burst_converter.sv
+    Info (12023): Found entity 1: altera_default_burst_converter File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_default_burst_converter.sv Line: 30
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_avalon_st_pipeline_stage.sv
+    Info (12023): Found entity 1: altera_avalon_st_pipeline_stage File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_avalon_st_pipeline_stage.sv Line: 22
+Info (12021): Found 2 design units, including 2 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router_008.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_router_008_default_decode File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router_008.sv Line: 45
+    Info (12023): Found entity 2: lab9_soc_mm_interconnect_0_router_008 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router_008.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router_004.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_router_004_default_decode File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router_004.sv Line: 45
+    Info (12023): Found entity 2: lab9_soc_mm_interconnect_0_router_004 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router_004.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router_002.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_router_002_default_decode File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router_002.sv Line: 45
+    Info (12023): Found entity 2: lab9_soc_mm_interconnect_0_router_002 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router_002.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router_001.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_router_001_default_decode File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router_001.sv Line: 45
+    Info (12023): Found entity 2: lab9_soc_mm_interconnect_0_router_001 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router_001.sv Line: 84
+Info (12021): Found 2 design units, including 2 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router.sv
+    Info (12023): Found entity 1: lab9_soc_mm_interconnect_0_router_default_decode File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router.sv Line: 45
+    Info (12023): Found entity 2: lab9_soc_mm_interconnect_0_router File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_mm_interconnect_0_router.sv Line: 84
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_avalon_sc_fifo.v
+    Info (12023): Found entity 1: altera_avalon_sc_fifo File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_avalon_sc_fifo.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_merlin_slave_agent.sv
+    Info (12023): Found entity 1: altera_merlin_slave_agent File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_slave_agent.sv Line: 34
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_merlin_master_agent.sv
+    Info (12023): Found entity 1: altera_merlin_master_agent File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_master_agent.sv Line: 28
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_merlin_slave_translator.sv
+    Info (12023): Found entity 1: altera_merlin_slave_translator File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_slave_translator.sv Line: 35
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/altera_merlin_master_translator.sv
+    Info (12023): Found entity 1: altera_merlin_master_translator File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/altera_merlin_master_translator.sv Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_sysid_qsys_0.v
+    Info (12023): Found entity 1: lab9_soc_sysid_qsys_0 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_sysid_qsys_0.v Line: 34
+Info (12021): Found 4 design units, including 4 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_sdram_pll.v
+    Info (12023): Found entity 1: lab9_soc_sdram_pll_dffpipe_l2c File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_sdram_pll.v Line: 37
+    Info (12023): Found entity 2: lab9_soc_sdram_pll_stdsync_sv6 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_sdram_pll.v Line: 98
+    Info (12023): Found entity 3: lab9_soc_sdram_pll_altpll_lqa2 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_sdram_pll.v Line: 130
+    Info (12023): Found entity 4: lab9_soc_sdram_pll File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_sdram_pll.v Line: 217
+Info (12021): Found 2 design units, including 2 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_sdram.v
+    Info (12023): Found entity 1: lab9_soc_sdram_input_efifo_module File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_sdram.v Line: 21
+    Info (12023): Found entity 2: lab9_soc_sdram File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_sdram.v Line: 159
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_onchip_memory2_0.v
+    Info (12023): Found entity 1: lab9_soc_onchip_memory2_0 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_onchip_memory2_0.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0.v
+    Info (12023): Found entity 1: lab9_soc_nios2_gen2_0 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0.v Line: 9
+Info (12021): Found 21 design units, including 21 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v
+    Info (12023): Found entity 1: lab9_soc_nios2_gen2_0_cpu_register_bank_a_module File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 21
+    Info (12023): Found entity 2: lab9_soc_nios2_gen2_0_cpu_register_bank_b_module File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 87
+    Info (12023): Found entity 3: lab9_soc_nios2_gen2_0_cpu_nios2_oci_debug File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 153
+    Info (12023): Found entity 4: lab9_soc_nios2_gen2_0_cpu_nios2_oci_break File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 295
+    Info (12023): Found entity 5: lab9_soc_nios2_gen2_0_cpu_nios2_oci_xbrk File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 588
+    Info (12023): Found entity 6: lab9_soc_nios2_gen2_0_cpu_nios2_oci_dbrk File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 795
+    Info (12023): Found entity 7: lab9_soc_nios2_gen2_0_cpu_nios2_oci_itrace File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 982
+    Info (12023): Found entity 8: lab9_soc_nios2_gen2_0_cpu_nios2_oci_td_mode File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 1115
+    Info (12023): Found entity 9: lab9_soc_nios2_gen2_0_cpu_nios2_oci_dtrace File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 1183
+    Info (12023): Found entity 10: lab9_soc_nios2_gen2_0_cpu_nios2_oci_compute_input_tm_cnt File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 1265
+    Info (12023): Found entity 11: lab9_soc_nios2_gen2_0_cpu_nios2_oci_fifo_wrptr_inc File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 1337
+    Info (12023): Found entity 12: lab9_soc_nios2_gen2_0_cpu_nios2_oci_fifo_cnt_inc File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 1380
+    Info (12023): Found entity 13: lab9_soc_nios2_gen2_0_cpu_nios2_oci_fifo File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 1427
+    Info (12023): Found entity 14: lab9_soc_nios2_gen2_0_cpu_nios2_oci_pib File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 1913
+    Info (12023): Found entity 15: lab9_soc_nios2_gen2_0_cpu_nios2_oci_im File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 1936
+    Info (12023): Found entity 16: lab9_soc_nios2_gen2_0_cpu_nios2_performance_monitors File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 2006
+    Info (12023): Found entity 17: lab9_soc_nios2_gen2_0_cpu_nios2_avalon_reg File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 2023
+    Info (12023): Found entity 18: lab9_soc_nios2_gen2_0_cpu_ociram_sp_ram_module File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 2116
+    Info (12023): Found entity 19: lab9_soc_nios2_gen2_0_cpu_nios2_ocimem File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 2181
+    Info (12023): Found entity 20: lab9_soc_nios2_gen2_0_cpu_nios2_oci File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 2362
+    Info (12023): Found entity 21: lab9_soc_nios2_gen2_0_cpu File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu.v Line: 2834
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu_debug_slave_sysclk.v
+    Info (12023): Found entity 1: lab9_soc_nios2_gen2_0_cpu_debug_slave_sysclk File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu_debug_slave_sysclk.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu_debug_slave_tck.v
+    Info (12023): Found entity 1: lab9_soc_nios2_gen2_0_cpu_debug_slave_tck File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu_debug_slave_tck.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v
+    Info (12023): Found entity 1: lab9_soc_nios2_gen2_0_cpu_debug_slave_wrapper File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu_debug_slave_wrapper.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu_test_bench.v
+    Info (12023): Found entity 1: lab9_soc_nios2_gen2_0_cpu_test_bench File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_nios2_gen2_0_cpu_test_bench.v Line: 21
+Info (12021): Found 5 design units, including 5 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_jtag_uart_0.v
+    Info (12023): Found entity 1: lab9_soc_jtag_uart_0_sim_scfifo_w File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_jtag_uart_0.v Line: 21
+    Info (12023): Found entity 2: lab9_soc_jtag_uart_0_scfifo_w File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_jtag_uart_0.v Line: 78
+    Info (12023): Found entity 3: lab9_soc_jtag_uart_0_sim_scfifo_r File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_jtag_uart_0.v Line: 164
+    Info (12023): Found entity 4: lab9_soc_jtag_uart_0_scfifo_r File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_jtag_uart_0.v Line: 243
+    Info (12023): Found entity 5: lab9_soc_jtag_uart_0 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_jtag_uart_0.v Line: 331
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/lab9_soc_timer.v
+    Info (12023): Found entity 1: lab9_soc_TIMER File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_TIMER.v Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_soc/synthesis/submodules/avalon_aes_interface.sv
+    Info (12023): Found entity 1: avalon_aes_interface File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/avalon_aes_interface.sv Line: 21
+Info (12021): Found 2 design units, including 2 entities, in source file subbytes.sv
+    Info (12023): Found entity 1: SubBytes File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/SubBytes.sv Line: 14
+    Info (12023): Found entity 2: InvSubBytes File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/SubBytes.sv Line: 93
+Info (12021): Found 1 design units, including 1 entities, in source file lab9_top.sv
+    Info (12023): Found entity 1: lab9_top File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_top.sv Line: 11
+Info (12021): Found 2 design units, including 2 entities, in source file keyexpansion.sv
+    Info (12023): Found entity 1: KeyExpansion File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv Line: 13
+    Info (12023): Found entity 2: KeyExpansionOne File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv Line: 41
+Info (12021): Found 1 design units, including 1 entities, in source file invshiftrows.sv
+    Info (12023): Found entity 1: InvShiftRows File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvShiftRows.sv Line: 2
+Info (12021): Found 5 design units, including 5 entities, in source file invmixcolumns.sv
+    Info (12023): Found entity 1: InvMixColumns File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv Line: 14
+    Info (12023): Found entity 2: GF_Mul_9 File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv Line: 74
+    Info (12023): Found entity 3: GF_Mul_b File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv Line: 93
+    Info (12023): Found entity 4: GF_Mul_d File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv Line: 112
+    Info (12023): Found entity 5: GF_Mul_e File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv Line: 131
+Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
+    Info (12023): Found entity 1: hexdriver File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/hexdriver.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file avalon_aes_interface.sv
+    Info (12023): Found entity 1: avalon_aes_interface File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/avalon_aes_interface.sv Line: 21
+Info (12021): Found 1 design units, including 1 entities, in source file aes.sv
+    Info (12023): Found entity 1: AES File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 10
+Info (12021): Found 1 design units, including 1 entities, in source file aselu.sv
+    Info (12023): Found entity 1: AESLU File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/ASELU.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file addroundkey.sv
+    Info (12023): Found entity 1: AddRoundKey File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AddRoundKey.sv Line: 1
+Warning (10037): Verilog HDL or VHDL warning at lab9_soc_sdram.v(318): conditional expression evaluates to a constant File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_sdram.v Line: 318
+Warning (10037): Verilog HDL or VHDL warning at lab9_soc_sdram.v(328): conditional expression evaluates to a constant File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_sdram.v Line: 328
+Warning (10037): Verilog HDL or VHDL warning at lab9_soc_sdram.v(338): conditional expression evaluates to a constant File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_sdram.v Line: 338
+Warning (10037): Verilog HDL or VHDL warning at lab9_soc_sdram.v(682): conditional expression evaluates to a constant File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/lab9_soc/synthesis/submodules/lab9_soc_sdram.v Line: 682
+Info (12127): Elaborating entity "AES" for the top level hierarchy
+Warning (10858): Verilog HDL warning at AES.sv(24): object outISB used but never assigned File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 24
+Warning (10858): Verilog HDL warning at AES.sv(24): object outIMC used but never assigned File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 24
+Warning (10030): Net "outISB" at AES.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 24
+Warning (10030): Net "outIMC" at AES.sv(24) has no driver or initial value, using a default initial value '0' File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 24
+Warning (10034): Output port "AES_MSG_DEC" at AES.sv(18) has no driver File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+Info (12128): Elaborating entity "Lab9_mealy_sm" for hierarchy "Lab9_mealy_sm:sm" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 36
+Info (12128): Elaborating entity "KeyExpansion" for hierarchy "KeyExpansion:instKey" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 39
+Info (12128): Elaborating entity "KeyExpansionOne" for hierarchy "KeyExpansion:instKey|KeyExpansionOne:key_0" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv Line: 25
+Info (12128): Elaborating entity "SubBytes" for hierarchy "KeyExpansion:instKey|KeyExpansionOne:key_0|SubBytes:subbytes_0" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv Line: 56
+Info (12128): Elaborating entity "InvMixColumns" for hierarchy "InvMixColumns:instIMC" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 71
+Info (12128): Elaborating entity "GF_Mul_9" for hierarchy "InvMixColumns:instIMC|GF_Mul_9:gfmul9_0" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv Line: 31
+Info (12128): Elaborating entity "GF_Mul_b" for hierarchy "InvMixColumns:instIMC|GF_Mul_b:gfmulb_0" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv Line: 37
+Info (12128): Elaborating entity "GF_Mul_d" for hierarchy "InvMixColumns:instIMC|GF_Mul_d:gfmuld_0" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv Line: 43
+Info (12128): Elaborating entity "GF_Mul_e" for hierarchy "InvMixColumns:instIMC|GF_Mul_e:gfmule_0" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv Line: 49
+Info (12128): Elaborating entity "AddRoundKey" for hierarchy "AddRoundKey:instARK" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 72
+Info (12128): Elaborating entity "InvShiftRows" for hierarchy "InvShiftRows:instISR" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 73
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "AES_MSG_DEC[0]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[1]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[2]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[3]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[4]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[5]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[6]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[7]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[8]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[9]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[10]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[11]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[12]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[13]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[14]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[15]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[16]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[17]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[18]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[19]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[20]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[21]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[22]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[23]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[24]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[25]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[26]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[27]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[28]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[29]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[30]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[31]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[32]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[33]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[34]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[35]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[36]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[37]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[38]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[39]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[40]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[41]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[42]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[43]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[44]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[45]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[46]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[47]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[48]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[49]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[50]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[51]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[52]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[53]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[54]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[55]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[56]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[57]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[58]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[59]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[60]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[61]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[62]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[63]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[64]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[65]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[66]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[67]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[68]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[69]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[70]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[71]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[72]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[73]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[74]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[75]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[76]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[77]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[78]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[79]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[80]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[81]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[82]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[83]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[84]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[85]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[86]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[87]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[88]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[89]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[90]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[91]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[92]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[93]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[94]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[95]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[96]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[97]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[98]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[99]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[100]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[101]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[102]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[103]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[104]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[105]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[106]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[107]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[108]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[109]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[110]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[111]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[112]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[113]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[114]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[115]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[116]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[117]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[118]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[119]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[120]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[121]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[122]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[123]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[124]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[125]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[126]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+    Warning (13410): Pin "AES_MSG_DEC[127]" is stuck at GND File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 18
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 32 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored 22 assignments for entity "DE2_115_Default" -- entity does not exist in design
+    Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_PRESERVE_HIGH_SPEED_TILES ON -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IGNORE_SOURCE_FILE_CHANGES OFF -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ALWAYS_USE_QXP_NETLIST OFF -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_ASSIGNMENTS ON -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_ASSIGNMENTS REPLACE_CONFLICTING -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_EXISTING_LOGICLOCK_REGIONS UPDATE_CONFLICTING -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PIN_ASSIGNMENTS ON -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_IMPORT_PROMOTE_ASSIGNMENTS ON -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_TYPE STANDARD_PARTITION -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ALLOW_MULTIPLE_PERSONAS OFF -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ASD_REGION_ID 1 -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name CROSS_BOUNDARY_OPTIMIZATIONS OFF -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_CONSTANTS_ON_INPUTS ON -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PROPAGATE_INVERSIONS_ON_INPUTS ON -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name REMOVE_LOGIC_ON_UNCONNECTED_OUTPUTS ON -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_INPUTS ON -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name MERGE_EQUIVALENT_BIDIRS ON -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity DE2_115_Default -section_id Top was ignored
+    Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity DE2_115_Default -section_id Top was ignored
+Warning (20013): Ignored 23 assignments for entity "altera_avalon_sc_fifo" -- entity does not exist in design
+Warning (20013): Ignored 23 assignments for entity "altera_avalon_st_handshake_clock_crosser" -- entity does not exist in design
+Warning (20013): Ignored 43 assignments for entity "altera_merlin_burst_adapter" -- entity does not exist in design
+Warning (20013): Ignored 64 assignments for entity "altera_merlin_master_agent" -- entity does not exist in design
+Warning (20013): Ignored 55 assignments for entity "altera_merlin_master_translator" -- entity does not exist in design
+Warning (20013): Ignored 53 assignments for entity "altera_merlin_slave_agent" -- entity does not exist in design
+Warning (20013): Ignored 68 assignments for entity "altera_merlin_slave_translator" -- entity does not exist in design
+Warning (20013): Ignored 60 assignments for entity "altera_merlin_width_adapter" -- entity does not exist in design
+Warning (20013): Ignored 35 assignments for entity "altera_reset_controller" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "lab9_soc" -- entity does not exist in design
+Warning (20013): Ignored 26 assignments for entity "lab9_soc_TIMER" -- entity does not exist in design
+Warning (20013): Ignored 14 assignments for entity "lab9_soc_irq_mapper" -- entity does not exist in design
+Warning (20013): Ignored 24 assignments for entity "lab9_soc_jtag_uart_0" -- entity does not exist in design
+Warning (20013): Ignored 12 assignments for entity "lab9_soc_mm_interconnect_0" -- entity does not exist in design
+Warning (20013): Ignored 32 assignments for entity "lab9_soc_mm_interconnect_0_avalon_st_adapter" -- entity does not exist in design
+Warning (20013): Ignored 32 assignments for entity "lab9_soc_mm_interconnect_0_avalon_st_adapter_006" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "lab9_soc_mm_interconnect_0_avalon_st_adapter_006_error_adapter_0" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "lab9_soc_mm_interconnect_0_avalon_st_adapter_error_adapter_0" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "lab9_soc_mm_interconnect_0_cmd_demux" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "lab9_soc_mm_interconnect_0_cmd_demux_001" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "lab9_soc_mm_interconnect_0_cmd_mux" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "lab9_soc_mm_interconnect_0_cmd_mux_002" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "lab9_soc_mm_interconnect_0_router" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "lab9_soc_mm_interconnect_0_router_001" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "lab9_soc_mm_interconnect_0_router_002" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "lab9_soc_mm_interconnect_0_router_004" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "lab9_soc_mm_interconnect_0_router_008" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "lab9_soc_mm_interconnect_0_rsp_demux" -- entity does not exist in design
+Warning (20013): Ignored 17 assignments for entity "lab9_soc_mm_interconnect_0_rsp_demux_002" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "lab9_soc_mm_interconnect_0_rsp_mux" -- entity does not exist in design
+Warning (20013): Ignored 19 assignments for entity "lab9_soc_mm_interconnect_0_rsp_mux_001" -- entity does not exist in design
+Warning (20013): Ignored 149 assignments for entity "lab9_soc_nios2_gen2_0" -- entity does not exist in design
+Warning (20013): Ignored 179 assignments for entity "lab9_soc_nios2_gen2_0_cpu" -- entity does not exist in design
+Warning (20013): Ignored 36 assignments for entity "lab9_soc_onchip_memory2_0" -- entity does not exist in design
+Warning (20013): Ignored 34 assignments for entity "lab9_soc_sdram" -- entity does not exist in design
+Warning (20013): Ignored 78 assignments for entity "lab9_soc_sdram_pll" -- entity does not exist in design
+Warning (20013): Ignored 10 assignments for entity "lab9_soc_sysid_qsys_0" -- entity does not exist in design
+Info (144001): Generated suppressed messages file C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/output_files/Lab9.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 256 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "AES_KEY[0]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[1]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[2]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[3]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[4]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[5]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[6]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[7]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[8]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[9]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[10]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[11]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[12]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[13]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[14]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[15]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[16]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[17]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[18]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[19]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[20]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[21]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[22]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[23]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[24]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[25]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[26]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[27]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[28]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[29]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[30]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[31]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[32]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[33]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[34]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[35]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[36]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[37]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[38]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[39]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[40]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[41]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[42]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[43]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[44]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[45]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[46]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[47]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[48]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[49]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[50]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[51]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[52]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[53]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[54]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[55]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[56]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[57]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[58]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[59]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[60]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[61]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[62]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[63]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[64]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[65]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[66]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[67]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[68]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[69]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[70]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[71]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[72]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[73]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[74]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[75]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[76]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[77]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[78]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[79]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[80]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[81]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[82]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[83]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[84]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[85]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[86]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[87]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[88]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[89]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[90]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[91]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[92]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[93]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[94]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[95]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[96]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[97]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[98]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[99]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[100]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[101]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[102]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[103]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[104]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[105]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[106]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[107]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[108]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[109]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[110]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[111]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[112]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[113]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[114]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[115]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[116]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[117]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[118]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[119]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[120]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[121]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[122]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[123]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[124]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[125]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[126]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_KEY[127]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 15
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[0]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[1]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[2]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[3]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[4]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[5]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[6]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[7]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[8]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[9]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[10]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[11]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[12]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[13]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[14]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[15]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[16]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[17]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[18]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[19]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[20]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[21]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[22]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[23]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[24]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[25]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[26]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[27]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[28]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[29]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[30]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[31]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[32]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[33]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[34]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[35]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[36]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[37]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[38]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[39]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[40]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[41]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[42]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[43]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[44]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[45]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[46]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[47]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[48]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[49]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[50]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[51]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[52]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[53]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[54]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[55]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[56]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[57]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[58]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[59]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[60]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[61]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[62]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[63]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[64]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[65]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[66]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[67]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[68]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[69]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[70]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[71]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[72]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[73]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[74]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[75]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[76]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[77]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[78]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[79]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[80]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[81]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[82]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[83]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[84]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[85]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[86]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[87]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[88]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[89]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[90]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[91]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[92]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[93]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[94]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[95]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[96]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[97]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[98]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[99]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[100]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[101]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[102]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[103]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[104]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[105]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[106]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[107]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[108]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[109]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[110]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[111]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[112]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[113]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[114]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[115]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[116]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[117]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[118]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[119]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[120]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[121]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[122]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[123]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[124]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[125]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[126]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+    Warning (15610): No output dependent on input pin "AES_MSG_ENC[127]" File: C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv Line: 16
+Info (21057): Implemented 408 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 259 input pins
+    Info (21059): Implemented 129 output pins
+    Info (21061): Implemented 20 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 457 warnings
+    Info: Peak virtual memory: 4793 megabytes
+    Info: Processing ended: Fri Mar 29 17:00:53 2019
+    Info: Elapsed time: 00:00:28
+    Info: Total CPU time (on all processors): 00:00:50
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/output_files/Lab9.map.smsg.
+
+

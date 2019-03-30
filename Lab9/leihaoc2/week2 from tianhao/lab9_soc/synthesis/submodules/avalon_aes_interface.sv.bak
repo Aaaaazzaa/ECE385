@@ -1,0 +1,100 @@
+/************************************************************************
+Avalon-MM Interface for AES Decryption IP Core
+
+Dong Kai Wang, Fall 2017
+
+For use with ECE 385 Experiment 9
+University of Illinois ECE Department
+
+Register Map:
+
+ 0-3 : 4x 32bit AES Key
+ 4-7 : 4x 32bit AES Encrypted Message
+ 8-11: 4x 32bit AES Decrypted Message
+   12: Not Used
+	13: Not Used
+   14: 32bit Start Register
+   15: 32bit Done Register
+
+************************************************************************/
+
+module avalon_aes_interface (
+	// Avalon Clock Input
+	input logic CLK,
+	
+	// Avalon Reset Input
+	input logic RESET,
+	
+	// Avalon-MM Slave Signals
+	input  logic AVL_READ,					// Avalon-MM Read
+	input  logic AVL_WRITE,					// Avalon-MM Write
+	input  logic AVL_CS,						// Avalon-MM Chip Select
+	input  logic [3:0] AVL_BYTE_EN,		// Avalon-MM Byte Enable
+	input  logic [3:0] AVL_ADDR,			// Avalon-MM Address
+	input  logic [31:0] AVL_WRITEDATA,	// Avalon-MM Write Data
+	output logic [31:0] AVL_READDATA,	// Avalon-MM Read Data
+	
+	// Exported Conduit
+	output logic [31:0] EXPORT_DATA		// Exported Conduit Signal to LEDs
+);
+	logic [31:0] RegFile[15:0];
+	logic [31:0] writemask;
+	always_comb
+		begin
+			if(AVL_READ & AVL_CS)
+				begin
+					unique case(AVL_ADDR)
+						4'b0000:
+							AVL_READDATA=RegFile[0];
+						4'b0001:
+							AVL_READDATA=RegFile[1];
+						4'b0010:
+							AVL_READDATA=RegFile[2];
+						4'b0011:
+							AVL_READDATA=RegFile[3];
+						default:
+							AVL_READDATA=32'b0;
+					endcase
+				end
+		end
+	always_comb
+		begin
+			if(AVL_WRITE)
+				begin
+					unique case(AVL_BYTE_EN)
+						4'b1111:
+							writemask=4'hffff;
+						4'b1100:
+							writemask=4'hff00;
+						4'b0011:
+							writemask=4'h00ff;
+						4'b1000:
+							writemask=4'hf000;
+						4'b0100:
+							writemask=4'h0f00;
+						4'b0010:
+							writemask=4'h00f0;
+						4'b0001:
+							writemask=4'h000f;
+						default:
+							writemask=4'h0000;
+					endcase
+//					unique case(AVL_ADDR)
+//						4'b0000:
+//							AVL_READDATA=RegFile[0];
+//						4'b0001:
+//							AVL_READDATA=RegFile[1];
+//						4'b0010:
+//							AVL_READDATA=RegFile[2];
+//						4'b0011:
+//							AVL_READDATA=RegFile[3];
+//						default:
+//							AVL_READDATA=32'b0;
+//					endcase
+			end
+			if(AVL_WRITE & AVL_CS)
+				begin 
+					RegFile[AVL_ADDR] = AVL_WRITEDATA & writemask;
+				end
+			
+endmodule

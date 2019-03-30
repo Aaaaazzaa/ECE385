@@ -1,0 +1,398 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/simulation/modelsim
+vAddRoundKey
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1553900623
+!i10b 1
+!s100 2IbF88??a096PB:[DVzdf0
+IWOakCFWNQmT4I<1P<1]Dg2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 AddRoundKey_sv_unit
+S1
+R0
+w1553894968
+8C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AddRoundKey.sv
+FC:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AddRoundKey.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1553900623.000000
+!s107 C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AddRoundKey.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao|C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AddRoundKey.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work {+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao}
+Z8 tCvgOpt 0
+n@add@round@key
+vAES
+R1
+R2
+!i10b 1
+!s100 o[3?a3BBL81=<e]^A@=cB1
+IIL1[6POI^BXc0GEjde4Mz1
+R3
+!s105 AES_sv_unit
+S1
+R0
+w1553900618
+8C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv
+FC:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv
+L0 10
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao|C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/AES.sv|
+!i113 1
+R6
+R7
+R8
+n@a@e@s
+vGF_Mul_9
+R1
+Z9 DXx4 work 21 InvMixColumns_sv_unit 0 22 a58:Hfo[W@F5?6EXV@^Gm0
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 `>]4H4@iliSP?dl2@_DE82
+Iz<>6_OWNMa:C<gg9YaM6R2
+Z10 !s105 InvMixColumns_sv_unit
+S1
+R0
+Z11 w1553818983
+Z12 8C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv
+Z13 FC:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv
+L0 74
+R4
+Z14 !s108 1553900622.000000
+Z15 !s107 C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv|
+Z16 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao|C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvMixColumns.sv|
+!i113 1
+R6
+R7
+R8
+n@g@f_@mul_9
+vGF_Mul_b
+R1
+R9
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 LWUM_dc3_P74=OT`RzHoN1
+I_?W?=^ei62Fk:O170bQYA1
+R10
+S1
+R0
+R11
+R12
+R13
+Z17 L0 93
+R4
+R14
+R15
+R16
+!i113 1
+R6
+R7
+R8
+n@g@f_@mul_b
+vGF_Mul_d
+R1
+R9
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 CPB;fC9?WAod]IM0<oISe0
+I`5:@zN:T1blY`9Ze^=PZV3
+R10
+S1
+R0
+R11
+R12
+R13
+L0 112
+R4
+R14
+R15
+R16
+!i113 1
+R6
+R7
+R8
+n@g@f_@mul_d
+vGF_Mul_e
+R1
+R9
+R3
+r1
+!s85 0
+31
+!i10b 1
+!s100 8MSGaQX_X5X4HB0HA=_gj1
+IZ0]Z5LYQB2dC9YboFh[lE3
+R10
+S1
+R0
+R11
+R12
+R13
+L0 131
+R4
+R14
+R15
+R16
+!i113 1
+R6
+R7
+R8
+n@g@f_@mul_e
+vInvMixColumns
+R1
+Z18 !s110 1553900622
+!i10b 1
+!s100 4o]QlL4?^EZ0IeL:kL;`V3
+IV;c[HW_Hc@Rc80lKd6>j93
+R3
+R10
+S1
+R0
+R11
+R12
+R13
+Z19 L0 14
+R4
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 1
+R6
+R7
+R8
+n@inv@mix@columns
+XInvMixColumns_sv_unit
+R1
+Va58:Hfo[W@F5?6EXV@^Gm0
+r1
+!s85 0
+31
+!i10b 1
+!s100 ijnMUG_l2]2^Mo8SMVA001
+Ia58:Hfo[W@F5?6EXV@^Gm0
+!i103 1
+S1
+R0
+R11
+R12
+R13
+L0 65
+R4
+R14
+R15
+R16
+!i113 1
+R6
+R7
+R8
+n@inv@mix@columns_sv_unit
+vInvShiftRows
+R1
+R18
+!i10b 1
+!s100 IGnkNoM>n=3VhTK>Jl2F=1
+IB8gkKK1Of`9j>OdQe;6`l2
+R3
+!s105 InvShiftRows_sv_unit
+S1
+R0
+R11
+8C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvShiftRows.sv
+FC:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvShiftRows.sv
+L0 2
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvShiftRows.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao|C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/InvShiftRows.sv|
+!i113 1
+R6
+R7
+R8
+n@inv@shift@rows
+vInvSubBytes
+R1
+R18
+!i10b 1
+!s100 fYzzGZ]YiaT7z3;]GQMHB1
+I6AGkDbB20j[BozQEFY[:53
+R3
+Z20 !s105 SubBytes_sv_unit
+S1
+R0
+R11
+Z21 8C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/SubBytes.sv
+Z22 FC:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/SubBytes.sv
+R17
+R4
+r1
+!s85 0
+31
+R14
+Z23 !s107 C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/SubBytes.sv|
+Z24 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao|C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/SubBytes.sv|
+!i113 1
+R6
+R7
+R8
+n@inv@sub@bytes
+vKeyExpansion
+R1
+R2
+!i10b 1
+!s100 Bdiae<klOdVNS3GLcDzdF2
+IffkAbF3P5V[cW?R=[oZjV2
+R3
+Z25 !s105 KeyExpansion_sv_unit
+S1
+R0
+R11
+Z26 8C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv
+Z27 FC:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv
+L0 13
+R4
+r1
+!s85 0
+31
+R5
+Z28 !s107 C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv|
+Z29 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao|C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/KeyExpansion.sv|
+!i113 1
+R6
+R7
+R8
+n@key@expansion
+vKeyExpansionOne
+R1
+R2
+!i10b 1
+!s100 2i=U]i?z:7<e:gKRGRX`f2
+IUOZTFDZ[ZVJS^=2YF^MTj1
+R3
+R25
+S1
+R0
+R11
+R26
+R27
+L0 41
+R4
+r1
+!s85 0
+31
+R5
+R28
+R29
+!i113 1
+R6
+R7
+R8
+n@key@expansion@one
+vLab9_mealy_sm
+R1
+R18
+!i10b 1
+!s100 2E7ZhE7eRl5?XQ>46Zk9;2
+IJzg`4AENa0X6J^B=WClgC2
+R3
+!s105 Lab9_mealy_sm_sv_unit
+S1
+R0
+w1553894493
+8C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/Lab9_mealy_sm.sv
+FC:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/Lab9_mealy_sm.sv
+L0 22
+R4
+r1
+!s85 0
+31
+R14
+!s107 C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/Lab9_mealy_sm.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao|C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/Lab9_mealy_sm.sv|
+!i113 1
+R6
+R7
+R8
+n@lab9_mealy_sm
+vSubBytes
+R1
+R18
+!i10b 1
+!s100 J7353OL5=^nSOQEV4PX_03
+IPT@>mOnmN:K?bMa[?X4ZG2
+R3
+R20
+S1
+R0
+R11
+R21
+R22
+R19
+R4
+r1
+!s85 0
+31
+R14
+R23
+R24
+!i113 1
+R6
+R7
+R8
+n@sub@bytes
+vtestbench
+R1
+R2
+!i10b 1
+!s100 9lGGmF7Vb_<UdUm0_h_YP0
+IP5g7[d00kSK5[PV4S9FAN1
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1553898527
+8C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/testbench.sv
+FC:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/testbench.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao|C:/Users/leihaoc2/Documents/GitHub/ECE385/Lab9/leihaoc2/week2 from tianhao/testbench.sv|
+!i113 1
+R6
+R7
+R8

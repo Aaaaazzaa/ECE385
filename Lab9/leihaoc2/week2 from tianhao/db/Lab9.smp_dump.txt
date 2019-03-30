@@ -1,0 +1,14 @@
+
+State Machine - |AES|Lab9_mealy_sm:sm|fstate
+Name fstate.Done fstate.ARK10 fstate.ISB10 fstate.ISR10 fstate.IMC fstate.ARK fstate.ISB fstate.ISR fstate.ARK0 fstate.Reset fstate.Idle 
+fstate.Idle 0 0 0 0 0 0 0 0 0 0 0 
+fstate.Reset 0 0 0 0 0 0 0 0 0 1 1 
+fstate.ARK0 0 0 0 0 0 0 0 0 1 0 1 
+fstate.ISR 0 0 0 0 0 0 0 1 0 0 1 
+fstate.ISB 0 0 0 0 0 0 1 0 0 0 1 
+fstate.ARK 0 0 0 0 0 1 0 0 0 0 1 
+fstate.IMC 0 0 0 0 1 0 0 0 0 0 1 
+fstate.ISR10 0 0 0 1 0 0 0 0 0 0 1 
+fstate.ISB10 0 0 1 0 0 0 0 0 0 0 1 
+fstate.ARK10 0 1 0 0 0 0 0 0 0 0 1 
+fstate.Done 1 0 0 0 0 0 0 0 0 0 1 
