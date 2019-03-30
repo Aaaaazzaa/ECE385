@@ -1,0 +1,48 @@
+module testbench();
+timeunit 10ns; // Half clock cycle at 50 MHz
+   // This is the amount of time represented by #1
+timeprecision 1ns;
+// These signals are internal because the processor will be
+// instantiated as a submodule in testbench.
+// toplevel signal
+logic CLK = 0;
+logic RESET;
+logic AES_START;
+logic AES_DONE;
+logic [127:0] AES_KEY;
+logic [127:0] AES_MSG_ENC;
+logic [127:0] AES_MSG_DEC;
+AES inst(.*);
+// Toggle the clock
+// #1 means wait for a delay of 1 timeunit
+always begin : CLOCK_GENERATION
+#1 Clk = ~Clk;
+end
+initial begin: CLOCK_INITIALIZATION
+    Clk = 0;
+end
+// test signal
+logic stateIn, roundIn, cycleIn, updataIn;
+always_comb
+begin
+  stateIn = inst.sm.fstate;
+  cycleIn = inst.Cycle;
+  updataIn = inst.Update;
+  roundIn = inst.round;
+  
+// 	X <= inst.mult_inst.X;
+// 	A <= inst.mult_inst.A_;
+// 	B <= inst.mult_inst.B_;
+// 	Shift <= inst.mult_inst.Shift;
+// 	Add <= inst.mult_inst.Add;
+// 	Sub <= inst.mult_inst.Sub;
+end
+initial begin: TEST_VECTORS
+#20 RESET = 1;
+#2 AES_START = 0;
+
+
+
+
+end
+endmodule
