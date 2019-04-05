@@ -10,42 +10,79 @@
 # Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+C:/ece385/trial/week2\ from\ tianhao {C:/ece385/trial/week2 from tianhao/Lab9_mealy_sm.sv}
+# vlib lab9_soc
+# ** Warning: (vlib-34) Library already exists at "lab9_soc".
+# vmap lab9_soc lab9_soc
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap lab9_soc lab9_soc 
+# Modifying modelsim.ini
+# vlog -sv -work lab9_soc +incdir+E:/My\ Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/lab9_soc/synthesis/submodules {E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/lab9_soc/synthesis/submodules/avalon_aes_interface.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:24:20 on Mar 30,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/ece385/trial/week2 from tianhao" C:/ece385/trial/week2 from tianhao/Lab9_mealy_sm.sv 
+# Start time: 18:03:44 on Apr 01,2019
+# vlog -reportprogress 300 -sv -work lab9_soc "+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/lab9_soc/synthesis/submodules" E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/lab9_soc/synthesis/submodules/avalon_aes_interface.sv 
+# -- Compiling module avalon_aes_interface
+# 
+# Top level modules:
+# 	avalon_aes_interface
+# End time: 18:03:44 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/My\ Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao {E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/stateISB.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:03:44 on Apr 01,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao" E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/stateISB.sv 
+# -- Compiling module stateISB
+# 
+# Top level modules:
+# 	stateISB
+# End time: 18:03:44 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/My\ Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao {E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/Lab9_mealy_sm.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:03:44 on Apr 01,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao" E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/Lab9_mealy_sm.sv 
 # -- Compiling module Lab9_mealy_sm
 # 
 # Top level modules:
 # 	Lab9_mealy_sm
-# End time: 02:24:20 on Mar 30,2019, Elapsed time: 0:00:00
+# End time: 18:03:44 on Apr 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/ece385/trial/week2\ from\ tianhao {C:/ece385/trial/week2 from tianhao/SubBytes.sv}
+# vlog -sv -work work +incdir+E:/My\ Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao {E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/SubBytes.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:24:21 on Mar 30,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/ece385/trial/week2 from tianhao" C:/ece385/trial/week2 from tianhao/SubBytes.sv 
+# Start time: 18:03:45 on Apr 01,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao" E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/SubBytes.sv 
 # -- Compiling module SubBytes
 # -- Compiling module InvSubBytes
 # 
 # Top level modules:
 # 	SubBytes
 # 	InvSubBytes
-# End time: 02:24:21 on Mar 30,2019, Elapsed time: 0:00:00
+# End time: 18:03:45 on Apr 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/ece385/trial/week2\ from\ tianhao {C:/ece385/trial/week2 from tianhao/InvShiftRows.sv}
+# vlog -sv -work work +incdir+E:/My\ Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao {E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/KeyExpansion.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:24:21 on Mar 30,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/ece385/trial/week2 from tianhao" C:/ece385/trial/week2 from tianhao/InvShiftRows.sv 
+# Start time: 18:03:45 on Apr 01,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao" E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/KeyExpansion.sv 
+# -- Compiling module KeyExpansion
+# -- Compiling module KeyExpansionOne
+# 
+# Top level modules:
+# 	KeyExpansion
+# End time: 18:03:45 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/My\ Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao {E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvShiftRows.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:03:45 on Apr 01,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao" E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvShiftRows.sv 
 # -- Compiling module InvShiftRows
 # 
 # Top level modules:
 # 	InvShiftRows
-# End time: 02:24:21 on Mar 30,2019, Elapsed time: 0:00:00
+# End time: 18:03:45 on Apr 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/ece385/trial/week2\ from\ tianhao {C:/ece385/trial/week2 from tianhao/InvMixColumns.sv}
+# vlog -sv -work work +incdir+E:/My\ Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao {E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvMixColumns.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:24:21 on Mar 30,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/ece385/trial/week2 from tianhao" C:/ece385/trial/week2 from tianhao/InvMixColumns.sv 
+# Start time: 18:03:45 on Apr 01,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao" E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvMixColumns.sv 
 # -- Compiling module InvMixColumns
 # -- Compiling package InvMixColumns_sv_unit
 # -- Compiling module GF_Mul_9
@@ -55,70 +92,43 @@
 # 
 # Top level modules:
 # 	InvMixColumns
-# End time: 02:24:21 on Mar 30,2019, Elapsed time: 0:00:00
+# End time: 18:03:45 on Apr 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/ece385/trial/week2\ from\ tianhao {C:/ece385/trial/week2 from tianhao/AddRoundKey.sv}
+# vlog -sv -work work +incdir+E:/My\ Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao {E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AES.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:24:21 on Mar 30,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/ece385/trial/week2 from tianhao" C:/ece385/trial/week2 from tianhao/AddRoundKey.sv 
-# -- Compiling module AddRoundKey
-# 
-# Top level modules:
-# 	AddRoundKey
-# End time: 02:24:21 on Mar 30,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/ece385/trial/week2\ from\ tianhao {C:/ece385/trial/week2 from tianhao/stateISB.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:24:21 on Mar 30,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/ece385/trial/week2 from tianhao" C:/ece385/trial/week2 from tianhao/stateISB.sv 
-# -- Compiling module stateISB
-# 
-# Top level modules:
-# 	stateISB
-# End time: 02:24:21 on Mar 30,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/ece385/trial/week2\ from\ tianhao {C:/ece385/trial/week2 from tianhao/KeyExpansion.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:24:21 on Mar 30,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/ece385/trial/week2 from tianhao" C:/ece385/trial/week2 from tianhao/KeyExpansion.sv 
-# -- Compiling module KeyExpansion
-# -- Compiling module KeyExpansionOne
-# 
-# Top level modules:
-# 	KeyExpansion
-# End time: 02:24:21 on Mar 30,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/ece385/trial/week2\ from\ tianhao {C:/ece385/trial/week2 from tianhao/AES.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:24:22 on Mar 30,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/ece385/trial/week2 from tianhao" C:/ece385/trial/week2 from tianhao/AES.sv 
+# Start time: 18:03:46 on Apr 01,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao" E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AES.sv 
 # -- Compiling module AES
 # 
 # Top level modules:
 # 	AES
-# End time: 02:24:22 on Mar 30,2019, Elapsed time: 0:00:00
+# End time: 18:03:46 on Apr 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlib lab9_soc
-# ** Warning: (vlib-34) Library already exists at "lab9_soc".
-# vmap lab9_soc lab9_soc
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap lab9_soc lab9_soc 
-# Modifying modelsim.ini
-# 
-# vlog -sv -work work +incdir+C:/ece385/trial/week2\ from\ tianhao {C:/ece385/trial/week2 from tianhao/testbench.sv}
+# vlog -sv -work work +incdir+E:/My\ Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao {E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AddRoundKey.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 02:24:22 on Mar 30,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/ece385/trial/week2 from tianhao" C:/ece385/trial/week2 from tianhao/testbench.sv 
+# Start time: 18:03:46 on Apr 01,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao" E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AddRoundKey.sv 
+# -- Compiling module AddRoundKey
+# 
+# Top level modules:
+# 	AddRoundKey
+# End time: 18:03:46 on Apr 01,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+E:/My\ Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao {E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 18:03:46 on Apr 01,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao" E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/testbench.sv 
 # -- Compiling module testbench
 # 
 # Top level modules:
 # 	testbench
-# End time: 02:24:22 on Mar 30,2019, Elapsed time: 0:00:00
+# End time: 18:03:46 on Apr 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab9_soc -voptargs="+acc"  testbench
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -L lab9_soc -voptargs=""+acc"" testbench 
-# Start time: 02:24:22 on Mar 30,2019
+# Start time: 18:03:47 on Apr 01,2019
 # Loading sv_std.std
 # Loading work.testbench
 # Loading work.AES
@@ -140,27 +150,23 @@
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: leihaoc2  Hostname: DESKTOP-QQ0U41E  ProcessID: 13556
-#           Attempting to use alternate WLF file "./wlftxa9dta".
+#           Attempting to use alternate WLF file "./wlftbcvea8".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftxa9dta
+#           Using alternate file: ./wlftbcvea8
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 1500 ns
-# ** Warning: (vsim-8315) C:/ece385/trial/week2 from tianhao/AES.sv(108): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AES.sv(108): No condition is true in the unique/priority if/case statement.
 #    Time: 0 ps  Iteration: 0  Instance: /testbench/inst
-# ** Warning: (vsim-8315) C:/ece385/trial/week2 from tianhao/AES.sv(108): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AES.sv(108): No condition is true in the unique/priority if/case statement.
 #    Time: 310 ns  Iteration: 2  Instance: /testbench/inst
-# ** Warning: (vsim-8315) C:/ece385/trial/week2 from tianhao/AES.sv(108): No condition is true in the unique/priority if/case statement.
+# ** Warning: (vsim-8315) E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AES.sv(108): No condition is true in the unique/priority if/case statement.
 #    Time: 330 ns  Iteration: 2  Instance: /testbench/inst
-restart -f
+reset -f
+# ambiguous command name "reset": resetGlobalEvcd resetTime
 run 3000ns
-# ** Warning: (vsim-8315) C:/ece385/trial/week2 from tianhao/AES.sv(108): No condition is true in the unique/priority if/case statement.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench/inst
-# ** Warning: (vsim-8315) C:/ece385/trial/week2 from tianhao/AES.sv(108): No condition is true in the unique/priority if/case statement.
-#    Time: 310 ns  Iteration: 2  Instance: /testbench/inst
-# ** Warning: (vsim-8315) C:/ece385/trial/week2 from tianhao/AES.sv(108): No condition is true in the unique/priority if/case statement.
-#    Time: 330 ns  Iteration: 2  Instance: /testbench/inst
-# End time: 02:50:30 on Mar 30,2019, Elapsed time: 0:26:08
-# Errors: 0, Warnings: 8
+# WARNING: No extended dataflow license exists
+# End time: 21:44:14 on Apr 01,2019, Elapsed time: 3:40:27
+# Errors: 1, Warnings: 6
