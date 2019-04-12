@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY AES
+set_global_assignment -name TOP_LEVEL_ENTITY lab9_top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.0.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "16:02:07  MARCH 16, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.0.0 Lite Edition"
@@ -490,7 +490,7 @@ set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -sectio
 set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH testbench -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME testbench -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id testbench
-set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "1500 ns" -section_id testbench
+set_global_assignment -name EDA_TEST_BENCH_RUN_SIM_FOR "2000 ns" -section_id testbench
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME testbench -section_id testbench
 set_global_assignment -name QIP_FILE lab9_soc/synthesis/lab9_soc.qip
 set_global_assignment -name SDC_FILE lab9.sdc

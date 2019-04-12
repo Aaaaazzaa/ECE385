@@ -7,31 +7,31 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dE:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/simulation/modelsim
+Z0 dE:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/simulation/modelsim
 vAddRoundKey
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1554159826
+Z2 !s110 1554816994
 !i10b 1
 !s100 2IbF88??a096PB:[DVzdf0
-IPFZ0B2:9ADKMCc<Fa;3`a0
+IAj^:_BH8E80z]0MeGiY:e3
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 AddRoundKey_sv_unit
 S1
 R0
 Z4 w1554159623
-8E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AddRoundKey.sv
-FE:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AddRoundKey.sv
+8E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AddRoundKey.sv
+FE:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AddRoundKey.sv
 L0 1
 Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z6 !s108 1554159826.000000
-!s107 E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AddRoundKey.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AddRoundKey.sv|
+Z6 !s108 1554816994.000000
+!s107 E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AddRoundKey.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AddRoundKey.sv|
 !i113 1
 Z7 o-sv -work work
-Z8 !s92 -sv -work work {+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao}
+Z8 !s92 -sv -work work +incdir+E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao
 Z9 tCvgOpt 0
 n@add@round@key
 vAES
@@ -39,22 +39,22 @@ R1
 R2
 !i10b 1
 !s100 SK8VOG<:cOHZmO@:j_87i0
-IeX8`fmBBOLXCRH2j8C>_f0
+IE=617zEEdQ4mQ7RI@Icg]3
 R3
 !s105 AES_sv_unit
 S1
 R0
 R4
-8E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AES.sv
-FE:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AES.sv
+8E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AES.sv
+FE:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AES.sv
 L0 10
 R5
 r1
 !s85 0
 31
 R6
-!s107 E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AES.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AES.sv|
+!s107 E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AES.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/AES.sv|
 !i113 1
 R7
 R8
@@ -62,25 +62,25 @@ R9
 n@a@e@s
 vGF_Mul_9
 R1
-Z10 DXx4 work 21 InvMixColumns_sv_unit 0 22 5EWB77Y5;2gLdWo28nXgY0
+Z10 DXx4 work 21 InvMixColumns_sv_unit 0 22 b4fQf8S9XOfjL?KJ<U96l1
 R3
 r1
 !s85 0
 31
 !i10b 1
 !s100 `>]4H4@iliSP?dl2@_DE82
-ILoXo4M:^X[`CVkUBC5SPC0
+Ia?;MV>[JC;P_l2B:oZdNn1
 Z11 !s105 InvMixColumns_sv_unit
 S1
 R0
 R4
-Z12 8E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvMixColumns.sv
-Z13 FE:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvMixColumns.sv
+Z12 8E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvMixColumns.sv
+Z13 FE:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvMixColumns.sv
 L0 74
 R5
-Z14 !s108 1554159825.000000
-Z15 !s107 E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvMixColumns.sv|
-Z16 !s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvMixColumns.sv|
+Z14 !s108 1554816993.000000
+Z15 !s107 E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvMixColumns.sv|
+Z16 !s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvMixColumns.sv|
 !i113 1
 R7
 R8
@@ -95,7 +95,7 @@ r1
 31
 !i10b 1
 !s100 LWUM_dc3_P74=OT`RzHoN1
-IUl8l8W>UOdAba:>Z_P4<a3
+I0[3SL6<H_z<9mVEBHzM390
 R11
 S1
 R0
@@ -121,7 +121,7 @@ r1
 31
 !i10b 1
 !s100 CPB;fC9?WAod]IM0<oISe0
-ISCnkJkeN_A7AMN`3Ak^0?1
+IZWG3<Z>XeZ_@S7GFzI2U80
 R11
 S1
 R0
@@ -147,7 +147,7 @@ r1
 31
 !i10b 1
 !s100 8MSGaQX_X5X4HB0HA=_gj1
-Id3kWUO3oM85dF_N8V@G3W0
+IoPI3Z^I^AcCzYLkg@KYWf1
 R11
 S1
 R0
@@ -164,12 +164,37 @@ R7
 R8
 R9
 n@g@f_@mul_e
+vhexdriver
+R1
+R2
+!i10b 1
+!s100 9aO?^i9QbIaBE;CD84;[50
+IDlAEOaLSK1X[:NWR9m<c=3
+R3
+!s105 hexdriver_sv_unit
+S1
+R0
+Z18 w1554159624
+8E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/hexdriver.sv
+FE:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/hexdriver.sv
+L0 2
+R5
+r1
+!s85 0
+31
+R6
+!s107 E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/hexdriver.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/hexdriver.sv|
+!i113 1
+R7
+R8
+R9
 vInvMixColumns
 R1
-Z18 !s110 1554159825
+Z19 !s110 1554816993
 !i10b 1
 !s100 4o]QlL4?^EZ0IeL:kL;`V3
-ICcDCX^PP8h`In2LNmG1@i0
+I8P_1G[LgjHCCOoBUo:oUW2
 R3
 R11
 S1
@@ -177,7 +202,7 @@ R0
 R4
 R12
 R13
-Z19 L0 14
+Z20 L0 14
 R5
 r1
 !s85 0
@@ -192,13 +217,13 @@ R9
 n@inv@mix@columns
 XInvMixColumns_sv_unit
 R1
-V5EWB77Y5;2gLdWo28nXgY0
+Vb4fQf8S9XOfjL?KJ<U96l1
 r1
 !s85 0
 31
 !i10b 1
 !s100 ijnMUG_l2]2^Mo8SMVA001
-I5EWB77Y5;2gLdWo28nXgY0
+Ib4fQf8S9XOfjL?KJ<U96l1
 !i103 1
 S1
 R0
@@ -217,25 +242,25 @@ R9
 n@inv@mix@columns_sv_unit
 vInvShiftRows
 R1
-R18
+R19
 !i10b 1
 !s100 IGnkNoM>n=3VhTK>Jl2F=1
-Ih]zW^4Pk`o6QAYll=KdFJ1
+IE=kU0AMTN9dX]2aLDIHXa0
 R3
 !s105 InvShiftRows_sv_unit
 S1
 R0
 R4
-8E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvShiftRows.sv
-FE:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvShiftRows.sv
+8E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvShiftRows.sv
+FE:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvShiftRows.sv
 L0 2
 R5
 r1
 !s85 0
 31
 R14
-!s107 E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvShiftRows.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvShiftRows.sv|
+!s107 E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvShiftRows.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/InvShiftRows.sv|
 !i113 1
 R7
 R8
@@ -243,25 +268,25 @@ R9
 n@inv@shift@rows
 vInvSubBytes
 R1
-R18
+Z21 !s110 1554816992
 !i10b 1
 !s100 fYzzGZ]YiaT7z3;]GQMHB1
-IW=Q`eHoj>e1bN4WUO62VH0
+I]2@4hNPSZ2MM]X5ja0Wb83
 R3
-Z20 !s105 SubBytes_sv_unit
+Z22 !s105 SubBytes_sv_unit
 S1
 R0
 R4
-Z21 8E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/SubBytes.sv
-Z22 FE:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/SubBytes.sv
+Z23 8E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/SubBytes.sv
+Z24 FE:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/SubBytes.sv
 R17
 R5
 r1
 !s85 0
 31
-R14
-Z23 !s107 E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/SubBytes.sv|
-Z24 !s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/SubBytes.sv|
+Z25 !s108 1554816992.000000
+Z26 !s107 E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/SubBytes.sv|
+Z27 !s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/SubBytes.sv|
 !i113 1
 R7
 R8
@@ -269,25 +294,25 @@ R9
 n@inv@sub@bytes
 vKeyExpansion
 R1
-R18
+R19
 !i10b 1
 !s100 Bdiae<klOdVNS3GLcDzdF2
-IgAkShjbk5g7=TF[eXPC^M1
+I6clBgjh>h76`c@NUPa]Y70
 R3
-Z25 !s105 KeyExpansion_sv_unit
+Z28 !s105 KeyExpansion_sv_unit
 S1
 R0
 R4
-Z26 8E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/KeyExpansion.sv
-Z27 FE:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/KeyExpansion.sv
+Z29 8E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/KeyExpansion.sv
+Z30 FE:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/KeyExpansion.sv
 L0 13
 R5
 r1
 !s85 0
 31
 R14
-Z28 !s107 E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/KeyExpansion.sv|
-Z29 !s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/KeyExpansion.sv|
+Z31 !s107 E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/KeyExpansion.sv|
+Z32 !s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/KeyExpansion.sv|
 !i113 1
 R7
 R8
@@ -295,25 +320,25 @@ R9
 n@key@expansion
 vKeyExpansionOne
 R1
-R18
+R19
 !i10b 1
 !s100 2i=U]i?z:7<e:gKRGRX`f2
-IE;gYN_W?1fU_l7C>_gEBi0
+IFRMRj3:ED4GLTAgJ00:252
 R3
-R25
+R28
 S1
 R0
 R4
-R26
-R27
+R29
+R30
 L0 41
 R5
 r1
 !s85 0
 31
 R14
-R28
-R29
+R31
+R32
 !i113 1
 R7
 R8
@@ -321,51 +346,76 @@ R9
 n@key@expansion@one
 vLab9_mealy_sm
 R1
-Z30 !s110 1554159824
+R21
 !i10b 1
 !s100 _Vda[G:QRb]M3bQ2ODRDL2
-I`_XDe8PB^k7Qb?YNflG0@3
+I[hWNKh?o4H7llQ`ACHLdS0
 R3
 !s105 Lab9_mealy_sm_sv_unit
 S1
 R0
 R4
-8E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/Lab9_mealy_sm.sv
-FE:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/Lab9_mealy_sm.sv
+8E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/Lab9_mealy_sm.sv
+FE:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/Lab9_mealy_sm.sv
 L0 22
 R5
 r1
 !s85 0
 31
-Z31 !s108 1554159824.000000
-!s107 E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/Lab9_mealy_sm.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/Lab9_mealy_sm.sv|
+R25
+!s107 E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/Lab9_mealy_sm.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/Lab9_mealy_sm.sv|
 !i113 1
 R7
 R8
 R9
 n@lab9_mealy_sm
+vlab9_top
+R1
+R19
+!i10b 1
+!s100 0BF;mfl]35B2WMRT5g1[b1
+ISbVIRda>?lLNa1k48Ufao0
+R3
+!s105 lab9_top_sv_unit
+S1
+R0
+R18
+8E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/lab9_top.sv
+FE:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/lab9_top.sv
+L0 11
+R5
+r1
+!s85 0
+31
+R14
+!s107 E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/lab9_top.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/lab9_top.sv|
+!i113 1
+R7
+R8
+R9
 vstateISB
 R1
-R30
+R21
 !i10b 1
 !s100 iBVQObMYEkabhJnMnJg`?0
-I6TA7;VMcL<lZFdGj2B4[:1
+IX]^kmW23=98;[o4fnhga83
 R3
 !s105 stateISB_sv_unit
 S1
 R0
-Z32 w1554159624
-8E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/stateISB.sv
-FE:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/stateISB.sv
+R18
+8E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/stateISB.sv
+FE:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/stateISB.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R31
-!s107 E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/stateISB.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/stateISB.sv|
+R25
+!s107 E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/stateISB.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/stateISB.sv|
 !i113 1
 R7
 R8
@@ -373,25 +423,25 @@ R9
 nstate@i@s@b
 vSubBytes
 R1
-R18
+R21
 !i10b 1
 !s100 J7353OL5=^nSOQEV4PX_03
-I^^Ym8>>VSnB8?:Sn:n?4j2
+IfbH9dg=h51bVKWcECRYj>2
 R3
-R20
+R22
 S1
 R0
 R4
-R21
-R22
-R19
+R23
+R24
+R20
 R5
 r1
 !s85 0
 31
-R14
-R23
-R24
+R25
+R26
+R27
 !i113 1
 R7
 R8
@@ -399,25 +449,25 @@ R9
 n@sub@bytes
 vtestbench
 R1
-R2
+!s110 1554816995
 !i10b 1
 !s100 R213fe[mDT>XdSeC>9S]11
-Igaz0kFkj^R5`[;=NVg9051
+INWicF]L`CVniE2<f[lFkb3
 R3
 !s105 testbench_sv_unit
 S1
 R0
-R32
-8E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/testbench.sv
-FE:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/testbench.sv
+R18
+8E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/testbench.sv
+FE:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/testbench.sv
 L0 1
 R5
 r1
 !s85 0
 31
-R6
-!s107 E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/testbench.sv|
-!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/testbench.sv|
+!s108 1554816995.000000
+!s107 E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao|E:/My_Document/ECE385/Lab9/Final_version/trial/week2_from_tianhao/testbench.sv|
 !i113 1
 R7
 R8
