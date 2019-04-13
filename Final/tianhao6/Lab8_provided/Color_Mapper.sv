@@ -20,9 +20,24 @@ module  color_mapper ( input              is_avatar,            // Whether curre
                        output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
 
                      );
+	 reg [3:0] backOCM [8192];
+    initial begin
+        $readmemh("sky128_64.txt", backOCM);
+        $display("mem = %p",backOCM);
+    end
+    parameter [9:0] backXDim = 20'd128; // 2^7
+    parameter [9:0] backYDim = 20'd64; // 2^6
 
     logic [7:0] Red, Green, Blue;
+    logic [7:0] backR, backG, backB;
+    logic [6:0] backXPos;
+    logic [5:0] backYPos;
+	 logic [12:0] OCMIdx;
+	 assign OCMIdx = {backYPos, backXPos}; // backYPos << 7 + backXPos
+    assign backXPos = DrawX[6:0]; // drawX % backXDim;
+    assign backYPos =  DrawY[5:0]; // drawY % backYDim;
 
+    paletteToRGB paletteInstL0 (.colorIdx( backOCM[OCMIdx] ), .R(backR), .G(backG), .B(backB));
     // Output colors to VGA
     assign VGA_R = Red;
     assign VGA_G = Green;
@@ -54,9 +69,9 @@ module  color_mapper ( input              is_avatar,            // Whether curre
         else
         begin
             // Background with nice color gradient
-            Red = 8'h3f;
-            Green = 8'h00;
-            Blue = 8'h7f - {1'b0, DrawX[9:3]};
+            Red = backR;
+            Green = backG;
+            Blue = backB;
         end
     end
 

@@ -47,7 +47,6 @@
           <tags>persp.viewSC:com.altera.sbtgui.launch.hardware.ByteStreamConsoleView</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_dTrnZVluEemL0dDQwtkHZw" selectedElement="_dTrna1luEemL0dDQwtkHZw" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_dTrnZlluEemL0dDQwtkHZw" elementId="topLeft" containerData="2500" selectedElement="_dTrnZ1luEemL0dDQwtkHZw">
-              <tags>noFocus</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_dTrnZ1luEemL0dDQwtkHZw" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_dTrof1luEemL0dDQwtkHZw"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_dTrnaFluEemL0dDQwtkHZw" elementId="org.eclipse.cdt.ui.CView" toBeRendered="false" ref="_dTroplluEemL0dDQwtkHZw"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_dTrnaVluEemL0dDQwtkHZw" elementId="org.eclipse.ui.views.ResourceNavigator" toBeRendered="false" ref="_dTrop1luEemL0dDQwtkHZw"/>
@@ -616,7 +615,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_dTsO4FluEemL0dDQwtkHZw" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_u7q_gFlzEem0sdH9trZ68Q" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_dTvR4lluEemL0dDQwtkHZw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_lw_8wF2yEem5F568BzMv2A" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.png" tooltip="Print" command="_dTvR4lluEemL0dDQwtkHZw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_dTsO7lluEemL0dDQwtkHZw" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -640,7 +639,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_dTsPM1luEemL0dDQwtkHZw" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_u7uC0FlzEem0sdH9trZ68Q" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_dTusk1luEemL0dDQwtkHZw"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_lxCZAF2yEem5F568BzMv2A" elementId="org.eclipse.ui.window.pinEditor" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.png" tooltip="Pin Editor" type="Check" command="_dTusk1luEemL0dDQwtkHZw"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_dTsPPVluEemL0dDQwtkHZw" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>

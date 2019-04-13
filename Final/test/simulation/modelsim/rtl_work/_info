@@ -1,0 +1,60 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/My_Document/ECE385/Final/test/simulation/modelsim
+vtest
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1555135280
+!i10b 1
+!s100 _@NV16z4P]O6f`8`ffZJJ0
+I:Q[G=:LIdP?Gd^:2]WS^]1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 test_sv_unit
+S1
+R0
+w1555135266
+8E:/My_Document/ECE385/Final/test/test.sv
+FE:/My_Document/ECE385/Final/test/test.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1555135280.000000
+!s107 E:/My_Document/ECE385/Final/test/test.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Final/test|E:/My_Document/ECE385/Final/test/test.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+E:/My_Document/ECE385/Final/test
+Z8 tCvgOpt 0
+vtestbench
+R1
+R2
+!i10b 1
+!s100 Wf?n[d>5jNQ=dYB8?g7bH1
+IiVdb?7C]3=z3X4`B2KNj?3
+R3
+!s105 testbench_sv_unit
+S1
+R0
+w1555135276
+8E:/My_Document/ECE385/Final/test/testbench.sv
+FE:/My_Document/ECE385/Final/test/testbench.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 E:/My_Document/ECE385/Final/test/testbench.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Final/test|E:/My_Document/ECE385/Final/test/testbench.sv|
+!i113 1
+R6
+R7
+R8

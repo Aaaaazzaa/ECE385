@@ -1,0 +1,5 @@
+module test(input logic [3:0] num,
+				input logic [3:0] divisor,
+				output logic [3:0] result);
+			assign result = 4'd10/4'd5;
+endmodule 

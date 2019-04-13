@@ -1,0 +1,79 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/My_Document/ECE385/Final/tianhao6/Lab8_provided/simulation/modelsim
+vavatar
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1555114851
+!i10b 1
+!s100 eH^8Yn;ocMJc]KiV83mT;0
+IkzgkieRf_Cb2zcMNaY]Gd1
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+!s105 ball_sv_unit
+S1
+R0
+w1554669272
+8E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/ball.sv
+FE:/My_Document/ECE385/Final/tianhao6/Lab8_provided/ball.sv
+L0 17
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1555114851.000000
+!s107 E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/ball.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Final/tianhao6/Lab8_provided|E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/ball.sv|
+!i113 1
+o-sv -work work
+!s92 -sv -work work +incdir+E:/My_Document/ECE385/Final/tianhao6/Lab8_provided
+Z3 tCvgOpt 0
+vvga_clk
+Z4 !s110 1555114842
+!i10b 1
+!s100 OGlLO8;N^^k^>BA7[_bgn1
+I]QDmTN2d@3U9N9bVFmI]=0
+R1
+R0
+Z5 w1552679565
+8E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/vga_clk.v
+FE:/My_Document/ECE385/Final/tianhao6/Lab8_provided/vga_clk.v
+L0 40
+R2
+r1
+!s85 0
+31
+Z6 !s108 1555114842.000000
+!s107 E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/vga_clk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/My_Document/ECE385/Final/tianhao6/Lab8_provided|E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/vga_clk.v|
+!i113 1
+Z7 o-vlog01compat -work work
+!s92 -vlog01compat -work work +incdir+E:/My_Document/ECE385/Final/tianhao6/Lab8_provided
+R3
+vvga_clk_altpll
+R4
+!i10b 1
+!s100 M:z4m=8?iG0fP6=5PXSTl1
+IW9IRC[I_TKo9<b`jnVZj=3
+R1
+R0
+R5
+8E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/db/vga_clk_altpll.v
+FE:/My_Document/ECE385/Final/tianhao6/Lab8_provided/db/vga_clk_altpll.v
+L0 29
+R2
+r1
+!s85 0
+31
+R6
+!s107 E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/db/vga_clk_altpll.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/db|E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/db/vga_clk_altpll.v|
+!i113 1
+R7
+!s92 -vlog01compat -work work +incdir+E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/db
+R3

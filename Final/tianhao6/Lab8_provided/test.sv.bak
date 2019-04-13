@@ -1,0 +1,4 @@
+module test(input logic [3:0] register [4]
+				output logic [1:0] output);
+
+endmodule 

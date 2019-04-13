@@ -4,10 +4,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define INPUT_FILE "sprite_bytes/FinalGameBackground.txt"			// Input filename
-#define OUTPUT_FILE "backgroundSeperate.ram"		// Name of file to output to
+#define INPUT_FILE "tetris_I.txt"			// Input filename
+#define OUTPUT_FILE "testtetris_I.ram"		// Name of file to output to
 #define NUM_COLORS 	4								// Total number of different colors
-#define WIDTH		8								
+#define WIDTH		8
 #define DEPTH		3072
 
 // Use this to define value of each color in the palette
@@ -29,7 +29,7 @@ int main()
 		printf("Unable to open input file!");
 		return -1;
 	}
-                    
+
 	// Get a line, convert it to an integer, and compare it to the palette values.
 	while(fgets(line, num_chars, in) != NULL)
 	{
