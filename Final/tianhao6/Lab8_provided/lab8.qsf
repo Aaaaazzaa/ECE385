@@ -1,18 +1,18 @@
 # -------------------------------------------------------------------------- #
 #
 # Copyright (C) 1991-2014 Altera Corporation. All rights reserved.
-# Your use of Altera Corporation's design tools, logic functions 
-# and other software and tools, and its AMPP partner logic 
-# functions, and any output files from any of the foregoing 
-# (including device programming or simulation files), and any 
-# associated documentation or information are expressly subject 
-# to the terms and conditions of the Altera Program License 
+# Your use of Altera Corporation's design tools, logic functions
+# and other software and tools, and its AMPP partner logic
+# functions, and any output files from any of the foregoing
+# (including device programming or simulation files), and any
+# associated documentation or information are expressly subject
+# to the terms and conditions of the Altera Program License
 # Subscription Agreement, the Altera Quartus II License Agreement,
-# the Altera MegaCore Function License Agreement, or other 
-# applicable license agreement, including, without limitation, 
-# that your use is for the sole purpose of programming logic 
-# devices manufactured by Altera and sold by Altera or its 
-# authorized distributors.  Please refer to the applicable 
+# the Altera MegaCore Function License Agreement, or other
+# applicable license agreement, including, without limitation,
+# that your use is for the sole purpose of programming logic
+# devices manufactured by Altera and sold by Altera or its
+# authorized distributors.  Please refer to the applicable
 # agreement for further details.
 #
 # -------------------------------------------------------------------------- #
@@ -356,47 +356,8 @@ set_location_assignment PIN_AC10 -to FL_WE_N
 set_location_assignment PIN_AE11 -to FL_RST_N
 set_location_assignment PIN_AE12 -to FL_WP_N
 set_location_assignment PIN_Y1 -to FL_RY
-set_location_assignment PIN_AG3 -to SRAM_DQ[15]
-set_location_assignment PIN_AF3 -to SRAM_DQ[14]
-set_location_assignment PIN_AE4 -to SRAM_DQ[13]
-set_location_assignment PIN_AE3 -to SRAM_DQ[12]
-set_location_assignment PIN_AE1 -to SRAM_DQ[11]
-set_location_assignment PIN_AE2 -to SRAM_DQ[10]
-set_location_assignment PIN_AD2 -to SRAM_DQ[9]
-set_location_assignment PIN_AD1 -to SRAM_DQ[8]
-set_location_assignment PIN_AF7 -to SRAM_DQ[7]
-set_location_assignment PIN_AH6 -to SRAM_DQ[6]
-set_location_assignment PIN_AG6 -to SRAM_DQ[5]
-set_location_assignment PIN_AF6 -to SRAM_DQ[4]
-set_location_assignment PIN_AH4 -to SRAM_DQ[3]
-set_location_assignment PIN_AG4 -to SRAM_DQ[2]
-set_location_assignment PIN_AF4 -to SRAM_DQ[1]
-set_location_assignment PIN_AH3 -to SRAM_DQ[0]
-set_location_assignment PIN_AC4 -to SRAM_UB_N
-set_location_assignment PIN_AD4 -to SRAM_LB_N
-set_location_assignment PIN_AF8 -to SRAM_CE_N
-set_location_assignment PIN_AD5 -to SRAM_OE_N
-set_location_assignment PIN_AE8 -to SRAM_WE_N
-set_location_assignment PIN_AE6 -to SRAM_ADDR[5]
-set_location_assignment PIN_AB5 -to SRAM_ADDR[6]
-set_location_assignment PIN_AC5 -to SRAM_ADDR[7]
-set_location_assignment PIN_AF5 -to SRAM_ADDR[8]
-set_location_assignment PIN_T7 -to SRAM_ADDR[9]
-set_location_assignment PIN_AF2 -to SRAM_ADDR[10]
-set_location_assignment PIN_AD3 -to SRAM_ADDR[11]
-set_location_assignment PIN_AB4 -to SRAM_ADDR[12]
-set_location_assignment PIN_AC3 -to SRAM_ADDR[13]
-set_location_assignment PIN_AA4 -to SRAM_ADDR[14]
-set_location_assignment PIN_AB7 -to SRAM_ADDR[0]
-set_location_assignment PIN_AD7 -to SRAM_ADDR[1]
-set_location_assignment PIN_AE7 -to SRAM_ADDR[2]
-set_location_assignment PIN_AC7 -to SRAM_ADDR[3]
-set_location_assignment PIN_AB6 -to SRAM_ADDR[4]
-set_location_assignment PIN_T8 -to SRAM_ADDR[19]
-set_location_assignment PIN_AB8 -to SRAM_ADDR[18]
-set_location_assignment PIN_AB9 -to SRAM_ADDR[17]
-set_location_assignment PIN_AC11 -to SRAM_ADDR[16]
-set_location_assignment PIN_AB11 -to SRAM_ADDR[15]
+
+
 set_location_assignment PIN_U1 -to DRAM_DQ[31]
 set_location_assignment PIN_U4 -to DRAM_DQ[30]
 set_location_assignment PIN_T3 -to DRAM_DQ[29]
@@ -566,6 +527,49 @@ set_location_assignment PIN_G4 -to OTG_DATA[15]
 set_location_assignment PIN_C14 -to ENET0_LINK100
 set_location_assignment PIN_D13 -to ENET1_LINK100
 set_location_assignment PIN_A14 -to ENETCLK_25
+
+set_location_assignment PIN_AC4 -to UB
+set_location_assignment PIN_AE8 -to WE
+set_location_assignment PIN_AD4 -to LB
+set_location_assignment PIN_AD5 -to OE
+set_location_assignment PIN_AF8 -to CE
+set_location_assignment PIN_AH3 -to DataOutSram[0]
+set_location_assignment PIN_AF4 -to DataOutSram[1]
+set_location_assignment PIN_AG4 -to DataOutSram[2]
+set_location_assignment PIN_AH4 -to DataOutSram[3]
+set_location_assignment PIN_AF6 -to DataOutSram[4]
+set_location_assignment PIN_AG6 -to DataOutSram[5]
+set_location_assignment PIN_AH6 -to DataOutSram[6]
+set_location_assignment PIN_AF7 -to DataOutSram[7]
+set_location_assignment PIN_AD1 -to DataOutSram[8]
+set_location_assignment PIN_AD2 -to DataOutSram[9]
+set_location_assignment PIN_AE2 -to DataOutSram[10]
+set_location_assignment PIN_AE1 -to DataOutSram[11]
+set_location_assignment PIN_AE3 -to DataOutSram[12]
+set_location_assignment PIN_AE4 -to DataOutSram[13]
+set_location_assignment PIN_AF3 -to DataOutSram[14]
+set_location_assignment PIN_AG3 -to DataOutSram[15]
+set_location_assignment PIN_AB7 -to ADDR[0]
+set_location_assignment PIN_AD7 -to ADDR[1]
+set_location_assignment PIN_AE7 -to ADDR[2]
+set_location_assignment PIN_AC7 -to ADDR[3]
+set_location_assignment PIN_AB6 -to ADDR[4]
+set_location_assignment PIN_AE6 -to ADDR[5]
+set_location_assignment PIN_AB5 -to ADDR[6]
+set_location_assignment PIN_AC5 -to ADDR[7]
+set_location_assignment PIN_AF5 -to ADDR[8]
+set_location_assignment PIN_T7 -to ADDR[9]
+set_location_assignment PIN_AF2 -to ADDR[10]
+set_location_assignment PIN_AD3 -to ADDR[11]
+set_location_assignment PIN_AB4 -to ADDR[12]
+set_location_assignment PIN_AC3 -to ADDR[13]
+set_location_assignment PIN_AA4 -to ADDR[14]
+set_location_assignment PIN_AB11 -to ADDR[15]
+set_location_assignment PIN_AC11 -to ADDR[16]
+set_location_assignment PIN_AB9 -to ADDR[17]
+set_location_assignment PIN_AB8 -to ADDR[18]
+set_location_assignment PIN_T8 -to ADDR[19]
+
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity DE2_115_Default -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity DE2_115_Default -section_id Top
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
@@ -587,6 +591,9 @@ set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_RO
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name ENABLE_SIGNALTAP ON
 set_global_assignment -name USE_SIGNALTAP_FILE stp1.stp
+set_global_assignment -name SYSTEMVERILOG_FILE ../sramIOHandler.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../SM1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE ../drawPoint.sv
 set_global_assignment -name TEXT_FILE sky128_64.txt
 set_global_assignment -name SYSTEMVERILOG_FILE ../paletteToRGB.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ball.sv
@@ -597,4 +604,9 @@ set_global_assignment -name SYSTEMVERILOG_FILE lab8.sv
 set_global_assignment -name SYSTEMVERILOG_FILE HexDriver.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Color_Mapper.sv
 set_global_assignment -name QIP_FILE vga_clk.qip
+set_global_assignment -name SYSTEMVERILOG_FILE ../frameBuffer.sv
+set_global_assignment -name SMF_FILE ../SM1.smf
+
+set_global_assignment -name VERILOG_CONSTANT_LOOP_LIMIT 307200
+set_global_assignment -name SMF_FILE ../adc_sm.smf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

@@ -1,0 +1,25 @@
+module testbench();
+timeunit 10ns; // Half clock cycle at 50 MHz
+   // This is the amount of time represented by #1
+timeprecision 1ns;
+logic CLK = 0;
+logic [3:0] num1, num2, result;
+logic [3:0] flag; 
+test testinst(.*);
+
+always begin : CLOCK_GENERATION
+#1 CLK = ~CLK;
+end
+initial begin: CLOCK_INITIALIZATION
+    CLK = 0;
+end
+
+always_comb begin
+flag = testinst.result;
+end
+
+initial begin: TEST_VECTORS
+#2 num1 = 1;
+	num2 = 1;
+
+endmodule 

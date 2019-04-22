@@ -1,5 +1,5 @@
 Analysis & Synthesis report for test
-Sat Apr 13 00:57:49 2019
+Sat Apr 20 23:43:09 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -10,16 +10,8 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0
- 11. lpm_mult Parameter Settings by Entity Instance
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
+  6. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -45,20 +37,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Apr 13 00:57:49 2019       ;
+; Analysis & Synthesis Status        ; Failed - Sat Apr 20 23:43:09 2019           ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; test                                        ;
-; Top-level Entity Name              ; test                                        ;
+; Top-level Entity Name              ; audiotest                                   ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 16                                          ;
-;     Total combinational functions  ; 14                                          ;
-;     Dedicated logic registers      ; 2                                           ;
-; Total registers                    ; 2                                           ;
-; Total pins                         ; 13                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -68,7 +60,7 @@ refer to the applicable agreement for further details.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; test               ; test               ;
+; Top-level entity name                                            ; audiotest          ; test               ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -164,242 +156,44 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
-; test.sv                          ; yes             ; User SystemVerilog HDL File  ; E:/My_Document/ECE385/Final/test/test.sv                               ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
-; aglobal180.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc  ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.inc    ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/bypassff.inc    ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altshift.inc    ;         ;
-; db/mult_j8t.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf                       ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
-
-
-+-------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                 ;
-+---------------------------------------------+---------------+
-; Resource                                    ; Usage         ;
-+---------------------------------------------+---------------+
-; Estimated Total logic elements              ; 16            ;
-;                                             ;               ;
-; Total combinational functions               ; 14            ;
-; Logic element usage by number of LUT inputs ;               ;
-;     -- 4 input functions                    ; 2             ;
-;     -- 3 input functions                    ; 6             ;
-;     -- <=2 input functions                  ; 6             ;
-;                                             ;               ;
-; Logic elements by mode                      ;               ;
-;     -- normal mode                          ; 10            ;
-;     -- arithmetic mode                      ; 4             ;
-;                                             ;               ;
-; Total registers                             ; 2             ;
-;     -- Dedicated logic registers            ; 2             ;
-;     -- I/O registers                        ; 0             ;
-;                                             ;               ;
-; I/O pins                                    ; 13            ;
-;                                             ;               ;
-; Embedded Multiplier 9-bit elements          ; 0             ;
-;                                             ;               ;
-; Maximum fan-out node                        ; num2[1]~input ;
-; Maximum fan-out                             ; 7             ;
-; Total fan-out                               ; 56            ;
-; Average fan-out                             ; 1.33          ;
-+---------------------------------------------+---------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                    ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                          ; Entity Name ; Library Name ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+-------------+--------------+
-; |test                           ; 14 (2)              ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 13   ; 0            ; |test                                        ; test        ; work         ;
-;    |lpm_mult:Mult0|             ; 12 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|lpm_mult:Mult0                         ; lpm_mult    ; work         ;
-;       |mult_j8t:auto_generated| ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |test|lpm_mult:Mult0|mult_j8t:auto_generated ; mult_j8t    ; work         ;
-+---------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+--------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                             ;
-+---------------------------------------+----------------------------------------+
-; Register name                         ; Reason for Removal                     ;
-+---------------------------------------+----------------------------------------+
-; inter[0,1]                            ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 2 ;                                        ;
-+---------------------------------------+----------------------------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 2     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-------------------------------------------------------------------------------------+
-; Parameter Settings for Inferred Entity Instance: lpm_mult:Mult0                     ;
-+------------------------------------------------+--------------+---------------------+
-; Parameter Name                                 ; Value        ; Type                ;
-+------------------------------------------------+--------------+---------------------+
-; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
-; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
-; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
-; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
-; LPM_WIDTHA                                     ; 4            ; Untyped             ;
-; LPM_WIDTHB                                     ; 4            ; Untyped             ;
-; LPM_WIDTHP                                     ; 8            ; Untyped             ;
-; LPM_WIDTHR                                     ; 8            ; Untyped             ;
-; LPM_WIDTHS                                     ; 1            ; Untyped             ;
-; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped             ;
-; LPM_PIPELINE                                   ; 0            ; Untyped             ;
-; LATENCY                                        ; 0            ; Untyped             ;
-; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
-; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped             ;
-; USE_EAB                                        ; OFF          ; Untyped             ;
-; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
-; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
-; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
-; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
-; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
-; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
-; CBXI_PARAMETER                                 ; mult_j8t     ; Untyped             ;
-; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
-; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
-; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
-+------------------------------------------------+--------------+---------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------+
-; lpm_mult Parameter Settings by Entity Instance         ;
-+---------------------------------------+----------------+
-; Name                                  ; Value          ;
-+---------------------------------------+----------------+
-; Number of entity instances            ; 1              ;
-; Entity Instance                       ; lpm_mult:Mult0 ;
-;     -- LPM_WIDTHA                     ; 4              ;
-;     -- LPM_WIDTHB                     ; 4              ;
-;     -- LPM_WIDTHP                     ; 8              ;
-;     -- LPM_REPRESENTATION             ; UNSIGNED       ;
-;     -- INPUT_A_IS_CONSTANT            ; NO             ;
-;     -- INPUT_B_IS_CONSTANT            ; NO             ;
-;     -- USE_EAB                        ; OFF            ;
-;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO           ;
-;     -- INPUT_A_FIXED_VALUE            ; Bx             ;
-;     -- INPUT_B_FIXED_VALUE            ; Bx             ;
-+---------------------------------------+----------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 13                          ;
-; cycloneiii_ff         ; 2                           ;
-;     plain             ; 2                           ;
-; cycloneiii_lcell_comb ; 15                          ;
-;     arith             ; 4                           ;
-;         2 data inputs ; 1                           ;
-;         3 data inputs ; 3                           ;
-;     normal            ; 11                          ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 2                           ;
-;                       ;                             ;
-; Max LUT depth         ; 5.10                        ;
-; Average LUT depth     ; 4.13                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sat Apr 13 00:57:34 2019
+    Info: Processing started: Sat Apr 20 23:42:56 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test -c test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file test.sv
-    Info (12023): Found entity 1: test File: E:/My_Document/ECE385/Final/test/test.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
-    Info (12023): Found entity 1: testbench File: E:/My_Document/ECE385/Final/test/testbench.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file testread.sv
-    Info (12023): Found entity 1: testread File: E:/My_Document/ECE385/Final/test/testread.sv Line: 1
-Info (12127): Elaborating entity "test" for the top level hierarchy
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "Mult0" File: E:/My_Document/ECE385/Final/test/test.sv Line: 9
-Info (12130): Elaborated megafunction instantiation "lpm_mult:Mult0" File: E:/My_Document/ECE385/Final/test/test.sv Line: 9
-Info (12133): Instantiated megafunction "lpm_mult:Mult0" with the following parameter: File: E:/My_Document/ECE385/Final/test/test.sv Line: 9
-    Info (12134): Parameter "LPM_WIDTHA" = "4"
-    Info (12134): Parameter "LPM_WIDTHB" = "4"
-    Info (12134): Parameter "LPM_WIDTHP" = "8"
-    Info (12134): Parameter "LPM_WIDTHR" = "8"
-    Info (12134): Parameter "LPM_WIDTHS" = "1"
-    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
-    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
-    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Info (12021): Found 1 design units, including 1 entities, in source file db/mult_j8t.tdf
-    Info (12023): Found entity 1: mult_j8t File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 28
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following LCELL buffer node(s):
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le3a[5]" File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 40
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le5a[4]" File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 42
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le5a[0]" File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 42
-Warning (14284): Synthesized away the following node(s):
-    Warning (14285): Synthesized away the following LCELL buffer node(s):
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le3a[4]" File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 40
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le4a[5]" File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 41
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le4a[4]" File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 41
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le4a[3]" File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 41
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le4a[2]" File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 41
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le5a[3]" File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 42
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le5a[2]" File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 42
-        Warning (14320): Synthesized away node "lpm_mult:Mult0|mult_j8t:auto_generated|le5a[1]" File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 42
-Info (13014): Ignored 17 buffer(s)
-    Info (13016): Ignored 3 CARRY_SUM buffer(s)
-    Info (13019): Ignored 14 SOFT buffer(s)
-Info (286030): Timing-Driven Synthesis is running
-Info (17016): Found the following redundant logic cells in design
-    Info (17048): Logic cell "lpm_mult:Mult0|mult_j8t:auto_generated|le3a[1]" File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 40
-    Info (17048): Logic cell "lpm_mult:Mult0|mult_j8t:auto_generated|le3a[0]" File: E:/My_Document/ECE385/Final/test/db/mult_j8t.tdf Line: 40
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 29 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 4 output pins
-    Info (21061): Implemented 16 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 16 warnings
-    Info: Peak virtual memory: 644 megabytes
-    Info: Processing ended: Sat Apr 13 00:57:49 2019
-    Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:31
+Info (12021): Found 1 design units, including 1 entities, in source file h:/final/tianhao6/lab8_provided/hexdriver.sv
+    Info (12023): Found entity 1: HexDriver File: H:/Final/tianhao6/Lab8_provided/HexDriver.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file h:/final/tianhao6/adc_sm.sv
+    Info (12023): Found entity 1: adc_sm File: H:/Final/tianhao6/adc_sm.sv Line: 22
+Info (12021): Found 0 design units, including 0 entities, in source file testbench2.sv
+Error (10149): Verilog HDL Declaration error at audio_interface.vhd(3): identifier "ieee" is already declared in the present scope File: E:/My_Document/ECE385/Final/test/audio_interface.vhd Line: 3
+Error (10170): Verilog HDL syntax error at audio_interface.vhd(3) near text: ".";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: E:/My_Document/ECE385/Final/test/audio_interface.vhd Line: 3
+Error (10149): Verilog HDL Declaration error at audio_interface.vhd(4): identifier "ieee" is already declared in the present scope File: E:/My_Document/ECE385/Final/test/audio_interface.vhd Line: 4
+Error (10170): Verilog HDL syntax error at audio_interface.vhd(4) near text: ".";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: E:/My_Document/ECE385/Final/test/audio_interface.vhd Line: 4
+Error (10170): Verilog HDL syntax error at audio_interface.vhd(5) near text: ".";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: E:/My_Document/ECE385/Final/test/audio_interface.vhd Line: 5
+Error (10149): Verilog HDL Declaration error at audio_interface.vhd(6): identifier "IEEE" is already declared in the present scope File: E:/My_Document/ECE385/Final/test/audio_interface.vhd Line: 6
+Error (10170): Verilog HDL syntax error at audio_interface.vhd(6) near text: ".";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: E:/My_Document/ECE385/Final/test/audio_interface.vhd Line: 6
+Error (10170): Verilog HDL syntax error at audio_interface.vhd(8) near text: "IS";  expecting ";". Check for and fix any syntax errors that appear immediately before or at the specified keyword. The Intel FPGA Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: E:/My_Document/ECE385/Final/test/audio_interface.vhd Line: 8
+Info (12021): Found 0 design units, including 0 entities, in source file audiotest.sv
+Info (12021): Found 2 design units, including 1 entities, in source file audio_interface.vhd
+    Info (12022): Found design unit 1: audio_interface-Behavorial File: E:/My_Document/ECE385/Final/test/audio_interface.vhd Line: 27
+    Info (12023): Found entity 1: audio_interface File: E:/My_Document/ECE385/Final/test/audio_interface.vhd Line: 8
+Info (144001): Generated suppressed messages file E:/My_Document/ECE385/Final/test/output_files/test.map.smsg
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 8 errors, 1 warning
+    Error: Peak virtual memory: 666 megabytes
+    Error: Processing ended: Sat Apr 20 23:43:09 2019
+    Error: Elapsed time: 00:00:13
+    Error: Total CPU time (on all processors): 00:00:29
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in E:/My_Document/ECE385/Final/test/output_files/test.map.smsg.
 
 

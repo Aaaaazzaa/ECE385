@@ -1,0 +1,54 @@
+module testbench2();
+timeunit 10ns;
+
+timeprecision 1ns;
+logic Clk = 0;
+logic AUD_BCLK = 0;
+always begin : CLOCK_GENERATION
+#1 Clk = ~Clk;
+end
+always begin : CLOCK_GENERATION2
+#2083 AUD_BCLK = ~ AUD_BCLK;
+end
+initial begin: CLOCK_INITIALIZATION
+   Clk = 0;
+   AUD_BCLK = 0;
+end
+logic Reset_h,  interDoneIN, arrDoneIN,  inBlock, nUpdateIN, ClearIN, DoneIN, mUpdateIN;
+logic stateIn;
+logic [10:0] bclkCnt;
+logic [31:0] soundIn [1920];
+//logic [72:0] fout [3839];
+always_ff @ (posedge AUD_BCLK) begin
+	if (bclkCnt >= 11'd1919 || Reset_h) begin
+		bclkCnt = 11'd0;
+	end
+	else begin
+		bclkCnt += 11'd1;
+	end
+end
+
+assign inBlock = ~(bclkCnt == 11'd1919);
+
+
+autoConvolution inst(.*);
+
+
+always_comb begin : INTERNAL_MONITORING
+  stateIn = inst.smInst.fstate;
+  interDoneIN = inst.smInst.interDone;
+  arrDoneIN =  inst.smInst.arrDone;
+  nUpdateIN = inst.smInst.nUpdate;
+  ClearIN = inst.smInst.Clear;
+  DoneIN = inst.smInst.Done;
+  mUpdateIN = inst.smInst.mUpdate;
+  logic stateIn;
+
+end
+
+initial begin: TEST_VECTORS
+#2 Reset_h = 1'b1;
+#2 Reset_h = 1'b0;
+
+end
+endmodule

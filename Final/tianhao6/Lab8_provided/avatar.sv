@@ -2,8 +2,10 @@ module avatar(  input Clk,
                       Reset,
                       frame_clk,
                 input [7:0] keycode,
-                input [9:0] DrawX, DrawY, sky, ground,
-                output logic is_avatar
+                input [9:0] DrawX, DrawY,  // don't need this any more
+                input [9:0] sky, ground,
+                output logic [9:0] spritePosX [2],
+                output logic [9:0] spritePosY [2]
                 );
   //  xcor <= xcorIn
   //  xcorIn = xcorprev + dx
@@ -94,21 +96,22 @@ module avatar(  input Clk,
          xcorIn = xcor;
       end
   end
-
   // Compute whether the pixel corresponds to ball or background
   /* Since the multiplicants are required to be signed, we have to first cast them
      from logic to int (signed by default) before they are multiplied. */
-  int DistX, DistY, Size;
-  assign DistX = DrawX - xcor;
-  assign DistY = DrawY - ycor;
-  assign Size = size;
-  always_comb begin
-      if ( ( DistX*DistX + DistY*DistY) <= (Size*Size) )
-          is_avatar = 1'b1;
-      else
-          is_avatar = 1'b0;
-      /* The ball's (pixelated) circle is generated using the standard circle formula.  Note that while
-         the single line is quite powerful descriptively, it causes the synthesis tool to use up three
-         of the 12 available multipliers on the chip! */
-  end
+  // int DistX, DistY, Size;
+  // assign DistX = DrawX - xcor;
+  // assign DistY = DrawY - ycor;
+  // assign Size = size;
+  // always_comb begin
+  //     if ( ( DistX*DistX + DistY*DistY) <= (Size*Size) )
+  //         is_avatar = 1'b1;
+  //     else
+  //         is_avatar = 1'b0;
+  //     /* The ball's (pixelated) circle is generated using the standard circle formula.  Note that while
+  //        the single line is quite powerful descriptively, it causes the synthesis tool to use up three
+  //        of the 12 available multipliers on the chip! */
+  // end
+  assign spritePosX[0] = xcor;
+  assign spritePosY[0] = ycor;
 endmodule

@@ -1,0 +1,8 @@
+
+State Machine - |autoConvolution|convolutionSM:smInst|fstate
+Name fstate.Idle fstate.interLoop fstate.arrLoop fstate.Start fstate.singleStore 
+fstate.Start 0 0 0 0 0 
+fstate.arrLoop 0 0 1 1 0 
+fstate.interLoop 0 1 0 1 0 
+fstate.Idle 1 0 0 1 0 
+fstate.singleStore 0 0 0 1 1 

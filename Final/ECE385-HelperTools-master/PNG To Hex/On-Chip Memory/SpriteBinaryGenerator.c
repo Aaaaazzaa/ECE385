@@ -4,14 +4,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define INPUT_FILE "On-Chip Memory/sprite_bytes/testImageHorizontal.txt"			// Input filename
-#define OUTPUT_FILE "testImageHorizontal.ram"		// Name of file to output to
-#define NUM_COLORS 	4								// Total number of different colors
+#define INPUT_FILE "sprite_bytes/NpcBllg2.txt"			// Input filename
+#define OUTPUT_FILE "NPC.ram"		// Name of file to output to
+#define NUM_COLORS 	16								// Total number of different colors
 #define WIDTH		8
 #define DEPTH		3072
 
 // Use this to define value of each color in the palette
-const long Palette_Colors []= {0, 24523562, 3172241, 2275140};
+const long Palette_Colors []= {0xFF00FF, 0x9C2E99, 0x5E2464, 0xB4C3EB, 0xF2C571, 0xA9814A, 0xDAEFDE,0x294656, 0xA9BDC5, 0x000003, 0x000004, 0x000005, 0x000006,  0x000007, 0x000008, 0x000009};
 int addr = 0;
 
 int main()

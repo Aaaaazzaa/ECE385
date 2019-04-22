@@ -1,0 +1,44 @@
+module autoConvolution  ( parameter BLOCKSIZE = 480,
+                          parameter BLOCKWIDTH = 9) // log_2(640) = 10
+                        ( input logic AUD_BCLK, Clk, Reset_h, inBlock,
+                        input logic [10:0] bclkCnt,
+                        input logic [31:0] soundIn [BLOCKSIZE],
+                        output logic [72:0] fout [2 * BLOCKSIZE - 1] // 2^31 * 2^31 * 1920; len = 2 * 1920 -1
+                        );
+logic interDone, arrDone, nUpdate, Clear, Done, mUpdate, store;
+reg unsigned [BLOCKWIDTH-1 : 0] n;
+reg signed [BLOCKWIDTH : 0] m;
+reg signed [61+BLOCKWIDTH:0] singleSum;
+
+always_ff @ (posedge Clk) begin
+  if (Clear)
+   singleSum <= 73'd0;
+end
+
+always_ff @ (posedge Clk) begin
+  if (Reset_h) begin
+    n <= 11'd0;
+    m <= -BLOCKSIZE;
+  end
+  if (Clear) begin
+    m <= BLOCKSIZE;
+  end
+  if (nUpdate) begin
+    n <= n + 11'd1;
+  end
+  if (mUpdate) begin
+    m <= m + 12'd1;
+  end
+  if (store && n <= 2 * BLOCKSIZE - 1 ) begin
+    //fout[n] <= singleSum;
+  end
+end
+
+assign arrDone = (n == 2 * BLOCKSIZE - 1); // arr has len 3890
+assign interDone = (m == BLOCKSIZE - 1); // do summation for m [-1920, 1919]
+convolutionSM smInst(.reset(Reset_h), .clock(Clk), .*);
+
+
+
+
+endmodule

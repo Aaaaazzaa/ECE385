@@ -11,88 +11,103 @@
     unique case (colorIdx)
       4'd0: begin
         //0x9C2E99 light purple
+          R = 8'h00;
+          G = 8'h00;
+          B = 8'hFF;
+        end
+      4'd1: begin
+//		  0xFF00FF,
+//		  0x9C2E99,
+//		  0x5E2464,
+//		  0xB4C3EB,
+//		  0xF2C571,
+//		  0xA9814A,
+//		  0xDAEFDE,
+//		  0x294656,
+//		  0xA9BDC5,
+
+
           R = 8'h9C;
           G = 8'h2E;
           B = 8'h99;
         end
-      4'd1: begin
-        //0x5E2464 dark purple
+      4'd2: begin
+        //0xB4C3EB sky blue
           R = 8'h5E;
           G = 8'h24;
           B = 8'h64;
         end
-      4'd2: begin
-        //0xB4C3EB sky blue
-          R = 8'hB4;
-          G = 8'hC3;
-          B = 8'hEB;
-        end
       4'd3: begin
         //0xF2C571 sand yellow
-          R = 8'hF2;
-          G = 8'hC5;
-          B = 8'h71;
+          R = 8'hB4;
+          G = 8'hff;
+          B = 8'h00;
         end
       4'd4: begin
-          R = 8'h00;
-          G = 8'h00;
-          B = 8'h00;
+          R = 8'hF2;
+          G = 8'hE5;
+          B = 8'h71;
         end
       4'd5: begin
-          R = 8'h00;
-          G = 8'h00;
-          B = 8'h00;
+          R = 8'hA9;
+          G = 8'h81;
+          B = 8'h4A;
         end
       4'd6: begin
-          R = 8'h00;
-          G = 8'h00;
-          B = 8'h00;
+          R = 8'hDA;
+          G = 8'hEF;
+          B = 8'hDE;
         end
       4'd7: begin
-          R = 8'h00;
-          G = 8'h00;
-          B = 8'h00;
+          R = 8'h29;
+          G = 8'h46;
+          B = 8'h56;
         end
       4'd8: begin
-          R = 8'h00;
-          G = 8'h00;
-          B = 8'h00;
+          R = 8'hA9;
+          G = 8'hBD;
+          B = 8'hC5;
         end
       4'd9: begin
-          R = 8'h00;
+          R = 8'h99;
           G = 8'h00;
           B = 8'h00;
         end
       4'd10: begin
           R = 8'h00;
           G = 8'h00;
-          B = 8'h00;
+          B = 8'h99;
         end
       4'd11: begin
           R = 8'h00;
-          G = 8'h00;
-          B = 8'h00;
+          G = 8'hff;
+          B = 8'hff;
         end
       4'd12: begin
-          R = 8'h00;
-          G = 8'h00;
+          R = 8'hff;
+          G = 8'hff;
           B = 8'h00;
         end
       4'd13: begin
-          R = 8'h00;
+          R = 8'hff;
           G = 8'h00;
           B = 8'h00;
         end
       4'd14: begin
           R = 8'h00;
-          G = 8'h00;
+          G = 8'hff;
           B = 8'h00;
         end
       4'd15: begin
           R = 8'h00;
           G = 8'h00;
-          B = 8'h00;
+          B = 8'hff;
         end
+      default: begin
+          R = 8'hff;
+          G = 8'hff;
+          B = 8'hff;
+      end
     endcase
   end
 

@@ -13,7 +13,7 @@
 //-------------------------------------------------------------------------
 
 
-module lab8( input               CLOCK_50,
+module lab8( input               CLOCK_50, Reset_h,
              input        [3:0]  KEY,          //bit 0 is set up as Reset
              output logic [6:0]  HEX0, HEX1,
              // VGA Interface
@@ -46,13 +46,11 @@ module lab8( input               CLOCK_50,
                                  DRAM_CLK      //SDRAM Clock
                     );
 
-    logic Reset_h, Clk;
+    logic Clk;
     logic [7:0] keycode;
 
     assign Clk = CLOCK_50;
-    always_ff @ (posedge Clk) begin
-        Reset_h <= ~(KEY[0]);        // The push buttons are active low
-    end
+    
 
     logic [1:0] hpi_addr;
     logic [15:0] hpi_data_in, hpi_data_out;

@@ -4,14 +4,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define INPUT_FILE "tetris_I.txt"			// Input filename
-#define OUTPUT_FILE "testtetris_I.ram"		// Name of file to output to
-#define NUM_COLORS 	4								// Total number of different colors
+#define INPUT_FILE "sprite_bytes/testImageVertical.txt"			// Input filename
+#define OUTPUT_FILE "testImageVertical.ram"		// Name of file to output to
+#define NUM_COLORS 	16								// Total number of different colors
 #define WIDTH		8
 #define DEPTH		3072
 
 // Use this to define value of each color in the palette
-const long Palette_Colors []= {426715, 0, 182960, 255255255};
+const long Palette_Colors []= {0x000000, 0xFBEE13, 0x08A9ED, 0xED028F,0x111111, 0x111115, 0x111125, 0x111113, 0x111117, 0x111116, 0x111145, 0x114514, 0x111167, 0x111190, 0x111178, 0x111166};
 int addr = 0;
 
 int main()

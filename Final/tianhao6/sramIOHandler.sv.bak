@@ -1,0 +1,41 @@
+// module sramIOHandler( input logic Clk,
+//                       input logic [3:0] spriteNum,
+//                       input logic [9:0] frameXOffset, frameYOffset, drawX, drawY,
+//                       input logic [1:0] layer,
+//                       input logic isNpc, isAvatar,
+//                       input logic VGA_VS, // read to spritebuffer only when not at notch
+//                       output logic [19:0] ADDR,
+// 					            output logic CE, UB, LB, OE, WE, //  pin of sram
+//                       // output logic [4499:0] spriteLUT, // 67 * 67 pixel sprite
+//                       output logic readDone, // ?
+//                       output logic [3:0] backcolorIdx,
+//                       output logic [3:0] colorIdx
+//                       output logic isBackground
+//   ); // contains sm, tristate buffer
+  // state xcor, start ycor, xdim, ydim determoined by spriteNum,
+module sramIOHandler( input logic Clk, VGA_VS, Reset_h,
+                      output logic CE, UB, LB, OE, WE,
+                      input logic [19:0]  EndAddr,  // change later
+                      output logic [15:0] DataOutSram
+);
+logic ReadDone, Clear, BufferWE, UpdateAddr;
+logic [19:0] ADDR;
+always_ff @ (posedge Clk) begin
+  if (Reset_h) begin
+    ADDR <= 20'd0;
+  end
+  else if (UpdateAddr) begin
+    ADDR <= ADDR + 20'd1;
+  end
+end
+// sm input pins
+assign  ReadDone = Addr > EndAddr;
+
+// sram input pins
+
+
+sramcontroller sramcontrollerInst (.reset(Reset_h), .clock(Clk), .ReadDone, .Blank(VGA_VS), .Clear(), .BufferWE, .UpdateAddr);
+// blank is a VGA_VS like signal
+
+
+endmodule

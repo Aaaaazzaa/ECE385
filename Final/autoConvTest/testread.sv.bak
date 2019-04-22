@@ -1,0 +1,8 @@
+module testread;
+    //string mem [5];        
+    real mem [5];            
+    initial begin
+        $sreadmemh(mem,2,3,"A","B");
+        $display("mem = %p",mem);
+    end 
+endmodule

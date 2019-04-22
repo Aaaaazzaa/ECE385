@@ -1,0 +1,6 @@
+
+State Machine - |audiotest|adc_sm:SM|fstate
+Name fstate.Init fstate.Store fstate.Gather 
+fstate.Init 0 0 0 
+fstate.Gather 1 0 1 
+fstate.Store 1 1 0 

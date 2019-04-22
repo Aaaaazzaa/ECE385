@@ -1,21 +1,52 @@
-|test
-num1[0] => Add0.IN8
-num1[0] => inter[2].DATAIN
-num1[1] => Add0.IN7
-num1[1] => inter[3].DATAIN
-num1[2] => Add0.IN6
-num1[3] => Add0.IN5
-num2[0] => Mult0.IN3
-num2[1] => Mult0.IN2
-num2[2] => Mult0.IN1
-num2[3] => Mult0.IN0
-Clk => inter[0].CLK
-Clk => inter[1].CLK
-Clk => inter[2].CLK
-Clk => inter[3].CLK
-result[0] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-result[1] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-result[2] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
-result[3] <= Add0.DB_MAX_OUTPUT_PORT_TYPE
+|audiotest
+reset => adc_sm:SM.reset
+clock => adc_sm:SM.clock
+INIT_FINISH => adc_sm:SM.INIT_FINISH
+adc_full => adc_sm:SM.adc_full
+ADCDATA[0] << <GND>
+ADCDATA[1] << <GND>
+ADCDATA[2] << <GND>
+ADCDATA[3] << <GND>
+ADCDATA[4] << <GND>
+ADCDATA[5] << <GND>
+ADCDATA[6] << <GND>
+ADCDATA[7] << <GND>
+ADCDATA[8] << <GND>
+ADCDATA[9] << <GND>
+ADCDATA[10] << <GND>
+ADCDATA[11] << <GND>
+ADCDATA[12] << <GND>
+ADCDATA[13] << <GND>
+ADCDATA[14] << <GND>
+ADCDATA[15] << <GND>
+ADCDATA[16] << <GND>
+ADCDATA[17] << <GND>
+ADCDATA[18] << <GND>
+ADCDATA[19] << <GND>
+ADCDATA[20] << <GND>
+ADCDATA[21] << <GND>
+ADCDATA[22] << <GND>
+ADCDATA[23] << <GND>
+ADCDATA[24] << <GND>
+ADCDATA[25] << <GND>
+ADCDATA[26] << <GND>
+ADCDATA[27] << <GND>
+ADCDATA[28] << <GND>
+ADCDATA[29] << <GND>
+ADCDATA[30] << <GND>
+ADCDATA[31] << <GND>
+
+
+|audiotest|adc_sm:SM
+reset => reg_fstate.Init.OUTPUTSELECT
+reset => reg_fstate.Gather.OUTPUTSELECT
+reset => reg_fstate.Store.OUTPUTSELECT
+reset => INIT.OUTPUTSELECT
+clock => fstate~1.DATAIN
+INIT_FINISH => Selector0.IN0
+INIT_FINISH => reg_fstate.DATAB
+adc_full => Selector1.IN1
+adc_full => Selector0.IN1
+INIT <= INIT.DB_MAX_OUTPUT_PORT_TYPE
 
 

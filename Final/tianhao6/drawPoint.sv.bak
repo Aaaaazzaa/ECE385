@@ -1,0 +1,20 @@
+module drawPoint (  input logic [19:0] drawPtSprite,
+                    input logic [9:0] Ball_X_Pos, Ball_Y_Pos,
+                    output logic [307199:0] drawPtFrame
+
+                    );
+parameter numColSprite = 20'd35;
+parameter spriteDim0 = 20'd17;
+parameter spriteDim1 = 20'd12;
+
+logic [19:0] ptSpriteCol, ptSprtieRo, tmp0, tmp1;
+
+assign ptSpriteDim0 = drawPtSprite / numColSprite;
+assign ptSpriteDim1 = drawPtSprite - ptSpriteDim0 * numColSprite; // k % n
+
+assign tmp1 = ptSpriteDim1 + {10'd0, Ball_X_Pos} - spriteDim0;
+assign tmp0 = ptSpriteDim0 + {10'd0, Ball_Y_Pos} - spriteDim1;
+
+assign drawPtFrame = {307180'd0, tmp1} + {307180'd0, tmp0} * {307200'd640};
+
+endmodule

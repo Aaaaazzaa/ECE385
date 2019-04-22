@@ -14,65 +14,72 @@
 //-------------------------------------------------------------------------
 
 // color_mapper: Decide which color to be output to VGA for each pixel.
-module  color_mapper ( input              is_avatar,            // Whether current pixel belongs to ball                                       //   or background (computed in ball.sv)
+module  color_mapper ( input              is_avatar, VGA_BLANK_EX, Clk,           // Whether current pixel belongs to ball                                       //   or background (computed in ball.sv)
                        input        [9:0] DrawX, DrawY,       // Current pixel coordinates
                        input        [9:0] sky, ground,
                        output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
-
                      );
-	 reg [3:0] backOCM [8192];
-    initial begin
-        $readmemh("sky128_64.txt", backOCM);
-        $display("mem = %p",backOCM);
-    end
-    parameter [9:0] backXDim = 20'd128; // 2^7
-    parameter [9:0] backYDim = 20'd64; // 2^6
-
-    logic [7:0] Red, Green, Blue;
-    logic [7:0] backR, backG, backB;
-    logic [6:0] backXPos;
-    logic [5:0] backYPos;
-	 logic [12:0] OCMIdx;
-	 assign OCMIdx = {backYPos, backXPos}; // backYPos << 7 + backXPos
-    assign backXPos = DrawX[6:0]; // drawX % backXDim;
-    assign backYPos =  DrawY[5:0]; // drawY % backYDim;
-
-    paletteToRGB paletteInstL0 (.colorIdx( backOCM[OCMIdx] ), .R(backR), .G(backG), .B(backB));
     // Output colors to VGA
+		logic [7:0] Red, Blue, Green;
+		paletteToRGB paletteInst (.colorIdx(outData), .R(Red), .G(Green), .B(Blue));
     assign VGA_R = Red;
     assign VGA_G = Green;
     assign VGA_B = Blue;
+		logic [19:0] testPt, testPtIn;
+		reg [3:0] buffer [307200]; //memory <= '{default:'1}
+		logic [3:0] outData;
 
-    // Assign color based on is_ball signal
-    always_comb
-    begin
-        if (is_avatar == 1'b1)
-        begin
-            // White ball
-            Red = 8'hff;
-            Green = 8'hff;
-            Blue = 8'hff;
-        end
-        else if (DrawY <= sky)
-          begin
-            Red = 8'd0;
-            Green = 8'hff;
-            Blue = 8'hff;
-          end
-        else if (DrawY >= ground)
-          begin
-            // 255, 204, 102
-            Red = 8'd255;
-            Green = 8'd204;
-            Blue = 8'd102;
-            end
-        else
-        begin
-            // Background with nice color gradient
-            Red = backR;
-            Green = backG;
-            Blue = backB;
-        end
-    end
+
+    // 2 always
+		always_comb begin
+			testPtIn = testPt + 20'd1;
+		end
+		always_ff @ (posedge Clk) begin
+			if(~VGA_BLANK_EX) begin
+				testPt <= testPtIn;
+			end
+			else begin
+				testPt <= 20'd0;
+			end
+		end
+
+		logic [3:0] inData;
+		assign inData = 4'd3;
+
+		logic [19:0] drawPtVGA;
+		assign drawPtVGA = {10'd0, DrawX} + ({10'd0, DrawY} * 20'd800);
+		always_ff @ (posedge Clk) begin
+				if (testPt <= 20'd307199) begin
+					// if (WE)
+					buffer[testPt] <= inData; // input write to  buffer
+				end
+				if (drawPtVGA <= 20'd307199) begin
+					outData <= buffer[drawPtVGA];
+				end
+
+		end
+
+		// always_comb
+    // begin
+    //     if (is_avatar == 1'b1)
+    //     begin
+    //         // White ball
+    //         inData = 4'd1;
+    //     end
+    //     else if (DrawY <= sky)
+    //       begin
+    //         inData = 4'd2;
+    //       end
+    //     else if (DrawY >= ground)
+    //       begin
+    //         // 255, 204, 102
+    //         inData = 4'd3;
+    //         end
+    //     else
+    //     begin
+    //         inData = 4'd4;
+    //     end
+		// end
+
 
 endmodule

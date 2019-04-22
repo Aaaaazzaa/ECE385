@@ -1,0 +1,9 @@
+module audio(input logic [15:0] LDATA, RDATA
+				 output logic [31:0] ADCDATA);
+logic reset, clock, INIT_FINISH, adc_full, INIT, data_over;
+logic AUD_MCLK, AUD_BCLK, AUD_ADCDAT, AUD_DACDAT, AUD_DACLRCK, AUD_ADCLRCK, I2C_SDAT, I2C_SCLK;
+adc_sm(.*);
+audio_interface(.*, .clk(clock), .Reset(reset));
+	
+
+endmodule 

@@ -43,10 +43,17 @@ module lab8( input               CLOCK_50,
                                  DRAM_CKE,     //SDRAM Clock Enable
                                  DRAM_WE_N,    //SDRAM Write Enable
                                  DRAM_CS_N,    //SDRAM Chip Select
-                                 DRAM_CLK      //SDRAM Clock
+                                 DRAM_CLK,      //SDRAM Clock
+             output logic CE, UB, LB, OE, WE,
+             output logic [15:0] DataOutSram,
+             output logic [19:0] ADDR
                     );
 
-    logic Reset_h, Clk;
+    logic Reset_h, Clk, VGA_BLANK_EX;
+    // temp
+    // logic [9:0] spritePosX [2];
+    // logic [9:0] spritePosY [2];
+    logic [9:0] Ball_X_Pos, Ball_Y_Pos;
     // parameter
     logic [9:0] sky = 10'd100;
     logic [9:0] ground = 10'd400;
@@ -112,7 +119,7 @@ module lab8( input               CLOCK_50,
     vga_clk vga_clk_instance(.inclk0(Clk), .c0(VGA_CLK));
 
     // TODO: Fill in the connections for the rest of the modules
-    VGA_controller vga_controller_instance(.Clk, .Reset(Reset_h), .VGA_HS, .VGA_VS, .VGA_CLK, .VGA_BLANK_N, .VGA_SYNC_N, .DrawX, .DrawY);
+    VGA_controller vga_controller_instance(.Clk, .Reset(Reset_h), .VGA_HS, .VGA_VS, .VGA_CLK, .VGA_BLANK_N, .VGA_SYNC_N, .DrawX, .DrawY, .VGA_BLANK_EX);
 
     // Which signal should be frame_clk?
     logic frame_clk; // register
@@ -126,9 +133,10 @@ module lab8( input               CLOCK_50,
         frame_clk = 1'b0;
     end
 
-    avatar avatar_instance(.Clk, .Reset(Reset_h), .frame_clk, .DrawX, .DrawY, .is_avatar, .keycode, .sky, .ground, .gravity);
+    avatar avatar_instance(.Clk, .Reset(Reset_h), .frame_clk, .DrawX, .DrawY, .is_avatar, .keycode, .sky, .ground, .gravity, .Ball_X_Pos, .Ball_Y_Pos);
 
-    color_mapper color_instance(.is_avatar, .DrawX, .DrawY, .VGA_R, .VGA_G, .VGA_B, .sky, .ground); // DrawX not sure
+    // color_mapper color_instance(.DrawX, .DrawY, .VGA_R, .VGA_G, .VGA_B, .sky, .ground, .Ball_X_Pos, .Ball_Y_Pos, .VGA_BLANK_EX, .Reset_h, .is_avatar); // DrawX not sure
+     color_mapper color_instance(.DrawX, .DrawY, .VGA_R, .VGA_G, .VGA_B, .sky, .ground, .is_avatar); // DrawX not sure
 
     // Display keycode on hex display
     HexDriver hex_inst_0 (keycode[3:0], HEX0);

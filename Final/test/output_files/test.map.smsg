@@ -1,0 +1,2 @@
+Warning (10273): Verilog HDL warning at HexDriver.sv(23): extended using "x" or "z" File: H:/Final/tianhao6/Lab8_provided/HexDriver.sv Line: 23
+Info (10281): Verilog HDL Declaration information at adc_sm.sv(24): object "INIT" differs only in case from object "Init" in the same scope File: H:/Final/tianhao6/adc_sm.sv Line: 24

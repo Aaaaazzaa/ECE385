@@ -19,7 +19,8 @@ module  avatar ( input         Clk,                // 50 MHz clock
                              frame_clk,          // The clock indicating a new frame (~60Hz)
                input [9:0]   DrawX, DrawY, sky, ground, gravity,       // Current pixel coordinates
                input [7:0]   keycode,
-               output logic  is_avatar             // Whether current pixel belongs to ball or background
+               output logic  is_avatar,             // Whether current pixel belongs to ball or background
+               output logic [9:0] Ball_X_Pos, Ball_Y_Pos
               );
 
     parameter [9:0] Ball_X_Center = 10'd320;  // Center position on the X axis
@@ -30,7 +31,7 @@ module  avatar ( input         Clk,                // 50 MHz clock
     parameter [9:0] Ball_Y_Step = 10'd10;      // Step size on the Y axis
     parameter [9:0] Ball_Size = 10'd4;        // Ball size
 
-    logic [9:0] Ball_X_Pos,     Ball_X_Motion,      Ball_Y_Pos,      Ball_Y_Motion; // registers Q
+    logic [9:0]      Ball_X_Motion,            Ball_Y_Motion; // registers Q
     logic [9:0] Ball_X_Pos_in,  Ball_X_Motion_in,   Ball_Y_Pos_in,   Ball_Y_Motion_in; // tmp same as D
     //////// Do not modify the always_ff blocks. ////////
     // Detect rising edge of frame_clk
