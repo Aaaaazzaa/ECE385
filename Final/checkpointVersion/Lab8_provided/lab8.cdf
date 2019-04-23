@@ -3,6 +3,8 @@ JedecChain;
 	FileRevision(JESD32A);
 	DefaultMfr(6E);
 
+	P ActionCode(Cfg)
+		Device PartName(EP4CE115F29) Path("E:/My_Document/ECE385/Final/checkpointVersion/Lab8_provided/") File("lab8.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

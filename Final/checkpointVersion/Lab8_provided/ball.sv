@@ -19,7 +19,10 @@ module  avatar ( input         Clk,                // 50 MHz clock
                              frame_clk,          // The clock indicating a new frame (~60Hz)
                input [9:0]   DrawX, DrawY, sky, ground, gravity,       // Current pixel coordinates
                input [7:0]   keycode,
-               output logic  is_avatar             // Whether current pixel belongs to ball or background
+               output[9:0]   Ball_X_Pos, Ball_Y_Pos,
+               output logic  is_avatar,             // Whether current pixel belongs to ball or background
+               output logic  xFlag,
+               output logic xDirection
               );
 
     parameter [9:0] Ball_X_Center = 10'd320;  // Center position on the X axis
@@ -28,12 +31,15 @@ module  avatar ( input         Clk,                // 50 MHz clock
     parameter [9:0] Ball_X_Max = 10'd639;     // Rightmost point on the X axis
     parameter [9:0] Ball_X_Step = 10'd2;      // Step size on the X axis
     parameter [9:0] Ball_Y_Step = 10'd10;      // Step size on the Y axis
-    parameter [9:0] Ball_Size = 10'd4;        // Ball size
+    parameter [9:0] Ball_Size = 10'd16;        // Ball size
 
-    logic [9:0] Ball_X_Pos,     Ball_X_Motion,      Ball_Y_Pos,      Ball_Y_Motion; // registers Q
+    logic [9:0] Ball_X_Motion,  Ball_Y_Motion; // registers Q
     logic [9:0] Ball_X_Pos_in,  Ball_X_Motion_in,   Ball_Y_Pos_in,   Ball_Y_Motion_in; // tmp same as D
+
+    logic[5:0] xCnt;
     //////// Do not modify the always_ff blocks. ////////
     // Detect rising edge of frame_clk
+
     logic frame_clk_delayed, frame_clk_rising_edge;
     always_ff @ (posedge Clk) begin
         frame_clk_delayed <= frame_clk;
@@ -146,7 +152,7 @@ module  avatar ( input         Clk,                // 50 MHz clock
     assign DistY = DrawY - Ball_Y_Pos;
     assign Size = Ball_Size;
     always_comb begin
-        if ( ( DistX*DistX + DistY*DistY) <= (Size*Size) )
+        if ( DistX <= Ball_Size && DistY <= Ball_Size  )
             is_avatar = 1'b1;
         else
             is_avatar = 1'b0;
@@ -155,4 +161,19 @@ module  avatar ( input         Clk,                // 50 MHz clock
            of the 12 available multipliers on the chip! */
     end
 
+
+    // assign xDirection = (keycode == 8'h04) ? 1'd1 : 1'd0;
+    always_ff @ ( posedge frame_clk ) begin
+	 // default
+       xDirection <= ~(keycode == 8'h04);
+	     xFlag = (xCnt >= 6'd5);
+      if (Reset || xCnt >= 6'd10 || keycode == 8'd0) begin
+        xCnt = 10'd0;
+        // yFlag = 1'd0;
+      end
+      if ( keycode != 8'd0)  begin
+        // right
+        xCnt <= xCnt + 6'd1;
+      end
+    end
 endmodule

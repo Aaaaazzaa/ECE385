@@ -19,8 +19,10 @@ module DE2_Audio_Example (
 	AUD_DACDAT,
 
 	I2C_SCLK,
+	EXP_SOUNDIN,
 	SW,
-	HEX0, HEX1, HEX2, HEX3, HEX4, HEX4, HEX5, HEX6, HEX7, LEDG
+	SUMRESULT,
+	EXP_SOUNDIN
 );
 
 /*****************************************************************************
@@ -52,8 +54,8 @@ output				AUD_XCK;
 output				AUD_DACDAT;
 
 output				I2C_SCLK;
-output 		[6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX4, HEX5, HEX6, HEX7;
-output 		[8:0] LEDG;
+output [31:0] EXP_SOUNDIN;
+output [25:0] SUMRESULT;
 
 /*****************************************************************************
  *                 Internal Wires and Registers Declarations                 *
@@ -70,7 +72,8 @@ wire		[31:0]	right_channel_audio_out;
 wire 		[31:0]  absData;
 wire				write_audio_out;
 wire 						isVoice;
-
+wire 		[31:0] EXP_SOUNDIN;
+wire 		[25:0] SUMRESULT;
 // Internal Registers
 
 reg [18:0] delay_cnt, delay;
@@ -218,4 +221,6 @@ end
 assign isVoice = (sumResult >= 26'd32500) ? 1'd1 : 1'd0;
 assign LEDG[8] = isVoice;
 // assign inBlock = ~(bclkCnt == 11'd1919);
+assign EXP_SOUNDIN = left_channel_audio_in;
+assign SUMRESULT = sumResult;
 endmodule

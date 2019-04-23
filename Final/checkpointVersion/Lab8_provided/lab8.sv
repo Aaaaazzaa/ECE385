@@ -52,7 +52,8 @@ module lab8( input               CLOCK_50,
     logic [9:0] ground = 10'd400;
     logic [9:0] gravity = 10'd1;
     logic [7:0] keycode;
-
+    logic xFlag, xDirection;
+    logic [9:0] Ball_X_Pos, Ball_Y_Pos;
     assign Clk = CLOCK_50;
     always_ff @ (posedge Clk) begin
         Reset_h <= ~(KEY[0]);        // The push buttons are active low
@@ -126,9 +127,9 @@ module lab8( input               CLOCK_50,
         frame_clk = 1'b0;
     end
 
-    avatar avatar_instance(.Clk, .Reset(Reset_h), .frame_clk, .DrawX, .DrawY, .is_avatar, .keycode, .sky, .ground, .gravity);
+    avatar avatar_instance(.Clk, .Reset(Reset_h), .frame_clk, .DrawX, .DrawY, .is_avatar, .keycode, .sky, .ground, .gravity, .xFlag, .xDirection, .Ball_X_Pos, .Ball_Y_Pos);
 
-    color_mapper color_instance(.is_avatar, .DrawX, .DrawY, .VGA_R, .VGA_G, .VGA_B, .sky, .ground); // DrawX not sure
+    color_mapper color_instance(.is_avatar, .DrawX, .DrawY, .VGA_R, .VGA_G, .VGA_B, .sky, .ground, .xFlag, .xDirection, .Ball_X_Pos, .Ball_Y_Pos); // DrawX not sure
 
     // Display keycode on hex display
     HexDriver hex_inst_0 (keycode[3:0], HEX0);
