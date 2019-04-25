@@ -1,4 +1,12 @@
 
+State Machine - |DE2_Audio_Example|autoConvolution:dspInst|convolutionSM:smInst|fstate
+Name fstate.Idle fstate.interLoop fstate.arrLoop fstate.Start fstate.singleStore 
+fstate.Start 0 0 0 0 0 
+fstate.arrLoop 0 0 1 1 0 
+fstate.interLoop 0 1 0 1 0 
+fstate.Idle 1 0 0 1 0 
+fstate.singleStore 0 0 0 1 1 
+
 State Machine - |DE2_Audio_Example|avconf:avc|mSetup_ST
 Name mSetup_ST.0000 mSetup_ST.0010 mSetup_ST.0001 
 mSetup_ST.0000 0 0 0 

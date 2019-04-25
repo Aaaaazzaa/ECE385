@@ -22,7 +22,8 @@ module  avatar ( input         Clk,                // 50 MHz clock
                output[9:0]   Ball_X_Pos, Ball_Y_Pos,
                output logic  is_avatar,             // Whether current pixel belongs to ball or background
                output logic  xFlag,
-               output logic xDirection
+               output logic xDirection,
+               output logic stopDirection
               );
 
     parameter [9:0] Ball_X_Center = 10'd320;  // Center position on the X axis
@@ -151,8 +152,20 @@ module  avatar ( input         Clk,                // 50 MHz clock
     assign DistX = DrawX - Ball_X_Pos;
     assign DistY = DrawY - Ball_Y_Pos;
     assign Size = Ball_Size;
+    always_ff @ (posedge frame_clk) begin
+      if (Ball_X_Motion > Ball_X_Motion_in) begin
+        stopDirection = 1'b1;
+      end
+      else if (Ball_X_Motion < Ball_X_Motion_in) begin
+        stopDirection = 1'b0;
+      end
+      else begin
+        stopDirection = stopDirection;
+      end
+    end
+    //assign stopDirection = (Ball_X_Motion > Ball_X_Motion_in ) ? 1'b1 : 1'b0;
     always_comb begin
-        if ( DistX <= Ball_Size && DistY <= Ball_Size  )
+        if ( DistX <= Ball_Size && DistY < Ball_Size  )
             is_avatar = 1'b1;
         else
             is_avatar = 1'b0;

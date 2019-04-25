@@ -19,10 +19,12 @@ module DE2_Audio_Example (
 	AUD_DACDAT,
 
 	I2C_SCLK,
-	EXP_SOUNDIN,
+	//EXP_SOUNDIN,
 	SW,
-	SUMRESULT,
-	EXP_SOUNDIN
+	//SUMRESULT,
+	HEX0, HEX1, HEX2, HEX3, HEX4, HEX4, HEX5, HEX6, HEX7,
+	LEDG, LEDR
+	//EXP_SOUNDIN
 );
 
 /*****************************************************************************
@@ -54,9 +56,11 @@ output				AUD_XCK;
 output				AUD_DACDAT;
 
 output				I2C_SCLK;
-output [31:0] EXP_SOUNDIN;
-output [25:0] SUMRESULT;
-
+//output [31:0] EXP_SOUNDIN;
+//output [25:0] SUMRESULT;
+output [6:0] HEX0, HEX1, HEX2, HEX3, HEX4, HEX4, HEX5, HEX6, HEX7;
+output [8:0] LEDG;
+output [17:0] LEDR;
 /*****************************************************************************
  *                 Internal Wires and Registers Declarations                 *
  *****************************************************************************/
@@ -72,17 +76,19 @@ wire		[31:0]	right_channel_audio_out;
 wire 		[31:0]  absData;
 wire				write_audio_out;
 wire 						isVoice;
-wire 		[31:0] EXP_SOUNDIN;
-wire 		[25:0] SUMRESULT;
+//wire 		[31:0] EXP_SOUNDIN;
+//wire 		[25:0] SUMRESULT;
 // Internal Registers
 
 reg [18:0] delay_cnt, delay;
 reg snd;
 reg 		[25:0]  blockSum;
 reg 		[25:0]  sumResult;
-reg 		[10:0]	bclkCnt;
+reg 		[8:0]	bclkCnt;
 reg     [1:0]   Cnt4;
 reg 	  			 	BCLK4;
+reg 		[13:0] pitch;
+reg 	signed [31:0] soundIn [480];
 // State Machine Registers
 parameter unsigned [10:0] sampleNumber = 11'd480;
 /*****************************************************************************
@@ -164,8 +170,8 @@ HexDriver inst1(.In0(sumResult[7:4]), .Out0(HEX1));
 HexDriver inst2(.In0(sumResult[11:8]), .Out0(HEX2));
 HexDriver inst3(.In0(sumResult[15:12]), .Out0(HEX3));
 HexDriver inst4(.In0(sumResult[19:16]), .Out0(HEX4));
-HexDriver inst5(.In0(sumResult[23:20]), .Out0(HEX5));
-HexDriver inst6(.In0({2'd0, sumResult[25:24]}), .Out0(HEX6));
+HexDriver inst5(.In0(pitch[3:0]), .Out0(HEX5));
+HexDriver inst6(.In0(pitch[7:4]), .Out0(HEX6));
 //HexDriver inst7(.In0(absData[31:28]), .Out0(HEX7));
 
 // abs(left_channel_audio_in)
@@ -215,12 +221,38 @@ always_ff @ (posedge BCLK4) begin
 		blockSum <= 26'd0;
 	end
 	else begin
+		soundIn[bclkCnt] <= left_channel_audio_in;
 		blockSum <= blockSum + {10'd0, absData[31:16]};
 	end
 end
-assign isVoice = (sumResult >= 26'd32500) ? 1'd1 : 1'd0;
+assign isVoice = (sumResult >= 26'd20000) ? 1'd1 : 1'd0;
 assign LEDG[8] = isVoice;
-// assign inBlock = ~(bclkCnt == 11'd1919);
-assign EXP_SOUNDIN = left_channel_audio_in;
-assign SUMRESULT = sumResult;
+assign inBlock = ~(bclkCnt == 9'd479);
+//assign EXP_SOUNDIN = left_channel_audio_in;
+//assign SUMRESULT = sumResult;
+autoConvolution dspInst(.BCLK4, .Clk(CLOCK_50), .Reset_h(~KEY[0]), .inBlock, .bclkCnt, .soundIn, .pitch);
+always_comb begin
+	if (pitch > 14'd255 || pitch < 14'd85)
+		LEDR[17] = 1'b1;
+	else
+		LEDR[17] = 1'b0;
+	LEDR[0] = (pitch >= 14'd85);
+	LEDR[1] = (pitch >= 14'd95);
+	LEDR[2] = (pitch >= 14'd105);
+	LEDR[3] = (pitch >= 14'd115);
+	LEDR[4] = (pitch >= 14'd125);
+	LEDR[5] = (pitch >= 14'd135);
+	LEDR[6] = (pitch >= 14'd145);
+	LEDR[7] = (pitch >= 14'd155);
+
+	LEDR[8] = (pitch >= 14'd165);
+	LEDR[9] = (pitch >= 14'd175);
+	LEDR[10] = (pitch >= 14'd185);
+	LEDR[11] = (pitch >= 14'd195);
+	LEDR[12] = (pitch >= 14'd205);
+	LEDR[13] = (pitch >= 14'd215);
+	LEDR[14] = (pitch >= 14'd225);
+	LEDR[15] = (pitch >= 14'd235);
+	LEDR[16] = (pitch >= 14'd245);
+end
 endmodule

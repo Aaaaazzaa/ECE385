@@ -1,5 +1,5 @@
 Analysis & Synthesis report for DE2_Audio_Example
-Sun Apr 21 18:17:23 2019
+Wed Apr 24 23:41:42 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -14,43 +14,55 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
-  9. State Machine - |DE2_Audio_Example|avconf:avc|mSetup_ST
- 10. User-Specified and Inferred Latches
- 11. Registers Removed During Synthesis
- 12. Removed Registers Triggering Further Register Optimizations
- 13. General Register Statistics
- 14. Inverted Register Statistics
- 15. Multiplexer Restructuring Statistics (Restructuring Performed)
- 16. Source assignments for Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|altsyncram_7tb1:FIFOram
- 17. Source assignments for Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|altsyncram_7tb1:FIFOram
- 18. Source assignments for Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|altsyncram_7tb1:FIFOram
- 19. Source assignments for Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|altsyncram_7tb1:FIFOram
- 20. Parameter Settings for User Entity Instance: Top-level Entity: |DE2_Audio_Example
- 21. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
- 22. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
- 23. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
- 24. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
- 25. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
- 26. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
- 27. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
- 28. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
- 29. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
- 30. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
- 31. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
- 32. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component
- 33. Parameter Settings for User Entity Instance: avconf:avc
- 34. scfifo Parameter Settings by Entity Instance
- 35. altpll Parameter Settings by Entity Instance
- 36. Port Connectivity Checks: "HexDriver:inst6"
- 37. Port Connectivity Checks: "avconf:avc|I2C_Controller:u0"
- 38. Port Connectivity Checks: "Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock"
- 39. Port Connectivity Checks: "Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer"
- 40. Port Connectivity Checks: "Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer"
- 41. Port Connectivity Checks: "Audio_Controller:Audio_Controller"
- 42. Post-Synthesis Netlist Statistics for Top Partition
- 43. Elapsed Time Per Partition
- 44. Analysis & Synthesis Messages
- 45. Analysis & Synthesis Suppressed Messages
+  9. Analysis & Synthesis DSP Block Usage Summary
+ 10. State Machine - |DE2_Audio_Example|autoConvolution:dspInst|convolutionSM:smInst|fstate
+ 11. State Machine - |DE2_Audio_Example|avconf:avc|mSetup_ST
+ 12. User-Specified and Inferred Latches
+ 13. Registers Removed During Synthesis
+ 14. Removed Registers Triggering Further Register Optimizations
+ 15. General Register Statistics
+ 16. Inverted Register Statistics
+ 17. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 18. Source assignments for Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|altsyncram_7tb1:FIFOram
+ 19. Source assignments for Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|altsyncram_7tb1:FIFOram
+ 20. Source assignments for Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|altsyncram_7tb1:FIFOram
+ 21. Source assignments for Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|altsyncram_7tb1:FIFOram
+ 22. Parameter Settings for User Entity Instance: Top-level Entity: |DE2_Audio_Example
+ 23. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer
+ 24. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter
+ 25. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO
+ 26. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|scfifo:Sync_FIFO
+ 27. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO
+ 28. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO
+ 29. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer
+ 30. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO
+ 31. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO
+ 32. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO
+ 33. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO
+ 34. Parameter Settings for User Entity Instance: Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock|altpll:altpll_component
+ 35. Parameter Settings for User Entity Instance: avconf:avc
+ 36. Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0
+ 37. Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMod:mod0|lpm_divide:Mod0
+ 38. Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMod:mod1|lpm_divide:Mod0
+ 39. Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMult:multInst|lpm_mult:Mult0
+ 40. Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0
+ 41. Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMod:mod1|lpm_mult:Mult0
+ 42. Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMod:mod0|lpm_divide:Div0
+ 43. Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMod:mod1|lpm_divide:Div0
+ 44. scfifo Parameter Settings by Entity Instance
+ 45. altpll Parameter Settings by Entity Instance
+ 46. lpm_mult Parameter Settings by Entity Instance
+ 47. Port Connectivity Checks: "autoConvolution:dspInst|signedMod:mod1"
+ 48. Port Connectivity Checks: "autoConvolution:dspInst|signedMod:mod0"
+ 49. Port Connectivity Checks: "avconf:avc|I2C_Controller:u0"
+ 50. Port Connectivity Checks: "Audio_Controller:Audio_Controller|Audio_Clock:Audio_Clock"
+ 51. Port Connectivity Checks: "Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer"
+ 52. Port Connectivity Checks: "Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer"
+ 53. Port Connectivity Checks: "Audio_Controller:Audio_Controller"
+ 54. Post-Synthesis Netlist Statistics for Top Partition
+ 55. Elapsed Time Per Partition
+ 56. Analysis & Synthesis Messages
+ 57. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -76,19 +88,19 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 21 18:17:23 2019       ;
+; Analysis & Synthesis Status        ; Successful - Wed Apr 24 23:41:40 2019       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; DE2_Audio_Example                           ;
 ; Top-level Entity Name              ; DE2_Audio_Example                           ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 790                                         ;
-;     Total combinational functions  ; 740                                         ;
-;     Dedicated logic registers      ; 383                                         ;
-; Total registers                    ; 383                                         ;
-; Total pins                         ; 90                                          ;
+; Total logic elements               ; 96,267                                      ;
+;     Total combinational functions  ; 46,401                                      ;
+;     Dedicated logic registers      ; 50,386                                      ;
+; Total registers                    ; 50386                                       ;
+; Total pins                         ; 108                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 16,384                                      ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 8                                           ;
 ; Total PLLs                         ; 1                                           ;
 +------------------------------------+---------------------------------------------+
 
@@ -197,6 +209,11 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
 ; File Name with User-Entered Path                   ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                                                      ; Library ;
 +----------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
+; signedMult.sv                                      ; yes             ; User SystemVerilog HDL File  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMult.sv                                      ;         ;
+; signedMod.sv                                       ; yes             ; User SystemVerilog HDL File  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv                                       ;         ;
+; findMaxIdx.sv                                      ; yes             ; User SystemVerilog HDL File  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/findMaxIdx.sv                                      ;         ;
+; convolutionSM.sv                                   ; yes             ; User SystemVerilog HDL File  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/convolutionSM.sv                                   ;         ;
+; autoConvolution.sv                                 ; yes             ; User SystemVerilog HDL File  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/autoConvolution.sv                                 ;         ;
 ; HexDriver.sv                                       ; yes             ; User SystemVerilog HDL File  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/HexDriver.sv                                       ;         ;
 ; avconf/avconf.v                                    ; yes             ; User Verilog HDL File        ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v                                    ;         ;
 ; avconf/I2C_Controller.v                            ; yes             ; User Verilog HDL File        ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/I2C_Controller.v                            ;         ;
@@ -226,6 +243,41 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; stratix_pll.inc                                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratix_pll.inc                                            ;         ;
 ; stratixii_pll.inc                                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/stratixii_pll.inc                                          ;         ;
 ; cycloneii_pll.inc                                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/cycloneii_pll.inc                                          ;         ;
+; lpm_divide.tdf                                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_divide.tdf                                             ;         ;
+; abs_divider.inc                                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/abs_divider.inc                                            ;         ;
+; sign_div_unsign.inc                                ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/sign_div_unsign.inc                                        ;         ;
+; db/lpm_divide_dkm.tdf                              ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/lpm_divide_dkm.tdf                              ;         ;
+; db/sign_div_unsign_5nh.tdf                         ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/sign_div_unsign_5nh.tdf                         ;         ;
+; db/alt_u_div_u9f.tdf                               ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/alt_u_div_u9f.tdf                               ;         ;
+; db/add_sub_7pc.tdf                                 ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/add_sub_7pc.tdf                                 ;         ;
+; db/add_sub_8pc.tdf                                 ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/add_sub_8pc.tdf                                 ;         ;
+; db/lpm_divide_ccm.tdf                              ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/lpm_divide_ccm.tdf                              ;         ;
+; db/sign_div_unsign_1nh.tdf                         ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/sign_div_unsign_1nh.tdf                         ;         ;
+; db/alt_u_div_m9f.tdf                               ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/alt_u_div_m9f.tdf                               ;         ;
+; lpm_mult.tdf                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf                                               ;         ;
+; lpm_add_sub.inc                                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_add_sub.inc                                            ;         ;
+; multcore.inc                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.inc                                               ;         ;
+; bypassff.inc                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/bypassff.inc                                               ;         ;
+; altshift.inc                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altshift.inc                                               ;         ;
+; db/mult_7dt.tdf                                    ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/mult_7dt.tdf                                    ;         ;
+; multcore.tdf                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.tdf                                               ;         ;
+; csa_add.inc                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/csa_add.inc                                                ;         ;
+; mpar_add.inc                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.inc                                               ;         ;
+; muleabz.inc                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/muleabz.inc                                                ;         ;
+; mul_lfrg.inc                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mul_lfrg.inc                                               ;         ;
+; mul_boothc.inc                                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mul_boothc.inc                                             ;         ;
+; alt_ded_mult.inc                                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/alt_ded_mult.inc                                           ;         ;
+; alt_ded_mult_y.inc                                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/alt_ded_mult_y.inc                                         ;         ;
+; dffpipe.inc                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/dffpipe.inc                                                ;         ;
+; mpar_add.tdf                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf                                               ;         ;
+; lpm_add_sub.tdf                                    ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_add_sub.tdf                                            ;         ;
+; addcore.inc                                        ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/addcore.inc                                                ;         ;
+; look_add.inc                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/look_add.inc                                               ;         ;
+; alt_stratix_add_sub.inc                            ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/alt_stratix_add_sub.inc                                    ;         ;
+; db/add_sub_g9h.tdf                                 ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/add_sub_g9h.tdf                                 ;         ;
+; db/add_sub_ekh.tdf                                 ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/add_sub_ekh.tdf                                 ;         ;
+; altshift.tdf                                       ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altshift.tdf                                               ;         ;
+; db/lpm_divide_9km.tdf                              ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/lpm_divide_9km.tdf                              ;         ;
 +----------------------------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -234,34 +286,34 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------+
 ; Resource                                    ; Usage          ;
 +---------------------------------------------+----------------+
-; Estimated Total logic elements              ; 790            ;
+; Estimated Total logic elements              ; 96,267         ;
 ;                                             ;                ;
-; Total combinational functions               ; 740            ;
+; Total combinational functions               ; 46401          ;
 ; Logic element usage by number of LUT inputs ;                ;
-;     -- 4 input functions                    ; 265            ;
-;     -- 3 input functions                    ; 239            ;
-;     -- <=2 input functions                  ; 236            ;
+;     -- 4 input functions                    ; 44316          ;
+;     -- 3 input functions                    ; 1536           ;
+;     -- <=2 input functions                  ; 549            ;
 ;                                             ;                ;
 ; Logic elements by mode                      ;                ;
-;     -- normal mode                          ; 501            ;
-;     -- arithmetic mode                      ; 239            ;
+;     -- normal mode                          ; 45615          ;
+;     -- arithmetic mode                      ; 786            ;
 ;                                             ;                ;
-; Total registers                             ; 383            ;
-;     -- Dedicated logic registers            ; 383            ;
+; Total registers                             ; 50386          ;
+;     -- Dedicated logic registers            ; 50386          ;
 ;     -- I/O registers                        ; 0              ;
 ;                                             ;                ;
-; I/O pins                                    ; 90             ;
+; I/O pins                                    ; 108            ;
 ; Total memory bits                           ; 16384          ;
 ;                                             ;                ;
-; Embedded Multiplier 9-bit elements          ; 0              ;
+; Embedded Multiplier 9-bit elements          ; 8              ;
 ;                                             ;                ;
 ; Total PLLs                                  ; 1              ;
 ;     -- PLLs                                 ; 1              ;
 ;                                             ;                ;
 ; Maximum fan-out node                        ; CLOCK_50~input ;
-; Maximum fan-out                             ; 388            ;
-; Total fan-out                               ; 5949           ;
-; Average fan-out                             ; 4.14           ;
+; Maximum fan-out                             ; 35065          ;
+; Total fan-out                               ; 336891         ;
+; Average fan-out                             ; 3.47           ;
 +---------------------------------------------+----------------+
 
 
@@ -270,8 +322,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
 ; Compilation Hierarchy Node                                    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                                                                                                                 ; Entity Name                     ; Library Name ;
 +---------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
-; |DE2_Audio_Example                                            ; 740 (184)           ; 383 (86)                  ; 16384       ; 0            ; 0       ; 0         ; 90   ; 0            ; |DE2_Audio_Example                                                                                                                                                                                                                                  ; DE2_Audio_Example               ; work         ;
-;    |Audio_Controller:Audio_Controller|                        ; 323 (4)             ; 222 (4)                   ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller                                                                                                                                                                                                ; Audio_Controller                ; work         ;
+; |DE2_Audio_Example                                            ; 46401 (741)         ; 50386 (15412)             ; 16384       ; 8            ; 0       ; 4         ; 108  ; 0            ; |DE2_Audio_Example                                                                                                                                                                                                                                  ; DE2_Audio_Example               ; work         ;
+;    |Audio_Controller:Audio_Controller|                        ; 322 (4)             ; 222 (4)                   ; 16384       ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller                                                                                                                                                                                                ; Audio_Controller                ; work         ;
 ;       |Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer| ; 155 (41)            ; 108 (36)                  ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer                                                                                                                                          ; Altera_UP_Audio_In_Deserializer ; work         ;
 ;          |Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|  ; 10 (10)             ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter                                                                                        ; Altera_UP_Audio_Bit_Counter     ; work         ;
 ;          |Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO|     ; 52 (0)              ; 33 (0)                    ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Left_Channel_FIFO                                                                                           ; Altera_UP_SYNC_FIFO             ; work         ;
@@ -290,7 +342,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                      |cntr_0ab:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|cntr_0ab:wr_ptr         ; cntr_0ab                        ; work         ;
 ;                      |cntr_ca7:usedw_counter|                 ; 8 (8)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|cntr_ca7:usedw_counter  ; cntr_ca7                        ; work         ;
 ;                      |cntr_v9b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_SYNC_FIFO:Audio_In_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|cntr_v9b:rd_ptr_msb     ; cntr_v9b                        ; work         ;
-;       |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|   ; 163 (57)            ; 104 (38)                  ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                            ; Altera_UP_Audio_Out_Serializer  ; work         ;
+;       |Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|   ; 162 (57)            ; 104 (38)                  ; 8192        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer                                                                                                                                            ; Altera_UP_Audio_Out_Serializer  ; work         ;
 ;          |Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|    ; 53 (0)              ; 33 (0)                    ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO                                                                                            ; Altera_UP_SYNC_FIFO             ; work         ;
 ;             |scfifo:Sync_FIFO|                                ; 53 (0)              ; 33 (0)                    ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO                                                                           ; scfifo                          ; work         ;
 ;                |scfifo_n441:auto_generated|                   ; 53 (0)              ; 33 (0)                    ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated                                                ; scfifo_n441                     ; work         ;
@@ -299,10 +351,10 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;                      |cntr_0ab:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|cntr_0ab:wr_ptr           ; cntr_0ab                        ; work         ;
 ;                      |cntr_ca7:usedw_counter|                 ; 8 (8)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|cntr_ca7:usedw_counter    ; cntr_ca7                        ; work         ;
 ;                      |cntr_v9b:rd_ptr_msb|                    ; 7 (7)               ; 6 (6)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|cntr_v9b:rd_ptr_msb       ; cntr_v9b                        ; work         ;
-;          |Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|   ; 53 (0)              ; 33 (0)                    ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO                                                                                           ; Altera_UP_SYNC_FIFO             ; work         ;
-;             |scfifo:Sync_FIFO|                                ; 53 (0)              ; 33 (0)                    ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO                                                                          ; scfifo                          ; work         ;
-;                |scfifo_n441:auto_generated|                   ; 53 (0)              ; 33 (0)                    ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated                                               ; scfifo_n441                     ; work         ;
-;                   |a_dpfifo_as31:dpfifo|                      ; 53 (30)             ; 33 (13)                   ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo                          ; a_dpfifo_as31                   ; work         ;
+;          |Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|   ; 52 (0)              ; 33 (0)                    ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO                                                                                           ; Altera_UP_SYNC_FIFO             ; work         ;
+;             |scfifo:Sync_FIFO|                                ; 52 (0)              ; 33 (0)                    ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO                                                                          ; scfifo                          ; work         ;
+;                |scfifo_n441:auto_generated|                   ; 52 (0)              ; 33 (0)                    ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated                                               ; scfifo_n441                     ; work         ;
+;                   |a_dpfifo_as31:dpfifo|                      ; 52 (29)             ; 33 (13)                   ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo                          ; a_dpfifo_as31                   ; work         ;
 ;                      |altsyncram_7tb1:FIFOram|                ; 0 (0)               ; 0 (0)                     ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|altsyncram_7tb1:FIFOram  ; altsyncram_7tb1                 ; work         ;
 ;                      |cntr_0ab:wr_ptr|                        ; 8 (8)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|cntr_0ab:wr_ptr          ; cntr_0ab                        ; work         ;
 ;                      |cntr_ca7:usedw_counter|                 ; 8 (8)               ; 7 (7)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|cntr_ca7:usedw_counter   ; cntr_ca7                        ; work         ;
@@ -318,7 +370,39 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;    |HexDriver:inst3|                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|HexDriver:inst3                                                                                                                                                                                                                  ; HexDriver                       ; work         ;
 ;    |HexDriver:inst4|                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|HexDriver:inst4                                                                                                                                                                                                                  ; HexDriver                       ; work         ;
 ;    |HexDriver:inst5|                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|HexDriver:inst5                                                                                                                                                                                                                  ; HexDriver                       ; work         ;
-;    |HexDriver:inst6|                                          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|HexDriver:inst6                                                                                                                                                                                                                  ; HexDriver                       ; work         ;
+;    |HexDriver:inst6|                                          ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|HexDriver:inst6                                                                                                                                                                                                                  ; HexDriver                       ; work         ;
+;    |autoConvolution:dspInst|                                  ; 45100 (21223)       ; 34677 (34580)             ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst                                                                                                                                                                                                          ; autoConvolution                 ; work         ;
+;       |convolutionSM:smInst|                                  ; 10 (10)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|convolutionSM:smInst                                                                                                                                                                                     ; convolutionSM                   ; work         ;
+;       |findMaxIdx:findMaxInst|                                ; 23429 (23223)       ; 92 (92)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|findMaxIdx:findMaxInst                                                                                                                                                                                   ; findMaxIdx                      ; work         ;
+;          |lpm_divide:Div0|                                    ; 206 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0                                                                                                                                                                   ; lpm_divide                      ; work         ;
+;             |lpm_divide_dkm:auto_generated|                   ; 206 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated                                                                                                                                     ; lpm_divide_dkm                  ; work         ;
+;                |sign_div_unsign_5nh:divider|                  ; 206 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider                                                                                                         ; sign_div_unsign_5nh             ; work         ;
+;                   |alt_u_div_u9f:divider|                     ; 206 (206)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider                                                                                   ; alt_u_div_u9f                   ; work         ;
+;       |signedMod:mod0|                                        ; 79 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod0                                                                                                                                                                                           ; signedMod                       ; work         ;
+;          |lpm_divide:Div0|                                    ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod0|lpm_divide:Div0                                                                                                                                                                           ; lpm_divide                      ; work         ;
+;             |lpm_divide_9km:auto_generated|                   ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod0|lpm_divide:Div0|lpm_divide_9km:auto_generated                                                                                                                                             ; lpm_divide_9km                  ; work         ;
+;                |sign_div_unsign_1nh:divider|                  ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod0|lpm_divide:Div0|lpm_divide_9km:auto_generated|sign_div_unsign_1nh:divider                                                                                                                 ; sign_div_unsign_1nh             ; work         ;
+;                   |alt_u_div_m9f:divider|                     ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod0|lpm_divide:Div0|lpm_divide_9km:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_m9f:divider                                                                                           ; alt_u_div_m9f                   ; work         ;
+;          |lpm_divide:Mod0|                                    ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod0|lpm_divide:Mod0                                                                                                                                                                           ; lpm_divide                      ; work         ;
+;             |lpm_divide_ccm:auto_generated|                   ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod0|lpm_divide:Mod0|lpm_divide_ccm:auto_generated                                                                                                                                             ; lpm_divide_ccm                  ; work         ;
+;                |sign_div_unsign_1nh:divider|                  ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod0|lpm_divide:Mod0|lpm_divide_ccm:auto_generated|sign_div_unsign_1nh:divider                                                                                                                 ; sign_div_unsign_1nh             ; work         ;
+;                   |alt_u_div_m9f:divider|                     ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod0|lpm_divide:Mod0|lpm_divide_ccm:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_m9f:divider                                                                                           ; alt_u_div_m9f                   ; work         ;
+;          |lpm_mult:Mult0|                                     ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0                                                                                                                                                                            ; lpm_mult                        ; work         ;
+;             |multcore:mult_core|                              ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0|multcore:mult_core                                                                                                                                                         ; multcore                        ; work         ;
+;       |signedMod:mod1|                                        ; 90 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod1                                                                                                                                                                                           ; signedMod                       ; work         ;
+;          |lpm_divide:Div0|                                    ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod1|lpm_divide:Div0                                                                                                                                                                           ; lpm_divide                      ; work         ;
+;             |lpm_divide_9km:auto_generated|                   ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod1|lpm_divide:Div0|lpm_divide_9km:auto_generated                                                                                                                                             ; lpm_divide_9km                  ; work         ;
+;                |sign_div_unsign_1nh:divider|                  ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod1|lpm_divide:Div0|lpm_divide_9km:auto_generated|sign_div_unsign_1nh:divider                                                                                                                 ; sign_div_unsign_1nh             ; work         ;
+;                   |alt_u_div_m9f:divider|                     ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod1|lpm_divide:Div0|lpm_divide_9km:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_m9f:divider                                                                                           ; alt_u_div_m9f                   ; work         ;
+;          |lpm_divide:Mod0|                                    ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod1|lpm_divide:Mod0                                                                                                                                                                           ; lpm_divide                      ; work         ;
+;             |lpm_divide_ccm:auto_generated|                   ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod1|lpm_divide:Mod0|lpm_divide_ccm:auto_generated                                                                                                                                             ; lpm_divide_ccm                  ; work         ;
+;                |sign_div_unsign_1nh:divider|                  ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod1|lpm_divide:Mod0|lpm_divide_ccm:auto_generated|sign_div_unsign_1nh:divider                                                                                                                 ; sign_div_unsign_1nh             ; work         ;
+;                   |alt_u_div_m9f:divider|                     ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod1|lpm_divide:Mod0|lpm_divide_ccm:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_m9f:divider                                                                                           ; alt_u_div_m9f                   ; work         ;
+;          |lpm_mult:Mult0|                                     ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod1|lpm_mult:Mult0                                                                                                                                                                            ; lpm_mult                        ; work         ;
+;             |multcore:mult_core|                              ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMod:mod1|lpm_mult:Mult0|multcore:mult_core                                                                                                                                                         ; multcore                        ; work         ;
+;       |signedMult:multInst|                                   ; 269 (191)           ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMult:multInst                                                                                                                                                                                      ; signedMult                      ; work         ;
+;          |lpm_mult:Mult0|                                     ; 78 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMult:multInst|lpm_mult:Mult0                                                                                                                                                                       ; lpm_mult                        ; work         ;
+;             |mult_7dt:auto_generated|                         ; 78 (78)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0    ; 0            ; |DE2_Audio_Example|autoConvolution:dspInst|signedMult:multInst|lpm_mult:Mult0|mult_7dt:auto_generated                                                                                                                                               ; mult_7dt                        ; work         ;
 ;    |avconf:avc|                                               ; 189 (140)           ; 75 (45)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|avconf:avc                                                                                                                                                                                                                       ; avconf                          ; work         ;
 ;       |I2C_Controller:u0|                                     ; 49 (49)             ; 30 (30)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |DE2_Audio_Example|avconf:avc|I2C_Controller:u0                                                                                                                                                                                                     ; I2C_Controller                  ; work         ;
 +---------------------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------------+--------------+
@@ -335,6 +419,38 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Left_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|altsyncram_7tb1:FIFOram|ALTSYNCRAM   ; AUTO ; Simple Dual Port ; 128          ; 32           ; 128          ; 32           ; 4096 ; None ;
 ; Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|Altera_UP_SYNC_FIFO:Audio_Out_Right_Channel_FIFO|scfifo:Sync_FIFO|scfifo_n441:auto_generated|a_dpfifo_as31:dpfifo|altsyncram_7tb1:FIFOram|ALTSYNCRAM  ; AUTO ; Simple Dual Port ; 128          ; 32           ; 128          ; 32           ; 4096 ; None ;
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+------+------+
+
+
++-----------------------------------------------------+
+; Analysis & Synthesis DSP Block Usage Summary        ;
++---------------------------------------+-------------+
+; Statistic                             ; Number Used ;
++---------------------------------------+-------------+
+; Simple Multipliers (9-bit)            ; 0           ;
+; Simple Multipliers (18-bit)           ; 4           ;
+; Embedded Multiplier Blocks            ; --          ;
+; Embedded Multiplier 9-bit elements    ; 8           ;
+; Signed Embedded Multipliers           ; 0           ;
+; Unsigned Embedded Multipliers         ; 4           ;
+; Mixed Sign Embedded Multipliers       ; 0           ;
+; Variable Sign Embedded Multipliers    ; 0           ;
+; Dedicated Input Shift Register Chains ; 0           ;
++---------------------------------------+-------------+
+Note: number of Embedded Multiplier Blocks used is only available after a successful fit.
+
+
+Encoding Type:  One-Hot
++----------------------------------------------------------------------------------------------------------+
+; State Machine - |DE2_Audio_Example|autoConvolution:dspInst|convolutionSM:smInst|fstate                   ;
++--------------------+-------------+------------------+----------------+--------------+--------------------+
+; Name               ; fstate.Idle ; fstate.interLoop ; fstate.arrLoop ; fstate.Start ; fstate.singleStore ;
++--------------------+-------------+------------------+----------------+--------------+--------------------+
+; fstate.Start       ; 0           ; 0                ; 0              ; 0            ; 0                  ;
+; fstate.arrLoop     ; 0           ; 0                ; 1              ; 1            ; 0                  ;
+; fstate.interLoop   ; 0           ; 1                ; 0              ; 1            ; 0                  ;
+; fstate.Idle        ; 1           ; 0                ; 0              ; 1            ; 0                  ;
+; fstate.singleStore ; 0           ; 0                ; 0              ; 1            ; 1                  ;
++--------------------+-------------+------------------+----------------+--------------+--------------------+
 
 
 Encoding Type:  One-Hot
@@ -375,19 +491,114 @@ Encoding Type:  One-Hot
 Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
-+------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                             ;
-+----------------------------------------------+-------------------------------------------------+
-; Register name                                ; Reason for Removal                              ;
-+----------------------------------------------+-------------------------------------------------+
-; avconf:avc|mI2C_DATA[16,17,19,23]            ; Stuck at GND due to stuck port data_in          ;
-; avconf:avc|I2C_Controller:u0|SD[16,17,19,23] ; Stuck at GND due to stuck port data_in          ;
-; avconf:avc|I2C_Controller:u0|SD[20,21]       ; Merged with avconf:avc|I2C_Controller:u0|SD[18] ;
-; avconf:avc|mI2C_DATA[20,21]                  ; Merged with avconf:avc|mI2C_DATA[18]            ;
-; avconf:avc|mSetup_ST~9                       ; Lost fanout                                     ;
-; avconf:avc|mSetup_ST~10                      ; Lost fanout                                     ;
-; Total Number of Removed Registers = 14       ;                                                 ;
-+----------------------------------------------+-------------------------------------------------+
++----------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                       ;
++--------------------------------------------------------+-------------------------------------------------+
+; Register name                                          ; Reason for Removal                              ;
++--------------------------------------------------------+-------------------------------------------------+
+; avconf:avc|mI2C_DATA[16,17,19,23]                      ; Stuck at GND due to stuck port data_in          ;
+; avconf:avc|I2C_Controller:u0|SD[16,17,19,23]           ; Stuck at GND due to stuck port data_in          ;
+; avconf:avc|I2C_Controller:u0|SD[20,21]                 ; Merged with avconf:avc|I2C_Controller:u0|SD[18] ;
+; avconf:avc|mI2C_DATA[20,21]                            ; Merged with avconf:avc|mI2C_DATA[18]            ;
+; soundIn[479][31]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][30]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][29]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][28]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][27]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][26]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][25]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][24]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][23]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][22]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][21]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][20]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][19]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][18]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][17]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][16]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][15]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][14]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][13]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][12]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][11]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][10]                                       ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][9]                                        ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][8]                                        ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][7]                                        ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][6]                                        ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][5]                                        ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][4]                                        ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][3]                                        ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][2]                                        ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][1]                                        ; Stuck at GND due to stuck port clock_enable     ;
+; soundIn[479][0]                                        ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~2  ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~3  ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~5  ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~6  ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~7  ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~8  ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~9  ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~10 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~11 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~12 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~13 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~14 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~15 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~16 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~17 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~18 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~19 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~20 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~21 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~22 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~23 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~24 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~25 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~26 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~27 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~28 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~29 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~30 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~31 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~32 ; Lost fanout                                     ;
+; autoConvolution:dspInst|convolutionSM:smInst|fstate~33 ; Lost fanout                                     ;
+; avconf:avc|mSetup_ST~9                                 ; Lost fanout                                     ;
+; avconf:avc|mSetup_ST~10                                ; Lost fanout                                     ;
+; autoConvolution:dspInst|fout[479][71]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][70]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][69]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][68]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][67]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][66]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][65]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][64]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][63]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][62]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][61]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][60]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][59]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][58]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][57]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][56]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][55]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][54]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][53]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][52]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][51]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][50]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][49]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][48]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][47]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][46]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][45]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][44]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][43]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][42]                  ; Stuck at GND due to stuck port clock_enable     ;
+; autoConvolution:dspInst|fout[479][41]                  ; Stuck at GND due to stuck port clock_enable     ;
+; Total Number of Removed Registers = 149                ;                                                 ;
++--------------------------------------------------------+-------------------------------------------------+
+* Table truncated at 100 items. To change the number of removed registers reported, set the "Number of Removed Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
 
 +-----------------------------------------------------------------------------------------------+
@@ -411,12 +622,12 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 383   ;
-; Number of registers using Synchronous Clear  ; 122   ;
-; Number of registers using Synchronous Load   ; 122   ;
+; Total registers                              ; 50386 ;
+; Number of registers using Synchronous Clear  ; 215   ;
+; Number of registers using Synchronous Load   ; 132   ;
 ; Number of registers using Asynchronous Clear ; 39    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 229   ;
+; Number of registers using Clock Enable       ; 50229 ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -429,7 +640,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; avconf:avc|I2C_Controller:u0|SD_COUNTER[0] ; 18      ;
 ; avconf:avc|I2C_Controller:u0|SD_COUNTER[2] ; 17      ;
 ; avconf:avc|I2C_Controller:u0|SD_COUNTER[3] ; 20      ;
-; avconf:avc|I2C_Controller:u0|SD_COUNTER[1] ; 17      ;
+; avconf:avc|I2C_Controller:u0|SD_COUNTER[1] ; 16      ;
 ; avconf:avc|I2C_Controller:u0|SD_COUNTER[4] ; 13      ;
 ; avconf:avc|I2C_Controller:u0|SD_COUNTER[5] ; 11      ;
 ; avconf:avc|I2C_Controller:u0|SCLK          ; 3       ;
@@ -444,10 +655,17 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                                                  ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|data_in_shift_reg[28]                                            ;
-; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|bit_counter[0] ;
-; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[32]                                             ;
-; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_Audio_Example|avconf:avc|I2C_Controller:u0|SD_COUNTER[0]                                                                                                               ;
+; 3:1                ; 82 bits   ; 164 LEs       ; 82 LEs               ; 82 LEs                 ; Yes        ; |DE2_Audio_Example|autoConvolution:dspInst|findMaxIdx:findMaxInst|maxVal[37]                                                                                                ;
+; 3:1                ; 72 bits   ; 144 LEs       ; 72 LEs               ; 72 LEs                 ; Yes        ; |DE2_Audio_Example|autoConvolution:dspInst|singleSum[62]                                                                                                                    ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|data_in_shift_reg[4]                                             ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DE2_Audio_Example|autoConvolution:dspInst|findMaxIdx:findMaxInst|cnt[0]                                                                                                    ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |DE2_Audio_Example|autoConvolution:dspInst|l[8]                                                                                                                             ;
+; 4:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter|bit_counter[4] ;
+; 6:1                ; 31 bits   ; 124 LEs       ; 62 LEs               ; 62 LEs                 ; Yes        ; |DE2_Audio_Example|Audio_Controller:Audio_Controller|Altera_UP_Audio_Out_Serializer:Audio_Out_Serializer|data_out_shift_reg[17]                                             ;
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |DE2_Audio_Example|avconf:avc|I2C_Controller:u0|SD_COUNTER[4]                                                                                                               ;
+; 512:1              ; 72 bits   ; 24552 LEs     ; 23040 LEs            ; 1512 LEs               ; No         ; |DE2_Audio_Example|autoConvolution:dspInst|findMaxIdx:findMaxInst|Mux20                                                                                                     ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 10240 LEs            ; 672 LEs                ; No         ; |DE2_Audio_Example|autoConvolution:dspInst|Mux18                                                                                                                            ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 10240 LEs            ; 672 LEs                ; No         ; |DE2_Audio_Example|autoConvolution:dspInst|Mux32                                                                                                                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1100,6 +1318,226 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-----------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                                  ;
++------------------------+----------------+-----------------------------------------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                                                               ;
+; LPM_WIDTHD             ; 10             ; Untyped                                                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                               ;
+; CBXI_PARAMETER         ; lpm_divide_dkm ; Untyped                                                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                        ;
++------------------------+----------------+-----------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMod:mod0|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                          ;
++------------------------+----------------+---------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                       ;
+; LPM_WIDTHD             ; 10             ; Untyped                                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                       ;
+; CBXI_PARAMETER         ; lpm_divide_ccm ; Untyped                                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                ;
++------------------------+----------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMod:mod1|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                          ;
++------------------------+----------------+---------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                       ;
+; LPM_WIDTHD             ; 10             ; Untyped                                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                       ;
+; CBXI_PARAMETER         ; lpm_divide_ccm ; Untyped                                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                ;
++------------------------+----------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMult:multInst|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+---------------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                        ;
++------------------------------------------------+--------------+---------------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                                  ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                                ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                                ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                              ;
+; LPM_WIDTHA                                     ; 32           ; Untyped                                     ;
+; LPM_WIDTHB                                     ; 32           ; Untyped                                     ;
+; LPM_WIDTHP                                     ; 64           ; Untyped                                     ;
+; LPM_WIDTHR                                     ; 64           ; Untyped                                     ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                     ;
+; LPM_REPRESENTATION                             ; UNSIGNED     ; Untyped                                     ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                     ;
+; LATENCY                                        ; 0            ; Untyped                                     ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                     ;
+; INPUT_B_IS_CONSTANT                            ; NO           ; Untyped                                     ;
+; USE_EAB                                        ; OFF          ; Untyped                                     ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                     ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                     ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                     ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                         ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                     ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                     ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                     ;
+; CBXI_PARAMETER                                 ; mult_7dt     ; Untyped                                     ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                     ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                     ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                     ;
++------------------------------------------------+--------------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+----------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                   ;
++------------------------------------------------+--------------+----------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                         ;
+; LPM_WIDTHA                                     ; 9            ; Untyped                                ;
+; LPM_WIDTHB                                     ; 6            ; Untyped                                ;
+; LPM_WIDTHP                                     ; 15           ; Untyped                                ;
+; LPM_WIDTHR                                     ; 15           ; Untyped                                ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                                ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                ;
+; LATENCY                                        ; 0            ; Untyped                                ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                ;
+; USE_EAB                                        ; OFF          ; Untyped                                ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                    ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                                ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                ;
++------------------------------------------------+--------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMod:mod1|lpm_mult:Mult0 ;
++------------------------------------------------+--------------+----------------------------------------+
+; Parameter Name                                 ; Value        ; Type                                   ;
++------------------------------------------------+--------------+----------------------------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY                             ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY                           ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE                           ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE                         ;
+; LPM_WIDTHA                                     ; 9            ; Untyped                                ;
+; LPM_WIDTHB                                     ; 6            ; Untyped                                ;
+; LPM_WIDTHP                                     ; 15           ; Untyped                                ;
+; LPM_WIDTHR                                     ; 15           ; Untyped                                ;
+; LPM_WIDTHS                                     ; 1            ; Untyped                                ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped                                ;
+; LPM_PIPELINE                                   ; 0            ; Untyped                                ;
+; LATENCY                                        ; 0            ; Untyped                                ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped                                ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped                                ;
+; USE_EAB                                        ; OFF          ; Untyped                                ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped                                ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped                                ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped                                ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K                    ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped                                ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped                                ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped                                ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped                                ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped                                ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped                                ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped                                ;
++------------------------------------------------+--------------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMod:mod0|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                          ;
++------------------------+----------------+---------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                       ;
+; LPM_WIDTHD             ; 10             ; Untyped                                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                       ;
+; CBXI_PARAMETER         ; lpm_divide_9km ; Untyped                                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                ;
++------------------------+----------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: autoConvolution:dspInst|signedMod:mod1|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------------------------------+
+; Parameter Name         ; Value          ; Type                                                          ;
++------------------------+----------------+---------------------------------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                                                       ;
+; LPM_WIDTHD             ; 10             ; Untyped                                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                                       ;
+; CBXI_PARAMETER         ; lpm_divide_9km ; Untyped                                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                                ;
++------------------------+----------------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; scfifo Parameter Settings by Entity Instance                                                                                                                                          ;
 +----------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1150,13 +1588,70 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+-----------------------------------------------------------------------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "HexDriver:inst6" ;
-+-----------+-------+----------+--------------+
-; Port      ; Type  ; Severity ; Details      ;
-+-----------+-------+----------+--------------+
-; In0[3..2] ; Input ; Info     ; Stuck at GND ;
-+-----------+-------+----------+--------------+
++----------------------------------------------------------------------------------------------------+
+; lpm_mult Parameter Settings by Entity Instance                                                     ;
++---------------------------------------+------------------------------------------------------------+
+; Name                                  ; Value                                                      ;
++---------------------------------------+------------------------------------------------------------+
+; Number of entity instances            ; 3                                                          ;
+; Entity Instance                       ; autoConvolution:dspInst|signedMult:multInst|lpm_mult:Mult0 ;
+;     -- LPM_WIDTHA                     ; 32                                                         ;
+;     -- LPM_WIDTHB                     ; 32                                                         ;
+;     -- LPM_WIDTHP                     ; 64                                                         ;
+;     -- LPM_REPRESENTATION             ; UNSIGNED                                                   ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                         ;
+;     -- INPUT_B_IS_CONSTANT            ; NO                                                         ;
+;     -- USE_EAB                        ; OFF                                                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                         ;
+; Entity Instance                       ; autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0      ;
+;     -- LPM_WIDTHA                     ; 9                                                          ;
+;     -- LPM_WIDTHB                     ; 6                                                          ;
+;     -- LPM_WIDTHP                     ; 15                                                         ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                     ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                        ;
+;     -- USE_EAB                        ; OFF                                                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                         ;
+; Entity Instance                       ; autoConvolution:dspInst|signedMod:mod1|lpm_mult:Mult0      ;
+;     -- LPM_WIDTHA                     ; 9                                                          ;
+;     -- LPM_WIDTHB                     ; 6                                                          ;
+;     -- LPM_WIDTHP                     ; 15                                                         ;
+;     -- LPM_REPRESENTATION             ; SIGNED                                                     ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                                         ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                                        ;
+;     -- USE_EAB                        ; OFF                                                        ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                                                       ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                                         ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                                         ;
++---------------------------------------+------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "autoConvolution:dspInst|signedMod:mod1"                                                   ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; base[8..5] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; base[4..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; base[9]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; result[9]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "autoConvolution:dspInst|signedMod:mod0"                                                   ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; base[8..5] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; base[4..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; base[9]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; result[9]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1215,34 +1710,37 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 90                          ;
-; cycloneiii_ff         ; 383                         ;
+; boundary_port         ; 108                         ;
+; cycloneiii_ff         ; 50386                       ;
 ;     CLR               ; 8                           ;
 ;     CLR SCLR          ; 16                          ;
-;     ENA               ; 98                          ;
+;     ENA               ; 49996                       ;
 ;     ENA CLR           ; 9                           ;
 ;     ENA CLR SLD       ; 6                           ;
+;     ENA SCLR          ; 92                          ;
 ;     ENA SCLR SLD      ; 31                          ;
-;     ENA SLD           ; 85                          ;
-;     SCLR              ; 75                          ;
-;     plain             ; 55                          ;
+;     ENA SLD           ; 95                          ;
+;     SCLR              ; 76                          ;
+;     plain             ; 57                          ;
 ; cycloneiii_io_obuf    ; 4                           ;
-; cycloneiii_lcell_comb ; 749                         ;
-;     arith             ; 239                         ;
+; cycloneiii_lcell_comb ; 46409                       ;
+;     arith             ; 786                         ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 146                         ;
-;         3 data inputs ; 92                          ;
-;     normal            ; 510                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 33                          ;
-;         2 data inputs ; 64                          ;
-;         3 data inputs ; 147                         ;
-;         4 data inputs ; 265                         ;
+;         2 data inputs ; 313                         ;
+;         3 data inputs ; 472                         ;
+;     normal            ; 45623                       ;
+;         0 data inputs ; 24                          ;
+;         1 data inputs ; 48                          ;
+;         2 data inputs ; 171                         ;
+;         3 data inputs ; 1064                        ;
+;         4 data inputs ; 44316                       ;
+; cycloneiii_mac_mult   ; 4                           ;
+; cycloneiii_mac_out    ; 4                           ;
 ; cycloneiii_pll        ; 1                           ;
 ; cycloneiii_ram_block  ; 128                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 2.76                        ;
+; Max LUT depth         ; 39.30                       ;
+; Average LUT depth     ; 13.95                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1251,7 +1749,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:02     ;
+; Top            ; 00:10:32     ;
 +----------------+--------------+
 
 
@@ -1261,9 +1759,19 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 21 18:17:05 2019
+    Info: Processing started: Wed Apr 24 23:30:24 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off DE2_Audio_Example -c DE2_Audio_Example
 Warning (12473): User specified to use only one processors but 4 processors were detected which could be used to decrease run time.
+Info (12021): Found 1 design units, including 1 entities, in source file signedmult.sv
+    Info (12023): Found entity 1: signedMult File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMult.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file signedmod.sv
+    Info (12023): Found entity 1: signedMod File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file findmaxidx.sv
+    Info (12023): Found entity 1: findMaxIdx File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/findMaxIdx.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file convolutionsm.sv
+    Info (12023): Found entity 1: convolutionSM File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/convolutionSM.sv Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file autoconvolution.sv
+    Info (12023): Found entity 1: autoConvolution File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/autoConvolution.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
     Info (12023): Found entity 1: HexDriver File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/HexDriver.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file avconf/avconf.v
@@ -1284,15 +1792,18 @@ Info (12021): Found 1 design units, including 1 entities, in source file audio_c
     Info (12023): Found entity 1: Audio_Clock File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Audio_Clock.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file audio_controller/audio_controller.v
     Info (12023): Found entity 1: Audio_Controller File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Audio_Controller.v Line: 11
-Warning (10275): Verilog HDL Module Instantiation warning at DE2_Audio_Example.v(150): ignored dangling comma in List of Port Connections File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 150
+Warning (10275): Verilog HDL Module Instantiation warning at DE2_Audio_Example.v(159): ignored dangling comma in List of Port Connections File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 159
 Info (12021): Found 1 design units, including 1 entities, in source file de2_audio_example.v
     Info (12023): Found entity 1: DE2_Audio_Example File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 2
+Info (12021): Found 0 design units, including 0 entities, in source file dsp_avalon_interface.sv
+Info (12021): Found 0 design units, including 0 entities, in source file audio_toplevel.sv
+Warning (10236): Verilog HDL Implicit Net warning at DE2_Audio_Example.v(230): created implicit net for "inBlock" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 230
 Info (12127): Elaborating entity "DE2_Audio_Example" for the top level hierarchy
-Warning (10230): Verilog HDL assignment warning at DE2_Audio_Example.v(98): truncated value with size 32 to match size of target (19) File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 98
-Warning (10136): Verilog HDL Module Declaration warning at DE2_Audio_Example.v(23): port "HEX4" already exists in the list of ports File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 23
-Warning (10034): Output port "HEX7" at DE2_Audio_Example.v(55) has no driver File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 55
-Warning (10034): Output port "LEDG[7..0]" at DE2_Audio_Example.v(56) has no driver File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 56
-Info (12128): Elaborating entity "Audio_Controller" for hierarchy "Audio_Controller:Audio_Controller" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 150
+Warning (10230): Verilog HDL assignment warning at DE2_Audio_Example.v(107): truncated value with size 32 to match size of target (19) File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 107
+Warning (10136): Verilog HDL Module Declaration warning at DE2_Audio_Example.v(25): port "HEX4" already exists in the list of ports File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 25
+Warning (10034): Output port "HEX7" at DE2_Audio_Example.v(61) has no driver File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 61
+Warning (10034): Output port "LEDG[7..0]" at DE2_Audio_Example.v(62) has no driver File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 62
+Info (12128): Elaborating entity "Audio_Controller" for hierarchy "Audio_Controller:Audio_Controller" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 159
 Info (12128): Elaborating entity "Altera_UP_Clock_Edge" for hierarchy "Audio_Controller:Audio_Controller|Altera_UP_Clock_Edge:Bit_Clock_Edges" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Audio_Controller.v Line: 182
 Info (12128): Elaborating entity "Altera_UP_Audio_In_Deserializer" for hierarchy "Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Audio_Controller.v Line: 237
 Info (12128): Elaborating entity "Altera_UP_Audio_Bit_Counter" for hierarchy "Audio_Controller:Audio_Controller|Altera_UP_Audio_In_Deserializer:Audio_In_Deserializer|Altera_UP_Audio_Bit_Counter:Audio_Out_Bit_Counter" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Audio_In_Deserializer.v Line: 159
@@ -1391,7 +1902,7 @@ Info (12133): Instantiated megafunction "Audio_Controller:Audio_Controller|Audio
     Info (12134): Parameter "port_extclk2" = "PORT_UNUSED"
     Info (12134): Parameter "port_extclk3" = "PORT_UNUSED"
     Info (12134): Parameter "valid_lock_multiplier" = "1"
-Info (12128): Elaborating entity "avconf" for hierarchy "avconf:avc" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 157
+Info (12128): Elaborating entity "avconf" for hierarchy "avconf:avc" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 166
 Warning (10230): Verilog HDL assignment warning at avconf.v(68): truncated value with size 32 to match size of target (16) File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 68
 Warning (10230): Verilog HDL assignment warning at avconf.v(119): truncated value with size 32 to match size of target (6) File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 119
 Warning (10230): Verilog HDL assignment warning at avconf.v(136): truncated value with size 32 to match size of target (16) File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 136
@@ -1417,8 +1928,94 @@ Info (12128): Elaborating entity "I2C_Controller" for hierarchy "avconf:avc|I2C_
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(78): truncated value with size 32 to match size of target (1) File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/I2C_Controller.v Line: 78
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(77): truncated value with size 32 to match size of target (1) File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/I2C_Controller.v Line: 77
 Warning (10230): Verilog HDL assignment warning at I2C_Controller.v(90): truncated value with size 32 to match size of target (6) File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/I2C_Controller.v Line: 90
-Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:inst0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 159
+Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:inst0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 168
+Info (12128): Elaborating entity "autoConvolution" for hierarchy "autoConvolution:dspInst" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 233
+Info (12128): Elaborating entity "signedMod" for hierarchy "autoConvolution:dspInst|signedMod:mod0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/autoConvolution.sv Line: 19
+Info (12128): Elaborating entity "signedMult" for hierarchy "autoConvolution:dspInst|signedMult:multInst" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/autoConvolution.sv Line: 23
+Info (12128): Elaborating entity "convolutionSM" for hierarchy "autoConvolution:dspInst|convolutionSM:smInst" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/autoConvolution.sv Line: 52
+Info (12128): Elaborating entity "findMaxIdx" for hierarchy "autoConvolution:dspInst|findMaxIdx:findMaxInst" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/autoConvolution.sv Line: 54
+Info (278001): Inferred 8 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "autoConvolution:dspInst|findMaxIdx:findMaxInst|Div0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/findMaxIdx.sv Line: 26
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "autoConvolution:dspInst|signedMod:mod0|Mod0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv Line: 11
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "autoConvolution:dspInst|signedMod:mod1|Mod0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv Line: 11
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "autoConvolution:dspInst|signedMult:multInst|Mult0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMult.sv Line: 13
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "autoConvolution:dspInst|signedMod:mod0|Mult0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv Line: 8
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "autoConvolution:dspInst|signedMod:mod1|Mult0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv Line: 8
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "autoConvolution:dspInst|signedMod:mod0|Div0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv Line: 8
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "autoConvolution:dspInst|signedMod:mod1|Div0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv Line: 8
+Info (12130): Elaborated megafunction instantiation "autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/findMaxIdx.sv Line: 26
+Info (12133): Instantiated megafunction "autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0" with the following parameter: File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/findMaxIdx.sv Line: 26
+    Info (12134): Parameter "LPM_WIDTHN" = "14"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_dkm.tdf
+    Info (12023): Found entity 1: lpm_divide_dkm File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/lpm_divide_dkm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_5nh File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/sign_div_unsign_5nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_u9f.tdf
+    Info (12023): Found entity 1: alt_u_div_u9f File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/alt_u_div_u9f.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/add_sub_7pc.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/add_sub_8pc.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_divide:Mod0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv Line: 11
+Info (12133): Instantiated megafunction "autoConvolution:dspInst|signedMod:mod0|lpm_divide:Mod0" with the following parameter: File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv Line: 11
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ccm.tdf
+    Info (12023): Found entity 1: lpm_divide_ccm File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/lpm_divide_ccm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_1nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_1nh File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/sign_div_unsign_1nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_m9f.tdf
+    Info (12023): Found entity 1: alt_u_div_m9f File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/alt_u_div_m9f.tdf Line: 26
+Info (12130): Elaborated megafunction instantiation "autoConvolution:dspInst|signedMult:multInst|lpm_mult:Mult0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMult.sv Line: 13
+Info (12133): Instantiated megafunction "autoConvolution:dspInst|signedMult:multInst|lpm_mult:Mult0" with the following parameter: File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMult.sv Line: 13
+    Info (12134): Parameter "LPM_WIDTHA" = "32"
+    Info (12134): Parameter "LPM_WIDTHB" = "32"
+    Info (12134): Parameter "LPM_WIDTHP" = "64"
+    Info (12134): Parameter "LPM_WIDTHR" = "64"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
+    Info (12023): Found entity 1: mult_7dt File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/mult_7dt.tdf Line: 30
+Info (12130): Elaborated megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv Line: 8
+Info (12133): Instantiated megafunction "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0" with the following parameter: File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv Line: 8
+    Info (12134): Parameter "LPM_WIDTHA" = "9"
+    Info (12134): Parameter "LPM_WIDTHB" = "6"
+    Info (12134): Parameter "LPM_WIDTHP" = "15"
+    Info (12134): Parameter "LPM_WIDTHR" = "15"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_g9h.tdf
+    Info (12023): Found entity 1: add_sub_g9h File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/add_sub_g9h.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ekh.tdf
+    Info (12023): Found entity 1: add_sub_ekh File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/add_sub_ekh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (12130): Elaborated megafunction instantiation "autoConvolution:dspInst|signedMod:mod0|lpm_divide:Div0" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv Line: 8
+Info (12133): Instantiated megafunction "autoConvolution:dspInst|signedMod:mod0|lpm_divide:Div0" with the following parameter: File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/signedMod.sv Line: 8
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_9km.tdf
+    Info (12023): Found entity 1: lpm_divide_9km File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/lpm_divide_9km.tdf Line: 24
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (13014): Ignored 220 buffer(s)
+    Info (13019): Ignored 220 SOFT buffer(s)
 Warning (13012): Latch avconf:avc|LUT_DATA[8] has unsafe behavior File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 130
     Warning (13013): Ports D and ENA on the latch are fed by the same signal avconf:avc|LUT_INDEX[4] File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 97
 Warning (13012): Latch avconf:avc|LUT_DATA[2] has unsafe behavior File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 130
@@ -1440,7 +2037,7 @@ Warning (13012): Latch avconf:avc|LUT_DATA[11] has unsafe behavior File: E:/My_D
 Warning (13012): Latch avconf:avc|LUT_DATA[3] has unsafe behavior File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 130
     Warning (13013): Ports D and ENA on the latch are fed by the same signal avconf:avc|LUT_INDEX[5] File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 97
 Warning (13012): Latch avconf:avc|LUT_DATA[6] has unsafe behavior File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 130
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal avconf:avc|LUT_INDEX[4] File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 97
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal avconf:avc|LUT_INDEX[5] File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 97
 Warning (13012): Latch avconf:avc|LUT_DATA[5] has unsafe behavior File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 130
     Warning (13013): Ports D and ENA on the latch are fed by the same signal avconf:avc|LUT_INDEX[5] File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 97
 Warning (13012): Latch avconf:avc|LUT_DATA[15] has unsafe behavior File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v Line: 130
@@ -1454,24 +2051,30 @@ Warning (13012): Latch avconf:avc|LUT_DATA[12] has unsafe behavior File: E:/My_D
 Info (13000): Registers with preset signals will power-up high File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/I2C_Controller.v Line: 72
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "HEX6[1]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 55
-    Warning (13410): Pin "HEX7[0]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 55
-    Warning (13410): Pin "HEX7[1]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 55
-    Warning (13410): Pin "HEX7[2]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 55
-    Warning (13410): Pin "HEX7[3]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 55
-    Warning (13410): Pin "HEX7[4]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 55
-    Warning (13410): Pin "HEX7[5]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 55
-    Warning (13410): Pin "HEX7[6]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 55
-    Warning (13410): Pin "LEDG[0]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 56
-    Warning (13410): Pin "LEDG[1]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 56
-    Warning (13410): Pin "LEDG[2]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 56
-    Warning (13410): Pin "LEDG[3]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 56
-    Warning (13410): Pin "LEDG[4]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 56
-    Warning (13410): Pin "LEDG[5]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 56
-    Warning (13410): Pin "LEDG[6]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 56
-    Warning (13410): Pin "LEDG[7]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 56
+    Warning (13410): Pin "HEX7[0]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 61
+    Warning (13410): Pin "HEX7[1]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 61
+    Warning (13410): Pin "HEX7[2]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 61
+    Warning (13410): Pin "HEX7[3]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 61
+    Warning (13410): Pin "HEX7[4]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 61
+    Warning (13410): Pin "HEX7[5]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 61
+    Warning (13410): Pin "HEX7[6]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 61
+    Warning (13410): Pin "LEDG[0]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 62
+    Warning (13410): Pin "LEDG[1]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 62
+    Warning (13410): Pin "LEDG[2]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 62
+    Warning (13410): Pin "LEDG[3]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 62
+    Warning (13410): Pin "LEDG[4]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 62
+    Warning (13410): Pin "LEDG[5]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 62
+    Warning (13410): Pin "LEDG[6]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 62
+    Warning (13410): Pin "LEDG[7]" is stuck at GND File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 62
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 2 registers lost all their fanouts during netlist optimizations.
+Info (17049): 33 registers lost all their fanouts during netlist optimizations.
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_2_result_int[0]~6" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/alt_u_div_u9f.tdf Line: 56
+    Info (17048): Logic cell "autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_3_result_int[0]~8" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/alt_u_div_u9f.tdf Line: 61
+    Info (17048): Logic cell "autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_4_result_int[0]~10" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/alt_u_div_u9f.tdf Line: 66
+    Info (17048): Logic cell "autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_6_result_int[0]~14" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/alt_u_div_u9f.tdf Line: 76
+    Info (17048): Logic cell "autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_7_result_int[0]~16" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/alt_u_div_u9f.tdf Line: 81
+    Info (17048): Logic cell "autoConvolution:dspInst|findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_8_result_int[0]~18" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/db/alt_u_div_u9f.tdf Line: 86
 Warning (20013): Ignored 25 assignments for entity "DE2_115_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_global_assignment -name LL_ROOT_REGION ON -entity DE2_115_Default -section_id "Root Region" was ignored
     Warning (20014): Assignment for entity set_global_assignment -name LL_MEMBER_STATE LOCKED -entity DE2_115_Default -section_id "Root Region" was ignored
@@ -1502,22 +2105,23 @@ Info (144001): Generated suppressed messages file E:/My_Document/ECE385/Final/ec
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 1 node(s), including 0 DDIO, 1 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "CLOCK_27" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 36
-    Warning (15610): No output dependent on input pin "KEY[1]" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 37
-    Warning (15610): No output dependent on input pin "KEY[2]" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 37
-    Warning (15610): No output dependent on input pin "KEY[3]" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 37
-Info (21057): Implemented 1034 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "CLOCK_27" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 40
+    Warning (15610): No output dependent on input pin "KEY[1]" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 41
+    Warning (15610): No output dependent on input pin "KEY[2]" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 41
+    Warning (15610): No output dependent on input pin "KEY[3]" File: E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/DE2_Audio_Example.v Line: 41
+Info (21057): Implemented 96537 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
-    Info (21059): Implemented 75 output pins
+    Info (21059): Implemented 93 output pins
     Info (21060): Implemented 4 bidirectional pins
-    Info (21061): Implemented 815 logic cells
+    Info (21061): Implemented 96292 logic cells
     Info (21064): Implemented 128 RAM segments
     Info (21065): Implemented 1 PLLs
+    Info (21062): Implemented 8 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 95 warnings
-    Info: Peak virtual memory: 648 megabytes
-    Info: Processing ended: Sun Apr 21 18:17:23 2019
-    Info: Elapsed time: 00:00:18
-    Info: Total CPU time (on all processors): 00:00:32
+    Info: Peak virtual memory: 1115 megabytes
+    Info: Processing ended: Wed Apr 24 23:41:42 2019
+    Info: Elapsed time: 00:11:18
+    Info: Total CPU time (on all processors): 00:11:26
 
 
 +------------------------------------------+
