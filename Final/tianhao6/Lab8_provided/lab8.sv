@@ -15,7 +15,7 @@
 
 module lab8( input               CLOCK_50,
              input        [3:0]  KEY,          //bit 0 is set up as Reset
-             output logic [6:0]  HEX0, HEX1,
+             output logic [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7,
              // VGA Interface
              output logic [7:0]  VGA_R,        //VGA Red
                                  VGA_G,        //VGA Green
@@ -43,32 +43,38 @@ module lab8( input               CLOCK_50,
                                  DRAM_CKE,     //SDRAM Clock Enable
                                  DRAM_WE_N,    //SDRAM Write Enable
                                  DRAM_CS_N,    //SDRAM Chip Select
-                                 DRAM_CLK,      //SDRAM Clock
-             output logic CE, UB, LB, OE, WE,
-             output logic [15:0] DataOutSram,
-             output logic [19:0] ADDR
+                                 DRAM_CLK      //SDRAM Clock
                     );
 
-    logic Reset_h, Clk, VGA_BLANK_EX;
-    // temp
-    // logic [9:0] spritePosX [2];
-    // logic [9:0] spritePosY [2];
-    logic [9:0] Ball_X_Pos, Ball_Y_Pos;
+    logic Reset_h, Clk;
     // parameter
     logic [9:0] sky = 10'd100;
     logic [9:0] ground = 10'd400;
     logic [9:0] gravity = 10'd1;
-    logic [7:0] keycode;
-
+    logic [9:0] Boss_X_Pos, Boss_Y_Pos;
+    //assign Boss_X_Pos = 10'd400;
+    //assign Boss_Y_Pos = ground-10'd64;
+    logic xFlagBoss;
+    logic [31:0] keycode;
+    logic xFlag, xDirection, stopDirection, xFlagBullet;
+    logic [9:0] Ball_X_Pos, Ball_Y_Pos, progress;
+    logic [9:0] Bullet_X_Pos, Bullet_Y_Pos;
+    logic [3:0] digitH, digitM, digitL;
+    logic [2:0] lifeBoss;
     assign Clk = CLOCK_50;
     always_ff @ (posedge Clk) begin
         Reset_h <= ~(KEY[0]);        // The push buttons are active low
     end
-
+    logic is_bullet, Bullet_X_Dir;
     logic [1:0] hpi_addr;
     logic [15:0] hpi_data_in, hpi_data_out;
     logic hpi_r, hpi_w, hpi_cs, hpi_reset;
+    logic alive, aliveBoss;
 
+    // test singals
+    logic [5:0] nohurt;
+    logic [1:0] health;
+    //
     // Interface between NIOS II and EZ-OTG chip
     hpi_io_intf hpi_io_inst(
                             .Clk(Clk),
@@ -119,13 +125,13 @@ module lab8( input               CLOCK_50,
     vga_clk vga_clk_instance(.inclk0(Clk), .c0(VGA_CLK));
 
     // TODO: Fill in the connections for the rest of the modules
-    VGA_controller vga_controller_instance(.Clk, .Reset(Reset_h), .VGA_HS, .VGA_VS, .VGA_CLK, .VGA_BLANK_N, .VGA_SYNC_N, .DrawX, .DrawY, .VGA_BLANK_EX);
+    VGA_controller vga_controller_instance(.Clk, .Reset(Reset_h), .VGA_HS, .VGA_VS, .VGA_CLK, .VGA_BLANK_N, .VGA_SYNC_N, .DrawX, .DrawY);
 
     // Which signal should be frame_clk?
     logic frame_clk; // register
-    logic is_avatar;
+    logic is_avatar, is_boss;
     logic[9:0] DrawX, DrawY;
-
+    //logic die;
     always_ff @ (posedge VGA_VS) begin
       if (~Reset_h)
         frame_clk = ~frame_clk;
@@ -133,14 +139,25 @@ module lab8( input               CLOCK_50,
         frame_clk = 1'b0;
     end
 
-    avatar avatar_instance(.Clk, .Reset(Reset_h), .frame_clk, .DrawX, .DrawY, .is_avatar, .keycode, .sky, .ground, .gravity, .Ball_X_Pos, .Ball_Y_Pos);
+    avatar avatar_instance(.Clk, .Reset(Reset_h), .frame_clk, .DrawX, .DrawY, .is_avatar, .keycode, .sky, .ground, .gravity, .xFlag, .xDirection, .Ball_X_Pos, .Ball_Y_Pos, .stopDirection, .alive, .Boss_X_Pos, .Boss_Y_Pos, .health, .nohurt, .progress ,.aliveBoss);
 
-    // color_mapper color_instance(.DrawX, .DrawY, .VGA_R, .VGA_G, .VGA_B, .sky, .ground, .Ball_X_Pos, .Ball_Y_Pos, .VGA_BLANK_EX, .Reset_h, .is_avatar); // DrawX not sure
-     color_mapper color_instance(.DrawX, .DrawY, .VGA_R, .VGA_G, .VGA_B, .sky, .ground, .is_avatar); // DrawX not sure
+    boss boss_avatar(.Clk, .Reset(Reset_h), .frame_clk, .DrawX, .DrawY, .is_boss, .keycode, .sky, .ground, .gravity, .xFlagBoss, .Boss_X_Pos, .Boss_Y_Pos, .Ball_X_Pos, .Ball_Y_Pos, .progress);
+    color_mapper color_instance(.is_avatar, .DrawX, .DrawY, .VGA_R, .VGA_G, .VGA_B, .sky, .ground, .xFlag, .xDirection, .Ball_X_Pos, .Ball_Y_Pos, .stopDirection, .alive, .health, .progress,
+                                .is_boss  ,                                                        .xFlagBoss,          .Boss_X_Pos, .Boss_Y_Pos,
+                                .is_bullet,                                                        .xFlagBullet,        .Bullet_X_Pos, .Bullet_Y_Pos,  .Bullet_X_Dir, .aliveBoss,
+                                .digitH, .digitL, .digitM); // DrawX not sure
+    bullet bullet0 (.Clk,  .Reset(Reset_h), .frame_clk, .DrawX, .DrawY, .keycode, .xFlagBullet, .Boss_X_Pos, .Boss_Y_Pos, .Ball_X_Pos, .Ball_Y_Pos,  .Bullet_X_Pos, .Bullet_Y_Pos, .is_bullet, .xDirection, .Bullet_X_Dir, .aliveBoss, .lifeBoss);
 
+    score scoreInst(.progress, .digitH, .digitL, .digitM, .lifeBoss);
     // Display keycode on hex display
     HexDriver hex_inst_0 (keycode[3:0], HEX0);
     HexDriver hex_inst_1 (keycode[7:4], HEX1);
+    HexDriver hex_inst_2 (keycode[11:8], HEX2);
+    HexDriver hex_inst_3 (keycode[15:12], HEX3);
+    HexDriver hex_inst_4 (keycode[19:16], HEX4);
+    HexDriver hex_inst_5 ({2'd0, health}, HEX5);
+    HexDriver hex_inst_6 (nohurt[3:0], HEX6);
+    HexDriver hex_inst_7 ({2'd0, nohurt[5:4]}, HEX7);
 
     /**************************************************************************************
         ATTENTION! Please answer the following quesiton in your lab report! Points will be allocated for the answers!

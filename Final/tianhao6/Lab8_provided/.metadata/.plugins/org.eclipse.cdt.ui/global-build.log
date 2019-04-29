@@ -516,3 +516,397 @@ Info: Building ../FinalFromLab8_bsp/
 C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
 [BSP build complete]
 [FinalFromLab8 build complete]
+21:16:13 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+22:18:08 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+22:31:14 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+22:38:09 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+22:42:25 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+22:49:55 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+22:52:48 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+23:00:14 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+23:10:05 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+23:13:21 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+23:14:08 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+23:17:17 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+23:17:49 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+23:20:09 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+23:59:51 **** Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+00:06:52 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+00:07:38 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+00:09:45 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+00:14:57 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+00:24:10 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+00:30:28 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+21:18:20 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+21:37:15 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+21:38:00 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+21:45:58 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+21:59:48 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+23:00:55 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+23:12:12 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+16:52:57 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+16:55:18 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+17:05:15 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+18:33:39 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+18:44:19 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+19:01:21 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+19:08:13 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+19:29:51 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+19:38:59 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+19:46:33 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+20:08:41 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+20:24:49 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+20:30:04 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+09:34:38 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+09:49:23 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+11:51:36 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+11:53:08 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+15:36:27 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+15:39:15 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+15:45:12 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+15:50:58 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+16:53:40 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+18:04:12 **** Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+18:18:54 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+18:21:43 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+18:39:17 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+19:36:55 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+19:51:02 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+20:03:13 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+20:03:41 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+20:04:09 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+20:23:46 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+20:40:34 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+20:59:51 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+[FinalFromLab8 build complete]
+21:26:26 **** Build of configuration Nios II for project FinalFromLab8 ****
+make all 
+Info: Building ../FinalFromLab8_bsp/
+C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
+[BSP build complete]
+Info: Compiling io_handler.c to obj/default/io_handler.o
+nios2-elf-gcc -xc -MP -MMD -c -I../FinalFromLab8_bsp//HAL/inc -I../FinalFromLab8_bsp/ -I../FinalFromLab8_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/io_handler.o io_handler.c
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../FinalFromLab8_bsp//HAL/inc -I../FinalFromLab8_bsp/ -I../FinalFromLab8_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Compiling usb.c to obj/default/usb.o
+nios2-elf-gcc -xc -MP -MMD -c -I../FinalFromLab8_bsp//HAL/inc -I../FinalFromLab8_bsp/ -I../FinalFromLab8_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/usb.o usb.c
+Info: Linking FinalFromLab8.elf
+nios2-elf-g++  -T'../FinalFromLab8_bsp//linker.x' -msys-crt0='../FinalFromLab8_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../FinalFromLab8_bsp/   -Wl,-Map=FinalFromLab8.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o FinalFromLab8.elf obj/default/io_handler.o obj/default/main.o obj/default/usb.o -lm -msys-lib=m
+nios2-elf-insert FinalFromLab8.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0xa8 --timestamp 1554599265 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab8_soc --quartus_project_dir "E:/My_Document/ECE385/Final/tianhao6/Lab8_provided" --jdi E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/software/FinalFromLab8_bsp/../../lab8.jdi --sopcinfo E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/software/FinalFromLab8_bsp/../../lab8_soc.sopcinfo
+Info: (FinalFromLab8.elf) 80 KBytes program size (code + initialized data).
+Info:                     16297 KBytes free for stack + heap.
+Info: Creating FinalFromLab8.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source FinalFromLab8.elf >FinalFromLab8.objdump
+[FinalFromLab8 build complete]
+21:26:39 **** Build of configuration Nios II for project FinalFromLab8_bsp ****
+make all 
+[BSP build complete]

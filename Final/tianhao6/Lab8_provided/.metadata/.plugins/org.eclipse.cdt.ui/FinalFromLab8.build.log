@@ -1,9 +1,22 @@
-18:37:39 **** Incremental Build of configuration Nios II for project FinalFromLab8 ****
+21:26:26 **** Build of configuration Nios II for project FinalFromLab8 ****
 make all 
 Info: Building ../FinalFromLab8_bsp/
 C:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../FinalFromLab8_bsp/
 [BSP build complete]
+Info: Compiling io_handler.c to obj/default/io_handler.o
+nios2-elf-gcc -xc -MP -MMD -c -I../FinalFromLab8_bsp//HAL/inc -I../FinalFromLab8_bsp/ -I../FinalFromLab8_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/io_handler.o io_handler.c
+Info: Compiling main.c to obj/default/main.o
+nios2-elf-gcc -xc -MP -MMD -c -I../FinalFromLab8_bsp//HAL/inc -I../FinalFromLab8_bsp/ -I../FinalFromLab8_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/main.o main.c
+Info: Compiling usb.c to obj/default/usb.o
+nios2-elf-gcc -xc -MP -MMD -c -I../FinalFromLab8_bsp//HAL/inc -I../FinalFromLab8_bsp/ -I../FinalFromLab8_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/usb.o usb.c
+Info: Linking FinalFromLab8.elf
+nios2-elf-g++  -T'../FinalFromLab8_bsp//linker.x' -msys-crt0='../FinalFromLab8_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../FinalFromLab8_bsp/   -Wl,-Map=FinalFromLab8.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o FinalFromLab8.elf obj/default/io_handler.o obj/default/main.o obj/default/usb.o -lm -msys-lib=m
+nios2-elf-insert FinalFromLab8.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --id 0 --sidp 0xa8 --timestamp 1554599265 --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name lab8_soc --quartus_project_dir "E:/My_Document/ECE385/Final/tianhao6/Lab8_provided" --jdi E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/software/FinalFromLab8_bsp/../../lab8.jdi --sopcinfo E:/My_Document/ECE385/Final/tianhao6/Lab8_provided/software/FinalFromLab8_bsp/../../lab8_soc.sopcinfo
+Info: (FinalFromLab8.elf) 80 KBytes program size (code + initialized data).
+Info:                     16297 KBytes free for stack + heap.
+Info: Creating FinalFromLab8.objdump
+nios2-elf-objdump --disassemble --syms --all-header --source FinalFromLab8.elf >FinalFromLab8.objdump
 [FinalFromLab8 build complete]
 
-18:37:44 Build Finished (took 4s.866ms)
+21:26:39 Build Finished (took 12s.688ms)
 

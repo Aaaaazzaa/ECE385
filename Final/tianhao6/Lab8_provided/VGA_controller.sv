@@ -30,7 +30,7 @@ module  VGA_controller (input              Clk,         // 50 MHz clock
                         input              VGA_CLK,     // 25 MHz VGA clock input
                         output logic       VGA_BLANK_N, // Blanking interval indicator.  Active low.
                                            VGA_SYNC_N,  // Composite Sync signal.  Active low.  We don't use it in this lab,
-                                           VGA_BLANK_EX,             // but the video DAC on the DE2 board requires an input for it.
+                                                        // but the video DAC on the DE2 board requires an input for it.
                         output logic [9:0] DrawX,       // horizontal coordinate
                                            DrawY        // vertical coordinate
                         );     
@@ -40,7 +40,7 @@ module  VGA_controller (input              Clk,         // 50 MHz clock
     parameter [9:0] H_TOTAL = 10'd800;
     parameter [9:0] V_TOTAL = 10'd525;
     
-    logic VGA_HS_in, VGA_VS_in, VGA_BLANK_N_in, VGA_BLANK_EX_in;
+    logic VGA_HS_in, VGA_VS_in, VGA_BLANK_N_in;
     logic [9:0] h_counter, v_counter;
     logic [9:0] h_counter_in, v_counter_in;
     
@@ -65,7 +65,6 @@ module  VGA_controller (input              Clk,         // 50 MHz clock
             VGA_HS <= VGA_HS_in;
             VGA_VS <= VGA_VS_in;
             VGA_BLANK_N <= VGA_BLANK_N_in;
-				VGA_BLANK_EX <= VGA_BLANK_EX_in;
             h_counter <= h_counter_in;
             v_counter <= v_counter_in;
         end
@@ -98,9 +97,6 @@ module  VGA_controller (input              Clk,         // 50 MHz clock
         VGA_BLANK_N_in = 1'b0;
         if(h_counter_in < 10'd640 && v_counter_in < 10'd480)
             VGA_BLANK_N_in = 1'b1;
-		  VGA_BLANK_EX_in = 1'b0;
-        if(v_counter_in < 10'd480)
-            VGA_BLANK_EX_in = 1'b1;
     end
     
 endmodule
