@@ -16,7 +16,7 @@
 
 #include "system.h"
 #include "alt_types.h"
-#include <unistd.h>  // usleep 
+#include <unistd.h>  // usleep
 #include "sys/alt_irq.h"
 #include "io_handler.h"
 
@@ -487,7 +487,7 @@ int main(void)
 		IO_write(HPI_DATA,0x0013);//8
 		IO_write(HPI_DATA,0x0000);//a
 		UsbWrite(HUSB_SIE1_pCurrentTDPtr,0x0500); //HUSB_SIE1_pCurrentTDPtr
-		
+
 		while (!(IO_read(HPI_STATUS) & HPI_STATUS_SIE1msg_FLAG) )  //read sie1 msg register
 		{
 			IO_write(HPI_ADDR,0x0500); //the start address
@@ -513,13 +513,21 @@ int main(void)
 
 		usb_ctl_val = UsbWaitTDListDone();
 
-		// The first two keycodes are stored in 0x051E. Other keycodes are in 
+		// The first two keycodes are stored in 0x051E. Other keycodes are in
 		// subsequent addresses.
-		keycode = UsbRead(0x051e);
+		// two continous direct io function
+		IO_write(HPI_ADDR,0x051e); //the address of byte 0~1
+
+		keycode = (IO_read(HPI_DATA));
+
+		IO_write(HPI_ADDR,0x0520); //the address of byte 2~3
+
+		keycode += (IO_read(HPI_DATA) << 16);
+		//
 		printf("\nfirst two keycode values are %04x\n",keycode);
 		// We only need the first keycode, which is at the lower byte of keycode.
 		// Send the keycode to hardware via PIO.
-		*keycode_base = keycode & 0xff; 
+		*keycode_base = keycode & 0xff;
 
 		usleep(200);//usleep(5000);
 		usb_ctl_val = UsbRead(ctl_reg);
@@ -560,4 +568,3 @@ int main(void)
 
 	return 0;
 }
-

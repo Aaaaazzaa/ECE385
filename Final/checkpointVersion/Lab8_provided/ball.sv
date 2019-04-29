@@ -18,28 +18,64 @@ module  avatar ( input         Clk,                // 50 MHz clock
                              Reset,              // Active-high reset signal
                              frame_clk,          // The clock indicating a new frame (~60Hz)
                input [9:0]   DrawX, DrawY, sky, ground, gravity,       // Current pixel coordinates
-               input [7:0]   keycode,
+               input [31:0]   keycode,
                output[9:0]   Ball_X_Pos, Ball_Y_Pos,
                output logic  is_avatar,             // Whether current pixel belongs to ball or background
                output logic  xFlag,
                output logic xDirection,
-               output logic stopDirection
+               output logic stopDirection,
+               output logic [9:0] progress,
+               output logic die,
+               output logic leftOn, rightOn, upOn, downOn, zOn, xOn
               );
 
     parameter [9:0] Ball_X_Center = 10'd320;  // Center position on the X axis
     parameter [9:0] Ball_Y_Center = 10'd240;  // Center position on the Y axis
     parameter [9:0] Ball_X_Min = 10'd0;       // Leftmost point on the X axis
     parameter [9:0] Ball_X_Max = 10'd639;     // Rightmost point on the X axis
-    parameter [9:0] Ball_X_Step = 10'd2;      // Step size on the X axis
+    parameter [9:0] Ball_X_Step = 10'd4;      // Step size on the X axis
     parameter [9:0] Ball_Y_Step = 10'd10;      // Step size on the Y axis
-    parameter [9:0] Ball_Size = 10'd16;        // Ball size
+    parameter [9:0] Ball_Size = 10'd32;        // Ball size
+
+
+    logic [9:0] Bullet_X_Position, Bullet_X_Position_in;
+    logic [9:0] Bullet_Y_Position, Bullet_Y_Position_in;
+    logic [9:0] Bullet_X_Motion, Bullet_X_Motion_in;
+    logic [9:0] Bullet_Y_Motion, Bullet_Y_Motion_in;
 
     logic [9:0] Ball_X_Motion,  Ball_Y_Motion; // registers Q
     logic [9:0] Ball_X_Pos_in,  Ball_X_Motion_in,   Ball_Y_Pos_in,   Ball_Y_Motion_in; // tmp same as D
+    logic [9:0] Ball_X_Progress, Ball_X_Progress_in;
 
     logic[5:0] xCnt;
+    logic[9:0] holeCenter;
+    logic[9:0] holeSize;
+    assign holeSize = 10'd32;
+    assign holeCenter = 10'd160 - progress;
+    assign die = Ball_Y_Pos > 10'd480;
+
+
     //////// Do not modify the always_ff blocks. ////////
     // Detect rising edge of frame_clk
+
+    // logic [9:0] monster_X_Motion;
+    // logic [9:0] monster_Y_Motion;
+    // logic [9:0] monster_X_Pos;
+    // logic [9:0] monster_Y_Pos;
+    //
+    assign upOn = (keycode[31:24] == 8'h82 | keycode[23:16] == 8'h82 | keycode[15: 8] == 8'h82 | keycode[ 7: 0] == 8'h82);
+
+    assign downOn = (keycode[31:24] == 8'h81 | keycode[23:16] == 8'h81 | keycode[15: 8] == 8'h81 | keycode[ 7: 0] == 8'h81);
+
+    assign leftOn = (keycode[31:24] == 8'h80 | keycode[23:16] == 8'h80 | keycode[15: 8] == 8'h80 | keycode[ 7: 0] == 8'h80);
+
+    assign rightOn = (keycode[31:24] == 8'h79 | keycode[23:16] == 8'h79 | keycode[15: 8] == 8'h79 | keycode[ 7: 0] == 8'h79);
+
+
+    // jump
+    assign zOn = (keycode[31:24] == 8'h29 | keycode[23:16] == 8'h29 | keycode[15: 8] == 8'h29 | keycode[ 7: 0] == 8'h29);
+    // fire
+    assign xOn = (keycode[31:24] == 8'h27 | keycode[23:16] == 8'h27 | keycode[15: 8] == 8'h27 | keycode[ 7: 0] == 8'h27);
 
     logic frame_clk_delayed, frame_clk_rising_edge;
     always_ff @ (posedge Clk) begin
@@ -55,6 +91,13 @@ module  avatar ( input         Clk,                // 50 MHz clock
             Ball_Y_Pos <= Ball_Y_Center;
             Ball_X_Motion <= 10'd0;
             Ball_Y_Motion <= 10'd0;
+            Ball_X_Progress <= 10'd0;
+            // monster_Y_Pos <= 10'd0;
+            // monster_X_Pos <= 10'd800;
+            // monster_X_Motion <= 10'd0;
+            // monster_Y_Motion <= 10'd0;
+            Bullet_X_Position <= 10'd800;
+            Bullet_Y_Position <= 10'd0;
         end
         else
         begin
@@ -62,6 +105,9 @@ module  avatar ( input         Clk,                // 50 MHz clock
             Ball_Y_Pos <= Ball_Y_Pos_in;
             Ball_X_Motion <= Ball_X_Motion_in;
             Ball_Y_Motion <= Ball_Y_Motion_in;
+            Ball_X_Progress <= Ball_X_Progress_in;
+            //monster_X_Pos
+
         end
     end
     //////// Do not modify the always_ff blocks. ////////
@@ -74,6 +120,10 @@ module  avatar ( input         Clk,                // 50 MHz clock
         Ball_Y_Pos_in = Ball_Y_Pos;
         Ball_X_Motion_in = Ball_X_Motion;
         Ball_Y_Motion_in = Ball_Y_Motion;
+        Ball_X_Progress_in = Ball_X_Progress;
+        Bullet_X_Position_in = Bullet_X_Position;
+        Bullet_Y_Position_in = Bullet_Y_Position;
+
         // Update position and motion only at rising edge of frame clock
         if (frame_clk_rising_edge)
         begin
@@ -85,39 +135,38 @@ module  avatar ( input         Clk,                // 50 MHz clock
 
             // TODO: Add other boundary detections and handle keypress here.
             begin // when bouncing disable keycode
-              unique case (keycode)
+
                 // 8'h16: begin // S = down
                 //   Ball_Y_Motion_in = 10'd1;
                 // end
-                8'h1a: begin// W = up
+                if (upOn) begin// W = up
                   Ball_Y_Motion_in = ~(10'd10) + 1; // larger init velocity, no teleport; Motion should be treated as velocity instead of displacement
                 end
-                8'h04: begin// A = left
+                if(leftOn) begin// A = left
                   Ball_Y_Motion_in = Ball_Y_Motion + gravity;
                   if (Ball_X_Motion == 10'd0)
-                    Ball_X_Motion_in =  ~(10'd2) + 1;
+                    Ball_X_Motion_in =  ~(10'd4) + 1;
                   else
     						      Ball_X_Motion_in = 10'd0;
                 end
-                8'h07: begin// D = right
+                if(rightOn) begin// D = right
                   Ball_Y_Motion_in = Ball_Y_Motion + gravity;
                   if (Ball_X_Motion == 10'd0)
-                    Ball_X_Motion_in =  10'd2;
+                    Ball_X_Motion_in =  10'd4;
                   else
                       Ball_X_Motion_in = 10'd0;
                 end
-                default:
-						      begin
+                else
+						  begin
                     Ball_Y_Motion_in = Ball_Y_Motion + gravity; // use gravity wo/ inAir
                     Ball_X_Motion_in = 10'd0; // FIX: clear xmotion by default to avoid undesirable xmotion
-						      end
-              endcase
+						  end
             end
 
             // Update the ball's position with its motion
             Ball_X_Pos_in = Ball_X_Pos + Ball_X_Motion;
             Ball_Y_Pos_in = Ball_Y_Pos + Ball_Y_Motion;
-            if(( Ball_Y_Pos_in + Ball_Size >= ground ) && (keycode != 8'h1a))  // FIX: use Ball_Y_Pos_in to avoid ball-under-ground frame
+            if(( Ball_Y_Pos_in + Ball_Size >= ground ) && (~zOn) && ~(Ball_X_Pos_in > holeCenter - holeSize - 10'd15 && Ball_X_Pos_in < holeCenter + holeSize - 10'd15))  // FIX: use Ball_Y_Pos_in to avoid ball-under-ground frame
               begin
                 Ball_Y_Pos_in = ground - Ball_Size;  // 2's complement.
                 if (Ball_Y_Motion != 10'b0)
@@ -130,8 +179,24 @@ module  avatar ( input         Clk,                // 50 MHz clock
                 Ball_Y_Pos_in = sky + Ball_Size;//if deleted: drop with no initial velocity in sky and accelerate after falling back
                 Ball_Y_Motion_in = gravity;//bounce back behavior
               end
-        end
 
+
+            if(Ball_X_Pos >= 10'd400 + Ball_Size && rightOn) begin
+              Ball_X_Pos_in = 10'd400 + Ball_Size;
+              Ball_X_Progress_in = Ball_X_Progress + Ball_X_Motion;
+            end
+
+            if(Ball_X_Pos <= 10'd0 + Ball_Size && leftOn) begin
+              Ball_X_Pos_in = Ball_Size;
+              //Ball_X_Progress_in = Ball_X_Progress + Ball_X_Motion;
+            end
+
+        end
+        if(Ball_X_Pos >= Ball_X_Progress + 10'd200)begin
+          if(Ball_X_Motion[9] == 0)begin
+            Ball_X_Progress_in = Ball_X_Progress + Ball_X_Motion;
+          end
+        end
         /**************************************************************************************
             ATTENTION! Please answer the following quesiton in your lab report! Points will be allocated for the answers!
             Hidden Question #2/2:
@@ -152,6 +217,7 @@ module  avatar ( input         Clk,                // 50 MHz clock
     assign DistX = DrawX - Ball_X_Pos;
     assign DistY = DrawY - Ball_Y_Pos;
     assign Size = Ball_Size;
+    assign progress = Ball_X_Progress;
     always_ff @ (posedge frame_clk) begin
       if (Ball_X_Motion > Ball_X_Motion_in) begin
         stopDirection = 1'b1;
@@ -178,13 +244,13 @@ module  avatar ( input         Clk,                // 50 MHz clock
     // assign xDirection = (keycode == 8'h04) ? 1'd1 : 1'd0;
     always_ff @ ( posedge frame_clk ) begin
 	 // default
-       xDirection <= ~(keycode == 8'h04);
+       xDirection <= ~leftOn;
 	     xFlag = (xCnt >= 6'd5);
       if (Reset || xCnt >= 6'd10 || keycode == 8'd0) begin
         xCnt = 10'd0;
         // yFlag = 1'd0;
       end
-      if ( keycode != 8'd0)  begin
+      if ( leftOn || rightOn || downOn || upOn || zOn)  begin
         // right
         xCnt <= xCnt + 6'd1;
       end

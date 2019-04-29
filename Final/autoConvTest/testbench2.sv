@@ -13,17 +13,17 @@ always begin : CLOCK_GENERATION2
 #8333 BCLK4 = ~ BCLK4; // 48kHz
 end
 
-logic [31:0] soundIn [480];
+logic signed [31:0] soundIn [480];
 
 initial begin: CLOCK_INITIALIZATION
    Clk = 0;
    BCLK4 = 0;
    for (int i = 0; i < 480; i++) begin
-     soundIn[i] = i -9'd130;
-     if (i > 9'd200)
-       soundIn[i] = i - 9'd330;
-     if (i > 9'd350)
-      soundIn[i] = i - 9'd430;
+     soundIn[i] = i * 2;
+//     if (i > 9'd200)
+//       soundIn[i] = i - 9'd330;
+//     if (i > 9'd350)
+//      soundIn[i] = i - 9'd430;
    end
 end
 
@@ -32,10 +32,10 @@ logic [3:0] stateIn;
 logic [9:0] mIN;
 logic [9:0] nIN;
 logic [8:0] bclkCnt;
-
+logic [13:0] pitch;
 logic [62:0] singleMultIn;
-logic  [70:0] singleSumIn;
-logic [70:0] fout [959];
+logic  [71:0] singleSumIn;
+//logic [70:0] fout [959];
 always_ff @ (posedge BCLK4) begin
 	if (bclkCnt >= 10'd480 || Reset_h) begin
 		bclkCnt = 10'd0;
@@ -59,8 +59,8 @@ always_comb begin : INTERNAL_MONITORING
   ClearIN = inst.smInst.Clear;
   DoneIN = inst.smInst.Done;
   mUpdateIN = inst.smInst.mUpdate;
-  mIN = inst.m;
-  nIN = inst.n;
+//  mIN = inst.m;
+//  nIN = inst.n;
   storeIN = inst.store;
   singleMultIn = inst.singleMult;
   singleSumIn = inst.singleSum;

@@ -511,15 +511,32 @@ int main(void)
 			usleep(10*1000);
 		}//end while
 
+//		usb_ctl_val = UsbWaitTDListDone();
+//
+//		// The first two keycodes are stored in 0x051E. Other keycodes are in
+//		// subsequent addresses.
+//		keycode = UsbRead(0x051e);
+//		printf("\nfirst two keycode values are %04x\n",keycode);
+//		// We only need the first keycode, which is at the lower byte of keycode.
+//		// Send the keycode to hardware via PIO.
+//		*keycode_base = keycode & 0xff;
+		// ktteck 2 keycode
 		usb_ctl_val = UsbWaitTDListDone();
 
-		// The first two keycodes are stored in 0x051E. Other keycodes are in 
-		// subsequent addresses.
-		keycode = UsbRead(0x051e);
-		printf("\nfirst two keycode values are %04x\n",keycode);
-		// We only need the first keycode, which is at the lower byte of keycode.
-		// Send the keycode to hardware via PIO.
-		*keycode_base = keycode & 0xff; 
+		// packet starts from 0x051c, reading third byte
+
+		IO_write(HPI_ADDR,0x051e); //the address of byte 0~1
+
+		keycode = (IO_read(HPI_DATA));
+
+		IO_write(HPI_ADDR,0x0520); //the address of byte 2~3
+
+		keycode += (IO_read(HPI_DATA) << 16);
+
+		printf("\nfirst four keycode values are %08x\n",keycode);
+
+		IOWR(KEYCODE_BASE, 0, keycode & 0xffff); //write to the PIO
+		//
 
 		usleep(200);//usleep(5000);
 		usb_ctl_val = UsbRead(ctl_reg);

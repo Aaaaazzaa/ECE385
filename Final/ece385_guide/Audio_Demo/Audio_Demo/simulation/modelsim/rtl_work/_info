@@ -1,0 +1,243 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/simulation/modelsim
+vAltera_UP_Audio_Bit_Counter
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1556207439
+!i10b 1
+!s100 UA@0D?WV9S<c6C8HfbE0d3
+Ihamo7JLX1CiP>o6AJ7hPm0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 Altera_UP_Audio_Bit_Counter_v_unit
+S1
+R0
+Z4 w1218068566
+8E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Audio_Bit_Counter.v
+FE:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Audio_Bit_Counter.v
+Z5 L0 11
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1556207439.000000
+!s107 E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Audio_Bit_Counter.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller|E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Audio_Bit_Counter.v|
+!i113 1
+Z8 o-sv -work work
+Z9 !s92 -sv -work work +incdir+E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller
+Z10 tCvgOpt 0
+n@altera_@u@p_@audio_@bit_@counter
+vAltera_UP_Audio_In_Deserializer
+R1
+R2
+!i10b 1
+!s100 VKEPBP3EaNkczA`C2[Hg;1
+Ia8Ie<40WYNEA2]oYbSdSz3
+R3
+!s105 Altera_UP_Audio_In_Deserializer_v_unit
+S1
+R0
+R4
+8E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Audio_In_Deserializer.v
+FE:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Audio_In_Deserializer.v
+L0 9
+R6
+r1
+!s85 0
+31
+R7
+!s107 E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Audio_In_Deserializer.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller|E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Audio_In_Deserializer.v|
+!i113 1
+R8
+R9
+R10
+n@altera_@u@p_@audio_@in_@deserializer
+vAltera_UP_Audio_Out_Serializer
+R1
+R2
+!i10b 1
+!s100 hYKfAi^RL078XJdn<WD1L3
+IWR?VLkUBjce3?X:FneKk;0
+R3
+!s105 Altera_UP_Audio_Out_Serializer_v_unit
+S1
+R0
+R4
+8E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Audio_Out_Serializer.v
+FE:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Audio_Out_Serializer.v
+L0 9
+R6
+r1
+!s85 0
+31
+R7
+!s107 E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Audio_Out_Serializer.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller|E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Audio_Out_Serializer.v|
+!i113 1
+R8
+R9
+R10
+n@altera_@u@p_@audio_@out_@serializer
+vAltera_UP_Clock_Edge
+R1
+Z11 !s110 1556207440
+!i10b 1
+!s100 dMN[E<;^EFfnoM2Hojb`b3
+In6VoGezKeJ3bZB<3WS^8;3
+R3
+!s105 Altera_UP_Clock_Edge_v_unit
+S1
+R0
+R4
+8E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Clock_Edge.v
+FE:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Clock_Edge.v
+L0 10
+R6
+r1
+!s85 0
+31
+Z12 !s108 1556207440.000000
+!s107 E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Clock_Edge.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller|E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_Clock_Edge.v|
+!i113 1
+R8
+R9
+R10
+n@altera_@u@p_@clock_@edge
+vAltera_UP_SYNC_FIFO
+R1
+R11
+!i10b 1
+!s100 53E50CP``jEeKfTSYg]f_3
+Im;XKg>JZk3T45XXnKcSKf0
+R3
+!s105 Altera_UP_SYNC_FIFO_v_unit
+S1
+R0
+R4
+8E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_SYNC_FIFO.v
+FE:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_SYNC_FIFO.v
+L0 9
+R6
+r1
+!s85 0
+31
+R12
+!s107 E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_SYNC_FIFO.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller|E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Altera_UP_SYNC_FIFO.v|
+!i113 1
+R8
+R9
+R10
+n@altera_@u@p_@s@y@n@c_@f@i@f@o
+vAudio_Clock
+R1
+R11
+!i10b 1
+!s100 GNDiKcW6RjMmMI;3MODK50
+IlcjQD]?5RKJ[X]YVN5nGY2
+R3
+!s105 Audio_Clock_v_unit
+S1
+R0
+R4
+8E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Audio_Clock.v
+FE:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Audio_Clock.v
+L0 39
+R6
+r1
+!s85 0
+31
+R12
+!s107 E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Audio_Clock.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller|E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Audio_Clock.v|
+!i113 1
+R8
+R9
+R10
+n@audio_@clock
+vAudio_Controller
+R1
+!s110 1556207441
+!i10b 1
+!s100 gYElEBESA2T8LefRedZ<U0
+IcODlA`GzgH7Yg6HUOaV_C1
+R3
+!s105 Audio_Controller_v_unit
+S1
+R0
+R4
+8E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Audio_Controller.v
+FE:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Audio_Controller.v
+R5
+R6
+r1
+!s85 0
+31
+!s108 1556207441.000000
+!s107 E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Audio_Controller.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller|E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/Audio_Controller/Audio_Controller.v|
+!i113 1
+R8
+R9
+R10
+n@audio_@controller
+vavconf
+R1
+R2
+!i10b 1
+!s100 a]c:XYAj3];5]552>OZ`91
+I1DJe_H0UzlMBS]^Kc1TMc2
+R3
+!s105 avconf_v_unit
+S1
+R0
+R4
+8E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v
+FE:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v
+L0 1
+R6
+r1
+!s85 0
+31
+!s108 1556207438.000000
+!s107 E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf|E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/avconf.v|
+!i113 1
+R8
+Z13 !s92 -sv -work work +incdir+E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf
+R10
+vI2C_Controller
+R1
+R2
+!i10b 1
+!s100 XCRm9l4P`Q`[`kGQB_Tg]3
+IG4bFjVEFe`zOD0>nIazoh3
+R3
+!s105 I2C_Controller_v_unit
+S1
+R0
+R4
+8E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/I2C_Controller.v
+FE:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/I2C_Controller.v
+L0 42
+R6
+r1
+!s85 0
+31
+R7
+!s107 E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/I2C_Controller.v|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf|E:/My_Document/ECE385/Final/ece385_guide/Audio_Demo/Audio_Demo/avconf/I2C_Controller.v|
+!i113 1
+R8
+R13
+R10
+n@i2@c_@controller

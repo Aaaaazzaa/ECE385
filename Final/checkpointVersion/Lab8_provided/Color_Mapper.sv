@@ -18,17 +18,18 @@ module  color_mapper ( input              is_avatar,            // Whether curre
                        input        [9:0] DrawX, DrawY,       // Current pixel coordinates
                        input        [9:0] sky, ground,
                        input        xDirection, xFlag, stopDirection,
-                       input        [9:0] Ball_X_Pos, Ball_Y_Pos,
+                       input        [9:0] Ball_X_Pos, Ball_Y_Pos, progress,
                        output logic [7:0] VGA_R, VGA_G, VGA_B // VGA RGB output
 
                      );
+
 	 reg [3:0] backOCM [16384];
-   reg [3:0] Char0 [256];
-   reg [3:0] Char1 [256];
-   reg [3:0] Char2 [256];
-	reg [3:0] Char3 [256];
-   reg [3:0] Char4 [256];
-   reg [3:0] Char5 [256];
+   reg [3:0] Char0 [1024];
+   reg [3:0] Char1 [1024];
+   reg [3:0] Char2 [1024];
+	reg [3:0] Char3 [1024];
+   reg [3:0] Char4 [1024];
+   reg [3:0] Char5 [1024];
    reg [3:0] ground64 [2048];
     initial begin
         $readmemh("back128_128.txt", backOCM);
@@ -51,7 +52,12 @@ module  color_mapper ( input              is_avatar,            // Whether curre
 	 logic [10:0] groundYPos;
 	 logic [13:0] OCMIdx;
    logic [10:0] groundIdx;
-   logic [8:0] avatarIdx;
+   logic [9:0] avatarIdx;
+   //
+   logic [9:0] holeCenter;
+   logic [9:0] holeSize;
+   assign holeCenter = 10'd160-progress;
+   assign holeSize = 10'd32;
    //
    logic [7:0] A0R, A0B, A0G;
    logic [7:0] A1R, A1B, A1G;
@@ -61,17 +67,19 @@ module  color_mapper ( input              is_avatar,            // Whether curre
    logic [7:0] A5R, A5B, A5G;
    logic [7:0] G0R, G0B, G0G;
 
+   logic [12:0] DrawX_plus_progress;
+   assign DrawX_plus_progress = {3'd0, DrawX} + {3'd0, progress};
    // tmp
    logic [9:0] inAvatarX;
    assign inAvatarX = DrawX - Ball_X_Pos ;
    logic [9:0] inAvatarY;
    assign inAvatarY = DrawY - Ball_Y_Pos ;
 
-   assign avatarIdx = {inAvatarY[3:0], inAvatarX[3:0]};
+   assign avatarIdx = {inAvatarY[4:0], inAvatarX[4:0]};
 	 assign OCMIdx = {backYPos[6:0], backXPos[6:0]}; // backYPos << 7 + backXPos
     assign backXPos = DrawX[6:0]; // drawX % backXDim;
     assign backYPos = DrawY[6:0]; // / backYDim * backYDim;  // drawY % backYDim;
-    assign groundIdx = {groundYPos[4:0],DrawX[5:0]};
+    assign groundIdx = {groundYPos[4:0],DrawX_plus_progress[5:0]};
 	 assign groundYPos = DrawY[9:0] + 10'd16;
     paletteToRGB paletteInstL0 (.colorIdx( backOCM[OCMIdx] ), .R(backR), .G(backG), .B(backB));
     paletteToRGB paletteInstA0 (.colorIdx( Char0[avatarIdx] ), .R(A0R), .G(A0G), .B(A0B));
@@ -143,13 +151,15 @@ module  color_mapper ( input              is_avatar,            // Whether curre
             Green = 8'hff;
             Blue = 8'hff;
           end
-        else if (DrawY >= ground && DrawY <= ground + 10'd32)
+        else if (DrawY >= ground && DrawY <= ground + 10'd32 && (DrawX < holeCenter - holeSize || DrawX > holeCenter + holeSize))
           begin
             // 255, 204, 102
             Red = G0R;
             Green = G0G;
             Blue = G0B;
           end
+
+
         else begin
             // Background with nice color gradient
             Red = backR;

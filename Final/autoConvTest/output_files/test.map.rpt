@@ -1,5 +1,5 @@
 Analysis & Synthesis report for test
-Sun Apr 21 19:38:32 2019
+Thu Apr 25 11:08:45 2019
 Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
 
 
@@ -18,13 +18,21 @@ Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
  10. Registers Removed During Synthesis
  11. General Register Statistics
  12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Parameter Settings for Inferred Entity Instance: signedMult:multInst|lpm_mult:Mult0
- 14. lpm_mult Parameter Settings by Entity Instance
- 15. Port Connectivity Checks: "convolutionSM:smInst"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
- 19. Analysis & Synthesis Suppressed Messages
+ 13. Parameter Settings for Inferred Entity Instance: findMaxIdx:findMaxInst|lpm_divide:Div0
+ 14. Parameter Settings for Inferred Entity Instance: signedMod:mod0|lpm_divide:Mod0
+ 15. Parameter Settings for Inferred Entity Instance: signedMod:mod1|lpm_divide:Mod0
+ 16. Parameter Settings for Inferred Entity Instance: signedMult:multInst|lpm_mult:Mult0
+ 17. Parameter Settings for Inferred Entity Instance: signedMod:mod0|lpm_mult:Mult0
+ 18. Parameter Settings for Inferred Entity Instance: signedMod:mod1|lpm_mult:Mult0
+ 19. Parameter Settings for Inferred Entity Instance: signedMod:mod0|lpm_divide:Div0
+ 20. Parameter Settings for Inferred Entity Instance: signedMod:mod1|lpm_divide:Div0
+ 21. lpm_mult Parameter Settings by Entity Instance
+ 22. Port Connectivity Checks: "signedMod:mod1"
+ 23. Port Connectivity Checks: "signedMod:mod0"
+ 24. Post-Synthesis Netlist Statistics for Top Partition
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -50,16 +58,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 21 19:38:28 2019       ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 25 11:08:43 2019       ;
 ; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
 ; Revision Name                      ; test                                        ;
 ; Top-level Entity Name              ; autoConvolution                             ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 90,194                                      ;
-;     Total combinational functions  ; 22,105                                      ;
-;     Dedicated logic registers      ; 68,185                                      ;
-; Total registers                    ; 68185                                       ;
-; Total pins                         ; 83,462                                      ;
+; Total logic elements               ; 79,591                                      ;
+;     Total combinational functions  ; 45,103                                      ;
+;     Dedicated logic registers      ; 34,677                                      ;
+; Total registers                    ; 34677                                       ;
+; Total pins                         ; 15,387                                      ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 8                                           ;
@@ -161,33 +169,64 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.01        ;
+; Average used               ; 1.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.3%      ;
-;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
+;     Processor 2            ;   0.1%      ;
+;     Processor 3            ;   0.1%      ;
+;     Processor 4            ;   0.1%      ;
 +----------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                               ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                           ; Library ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
-; convolutionSM.sv                 ; yes             ; User SystemVerilog HDL File  ; H:/Final/autoConvTest/convolutionSM.sv                                 ;         ;
-; autoConvolution.sv               ; yes             ; User SystemVerilog HDL File  ; H:/Final/autoConvTest/autoConvolution.sv                               ;         ;
-; signedMult.sv                    ; yes             ; User SystemVerilog HDL File  ; H:/Final/autoConvTest/signedMult.sv                                    ;         ;
-; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf    ;         ;
-; aglobal180.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc  ;         ;
-; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_add_sub.inc ;         ;
-; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.inc    ;         ;
-; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/bypassff.inc    ;         ;
-; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altshift.inc    ;         ;
-; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; H:/Final/autoConvTest/db/mult_7dt.tdf                                  ;         ;
-+----------------------------------+-----------------+------------------------------+------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                       ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
+; signedMod.sv                     ; yes             ; User SystemVerilog HDL File  ; E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv                          ;         ;
+; findMaxIdx.sv                    ; yes             ; User SystemVerilog HDL File  ; E:/My_Document/ECE385/Final/autoConvTest/findMaxIdx.sv                         ;         ;
+; convolutionSM.sv                 ; yes             ; User SystemVerilog HDL File  ; E:/My_Document/ECE385/Final/autoConvTest/convolutionSM.sv                      ;         ;
+; autoConvolution.sv               ; yes             ; User SystemVerilog HDL File  ; E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv                    ;         ;
+; signedMult.sv                    ; yes             ; User SystemVerilog HDL File  ; E:/My_Document/ECE385/Final/autoConvTest/signedMult.sv                         ;         ;
+; lpm_divide.tdf                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_divide.tdf          ;         ;
+; abs_divider.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/abs_divider.inc         ;         ;
+; sign_div_unsign.inc              ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/sign_div_unsign.inc     ;         ;
+; aglobal180.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/aglobal180.inc          ;         ;
+; db/lpm_divide_dkm.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/autoConvTest/db/lpm_divide_dkm.tdf                 ;         ;
+; db/sign_div_unsign_5nh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/autoConvTest/db/sign_div_unsign_5nh.tdf            ;         ;
+; db/alt_u_div_u9f.tdf             ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/autoConvTest/db/alt_u_div_u9f.tdf                  ;         ;
+; db/add_sub_7pc.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/autoConvTest/db/add_sub_7pc.tdf                    ;         ;
+; db/add_sub_8pc.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/autoConvTest/db/add_sub_8pc.tdf                    ;         ;
+; db/lpm_divide_ccm.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/autoConvTest/db/lpm_divide_ccm.tdf                 ;         ;
+; db/sign_div_unsign_1nh.tdf       ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/autoConvTest/db/sign_div_unsign_1nh.tdf            ;         ;
+; db/alt_u_div_m9f.tdf             ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/autoConvTest/db/alt_u_div_m9f.tdf                  ;         ;
+; lpm_mult.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf            ;         ;
+; lpm_add_sub.inc                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_add_sub.inc         ;         ;
+; multcore.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.inc            ;         ;
+; bypassff.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/bypassff.inc            ;         ;
+; altshift.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altshift.inc            ;         ;
+; db/mult_7dt.tdf                  ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/autoConvTest/db/mult_7dt.tdf                       ;         ;
+; multcore.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.tdf            ;         ;
+; csa_add.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/csa_add.inc             ;         ;
+; mpar_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.inc            ;         ;
+; muleabz.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/muleabz.inc             ;         ;
+; mul_lfrg.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mul_lfrg.inc            ;         ;
+; mul_boothc.inc                   ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mul_boothc.inc          ;         ;
+; alt_ded_mult.inc                 ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/alt_ded_mult.inc        ;         ;
+; alt_ded_mult_y.inc               ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/alt_ded_mult_y.inc      ;         ;
+; dffpipe.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/dffpipe.inc             ;         ;
+; mpar_add.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf            ;         ;
+; lpm_add_sub.tdf                  ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_add_sub.tdf         ;         ;
+; addcore.inc                      ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/addcore.inc             ;         ;
+; look_add.inc                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/look_add.inc            ;         ;
+; alt_stratix_add_sub.inc          ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/alt_stratix_add_sub.inc ;         ;
+; db/add_sub_g9h.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/autoConvTest/db/add_sub_g9h.tdf                    ;         ;
+; db/add_sub_ekh.tdf               ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/autoConvTest/db/add_sub_ekh.tdf                    ;         ;
+; altshift.tdf                     ; yes             ; Megafunction                 ; c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/altshift.tdf            ;         ;
+; db/lpm_divide_9km.tdf            ; yes             ; Auto-Generated Megafunction  ; E:/My_Document/ECE385/Final/autoConvTest/db/lpm_divide_9km.tdf                 ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -195,44 +234,71 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 90,194    ;
+; Estimated Total logic elements              ; 79,591    ;
 ;                                             ;           ;
-; Total combinational functions               ; 22105     ;
+; Total combinational functions               ; 45103     ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 21280     ;
-;     -- 3 input functions                    ; 716       ;
-;     -- <=2 input functions                  ; 109       ;
+;     -- 4 input functions                    ; 43967     ;
+;     -- 3 input functions                    ; 818       ;
+;     -- <=2 input functions                  ; 318       ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 21779     ;
-;     -- arithmetic mode                      ; 326       ;
+;     -- normal mode                          ; 44554     ;
+;     -- arithmetic mode                      ; 549       ;
 ;                                             ;           ;
-; Total registers                             ; 68185     ;
-;     -- Dedicated logic registers            ; 68185     ;
+; Total registers                             ; 34677     ;
+;     -- Dedicated logic registers            ; 34677     ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 83462     ;
+; I/O pins                                    ; 15387     ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 8         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
-; Maximum fan-out                             ; 68185     ;
-; Total fan-out                               ; 443791    ;
-; Average fan-out                             ; 1.73      ;
+; Maximum fan-out                             ; 34677     ;
+; Total fan-out                               ; 298560    ;
+; Average fan-out                             ; 2.70      ;
 +---------------------------------------------+-----------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                           ;
-+------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-------+--------------+-----------------------------------------------------------------------------+-----------------+--------------+
-; Compilation Hierarchy Node         ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins  ; Virtual Pins ; Full Hierarchy Name                                                         ; Entity Name     ; Library Name ;
-+------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-------+--------------+-----------------------------------------------------------------------------+-----------------+--------------+
-; |autoConvolution                   ; 22105 (21825)       ; 68185 (68180)             ; 0           ; 8            ; 0       ; 4         ; 83462 ; 0            ; |autoConvolution                                                            ; autoConvolution ; work         ;
-;    |convolutionSM:smInst|          ; 9 (9)               ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|convolutionSM:smInst                                       ; convolutionSM   ; work         ;
-;    |signedMult:multInst|           ; 271 (193)           ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0     ; 0            ; |autoConvolution|signedMult:multInst                                        ; signedMult      ; work         ;
-;       |lpm_mult:Mult0|             ; 78 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0     ; 0            ; |autoConvolution|signedMult:multInst|lpm_mult:Mult0                         ; lpm_mult        ; work         ;
-;          |mult_7dt:auto_generated| ; 78 (78)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0     ; 0            ; |autoConvolution|signedMult:multInst|lpm_mult:Mult0|mult_7dt:auto_generated ; mult_7dt        ; work         ;
-+------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-------+--------------+-----------------------------------------------------------------------------+-----------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                                                                  ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins  ; Virtual Pins ; Full Hierarchy Name                                                                                                                     ; Entity Name         ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
+; |autoConvolution                          ; 45103 (21227)       ; 34677 (34580)             ; 0           ; 8            ; 0       ; 4         ; 15387 ; 0            ; |autoConvolution                                                                                                                        ; autoConvolution     ; work         ;
+;    |convolutionSM:smInst|                 ; 10 (10)             ; 5 (5)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|convolutionSM:smInst                                                                                                   ; convolutionSM       ; work         ;
+;    |findMaxIdx:findMaxInst|               ; 23428 (23227)       ; 92 (92)                   ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|findMaxIdx:findMaxInst                                                                                                 ; findMaxIdx          ; work         ;
+;       |lpm_divide:Div0|                   ; 201 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|findMaxIdx:findMaxInst|lpm_divide:Div0                                                                                 ; lpm_divide          ; work         ;
+;          |lpm_divide_dkm:auto_generated|  ; 201 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated                                                   ; lpm_divide_dkm      ; work         ;
+;             |sign_div_unsign_5nh:divider| ; 201 (0)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider                       ; sign_div_unsign_5nh ; work         ;
+;                |alt_u_div_u9f:divider|    ; 201 (201)           ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider ; alt_u_div_u9f       ; work         ;
+;    |signedMod:mod0|                       ; 79 (34)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod0                                                                                                         ; signedMod           ; work         ;
+;       |lpm_divide:Div0|                   ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod0|lpm_divide:Div0                                                                                         ; lpm_divide          ; work         ;
+;          |lpm_divide_9km:auto_generated|  ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod0|lpm_divide:Div0|lpm_divide_9km:auto_generated                                                           ; lpm_divide_9km      ; work         ;
+;             |sign_div_unsign_1nh:divider| ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod0|lpm_divide:Div0|lpm_divide_9km:auto_generated|sign_div_unsign_1nh:divider                               ; sign_div_unsign_1nh ; work         ;
+;                |alt_u_div_m9f:divider|    ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod0|lpm_divide:Div0|lpm_divide_9km:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_m9f:divider         ; alt_u_div_m9f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod0|lpm_divide:Mod0                                                                                         ; lpm_divide          ; work         ;
+;          |lpm_divide_ccm:auto_generated|  ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod0|lpm_divide:Mod0|lpm_divide_ccm:auto_generated                                                           ; lpm_divide_ccm      ; work         ;
+;             |sign_div_unsign_1nh:divider| ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod0|lpm_divide:Mod0|lpm_divide_ccm:auto_generated|sign_div_unsign_1nh:divider                               ; sign_div_unsign_1nh ; work         ;
+;                |alt_u_div_m9f:divider|    ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod0|lpm_divide:Mod0|lpm_divide_ccm:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_m9f:divider         ; alt_u_div_m9f       ; work         ;
+;       |lpm_mult:Mult0|                    ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod0|lpm_mult:Mult0                                                                                          ; lpm_mult            ; work         ;
+;          |multcore:mult_core|             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod0|lpm_mult:Mult0|multcore:mult_core                                                                       ; multcore            ; work         ;
+;    |signedMod:mod1|                       ; 90 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod1                                                                                                         ; signedMod           ; work         ;
+;       |lpm_divide:Div0|                   ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod1|lpm_divide:Div0                                                                                         ; lpm_divide          ; work         ;
+;          |lpm_divide_9km:auto_generated|  ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod1|lpm_divide:Div0|lpm_divide_9km:auto_generated                                                           ; lpm_divide_9km      ; work         ;
+;             |sign_div_unsign_1nh:divider| ; 21 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod1|lpm_divide:Div0|lpm_divide_9km:auto_generated|sign_div_unsign_1nh:divider                               ; sign_div_unsign_1nh ; work         ;
+;                |alt_u_div_m9f:divider|    ; 21 (21)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod1|lpm_divide:Div0|lpm_divide_9km:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_m9f:divider         ; alt_u_div_m9f       ; work         ;
+;       |lpm_divide:Mod0|                   ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod1|lpm_divide:Mod0                                                                                         ; lpm_divide          ; work         ;
+;          |lpm_divide_ccm:auto_generated|  ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod1|lpm_divide:Mod0|lpm_divide_ccm:auto_generated                                                           ; lpm_divide_ccm      ; work         ;
+;             |sign_div_unsign_1nh:divider| ; 33 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod1|lpm_divide:Mod0|lpm_divide_ccm:auto_generated|sign_div_unsign_1nh:divider                               ; sign_div_unsign_1nh ; work         ;
+;                |alt_u_div_m9f:divider|    ; 33 (33)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod1|lpm_divide:Mod0|lpm_divide_ccm:auto_generated|sign_div_unsign_1nh:divider|alt_u_div_m9f:divider         ; alt_u_div_m9f       ; work         ;
+;       |lpm_mult:Mult0|                    ; 3 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod1|lpm_mult:Mult0                                                                                          ; lpm_mult            ; work         ;
+;          |multcore:mult_core|             ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0     ; 0            ; |autoConvolution|signedMod:mod1|lpm_mult:Mult0|multcore:mult_core                                                                       ; multcore            ; work         ;
+;    |signedMult:multInst|                  ; 269 (191)           ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0     ; 0            ; |autoConvolution|signedMult:multInst                                                                                                    ; signedMult          ; work         ;
+;       |lpm_mult:Mult0|                    ; 78 (0)              ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0     ; 0            ; |autoConvolution|signedMult:multInst|lpm_mult:Mult0                                                                                     ; lpm_mult            ; work         ;
+;          |mult_7dt:auto_generated|        ; 78 (78)             ; 0 (0)                     ; 0           ; 8            ; 0       ; 4         ; 0     ; 0            ; |autoConvolution|signedMult:multInst|lpm_mult:Mult0|mult_7dt:auto_generated                                                             ; mult_7dt            ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -268,44 +334,116 @@ Encoding Type:  One-Hot
 +--------------------+-------------+------------------+----------------+--------------+--------------------+
 
 
-+-------------------------------------------------------------+
-; Registers Removed During Synthesis                          ;
-+----------------------------------------+--------------------+
-; Register name                          ; Reason for Removal ;
-+----------------------------------------+--------------------+
-; convolutionSM:smInst|fstate~2          ; Lost fanout        ;
-; convolutionSM:smInst|fstate~3          ; Lost fanout        ;
-; convolutionSM:smInst|fstate~5          ; Lost fanout        ;
-; convolutionSM:smInst|fstate~6          ; Lost fanout        ;
-; convolutionSM:smInst|fstate~7          ; Lost fanout        ;
-; convolutionSM:smInst|fstate~8          ; Lost fanout        ;
-; convolutionSM:smInst|fstate~9          ; Lost fanout        ;
-; convolutionSM:smInst|fstate~10         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~11         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~12         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~13         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~14         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~15         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~16         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~17         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~18         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~19         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~20         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~21         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~22         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~23         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~24         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~25         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~26         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~27         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~28         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~29         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~30         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~31         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~32         ; Lost fanout        ;
-; convolutionSM:smInst|fstate~33         ; Lost fanout        ;
-; Total Number of Removed Registers = 31 ;                    ;
-+----------------------------------------+--------------------+
++---------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                    ;
++-----------------------------------------+---------------------------------------------+
+; Register name                           ; Reason for Removal                          ;
++-----------------------------------------+---------------------------------------------+
+; convolutionSM:smInst|fstate~2           ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~3           ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~5           ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~6           ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~7           ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~8           ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~9           ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~10          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~11          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~12          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~13          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~14          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~15          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~16          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~17          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~18          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~19          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~20          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~21          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~22          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~23          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~24          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~25          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~26          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~27          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~28          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~29          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~30          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~31          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~32          ; Lost fanout                                 ;
+; convolutionSM:smInst|fstate~33          ; Lost fanout                                 ;
+; fout[479][71]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][70]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][69]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][68]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][67]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][66]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][65]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][64]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][63]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][62]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][61]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][60]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][59]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][58]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][57]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][56]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][55]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][54]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][53]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][52]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][51]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][50]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][49]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][48]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][47]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][46]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][45]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][44]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][43]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][42]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][41]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][40]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][39]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][38]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][37]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][36]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][35]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][34]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][33]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][32]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][31]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][30]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][29]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][28]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][27]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][26]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][25]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][24]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][23]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][22]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][21]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][20]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][19]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][18]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][17]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][16]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][15]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][14]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][13]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][12]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][11]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][10]                           ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][9]                            ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][8]                            ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][7]                            ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][6]                            ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][5]                            ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][4]                            ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][3]                            ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][2]                            ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][1]                            ; Stuck at GND due to stuck port clock_enable ;
+; fout[479][0]                            ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 103 ;                                             ;
++-----------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -313,26 +451,98 @@ Encoding Type:  One-Hot
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 68185 ;
-; Number of registers using Synchronous Clear  ; 81    ;
-; Number of registers using Synchronous Load   ; 0     ;
+; Total registers                              ; 34677 ;
+; Number of registers using Synchronous Clear  ; 92    ;
+; Number of registers using Synchronous Load   ; 10    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 68178 ;
+; Number of registers using Clock Enable       ; 34672 ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                               ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output     ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
-; 3:1                ; 71 bits   ; 142 LEs       ; 71 LEs               ; 71 LEs                 ; Yes        ; |autoConvolution|singleSum[56] ;
-; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |autoConvolution|n[0]          ;
-; 513:1              ; 32 bits   ; 10944 LEs     ; 10272 LEs            ; 672 LEs                ; No         ; |autoConvolution|fn_m[31]      ;
-; 1025:1             ; 32 bits   ; 21856 LEs     ; 10272 LEs            ; 11584 LEs              ; No         ; |autoConvolution|fm[31]        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 3:1                ; 82 bits   ; 164 LEs       ; 82 LEs               ; 82 LEs                 ; Yes        ; |autoConvolution|findMaxIdx:findMaxInst|maxVal[70] ;
+; 3:1                ; 72 bits   ; 144 LEs       ; 72 LEs               ; 72 LEs                 ; Yes        ; |autoConvolution|singleSum[7]                      ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |autoConvolution|findMaxIdx:findMaxInst|cnt[1]     ;
+; 3:1                ; 10 bits   ; 20 LEs        ; 10 LEs               ; 10 LEs                 ; Yes        ; |autoConvolution|l[0]                              ;
+; 512:1              ; 72 bits   ; 24552 LEs     ; 23040 LEs            ; 1512 LEs               ; No         ; |autoConvolution|findMaxIdx:findMaxInst|Mux20      ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 10240 LEs            ; 672 LEs                ; No         ; |autoConvolution|Mux18                             ;
+; 512:1              ; 32 bits   ; 10912 LEs     ; 10240 LEs            ; 672 LEs                ; No         ; |autoConvolution|Mux32                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: findMaxIdx:findMaxInst|lpm_divide:Div0 ;
++------------------------+----------------+-----------------------------------------------+
+; Parameter Name         ; Value          ; Type                                          ;
++------------------------+----------------+-----------------------------------------------+
+; LPM_WIDTHN             ; 14             ; Untyped                                       ;
+; LPM_WIDTHD             ; 10             ; Untyped                                       ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                                       ;
+; LPM_PIPELINE           ; 0              ; Untyped                                       ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                                       ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                                       ;
+; CBXI_PARAMETER         ; lpm_divide_dkm ; Untyped                                       ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                                       ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                                       ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                                    ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                                  ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                                  ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                                ;
++------------------------+----------------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: signedMod:mod0|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                               ;
+; LPM_WIDTHD             ; 10             ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_ccm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: signedMod:mod1|lpm_divide:Mod0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                               ;
+; LPM_WIDTHD             ; 10             ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_ccm ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +-------------------------------------------------------------------------------------+
@@ -370,12 +580,128 @@ Encoding Type:  One-Hot
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: signedMod:mod0|lpm_mult:Mult0      ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 9            ; Untyped             ;
+; LPM_WIDTHB                                     ; 6            ; Untyped             ;
+; LPM_WIDTHP                                     ; 15           ; Untyped             ;
+; LPM_WIDTHR                                     ; 15           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: signedMod:mod1|lpm_mult:Mult0      ;
++------------------------------------------------+--------------+---------------------+
+; Parameter Name                                 ; Value        ; Type                ;
++------------------------------------------------+--------------+---------------------+
+; AUTO_CARRY_CHAINS                              ; ON           ; AUTO_CARRY          ;
+; IGNORE_CARRY_BUFFERS                           ; OFF          ; IGNORE_CARRY        ;
+; AUTO_CASCADE_CHAINS                            ; ON           ; AUTO_CASCADE        ;
+; IGNORE_CASCADE_BUFFERS                         ; OFF          ; IGNORE_CASCADE      ;
+; LPM_WIDTHA                                     ; 9            ; Untyped             ;
+; LPM_WIDTHB                                     ; 6            ; Untyped             ;
+; LPM_WIDTHP                                     ; 15           ; Untyped             ;
+; LPM_WIDTHR                                     ; 15           ; Untyped             ;
+; LPM_WIDTHS                                     ; 1            ; Untyped             ;
+; LPM_REPRESENTATION                             ; SIGNED       ; Untyped             ;
+; LPM_PIPELINE                                   ; 0            ; Untyped             ;
+; LATENCY                                        ; 0            ; Untyped             ;
+; INPUT_A_IS_CONSTANT                            ; NO           ; Untyped             ;
+; INPUT_B_IS_CONSTANT                            ; YES          ; Untyped             ;
+; USE_EAB                                        ; OFF          ; Untyped             ;
+; MAXIMIZE_SPEED                                 ; 5            ; Untyped             ;
+; DEVICE_FAMILY                                  ; Cyclone IV E ; Untyped             ;
+; CARRY_CHAIN                                    ; MANUAL       ; Untyped             ;
+; APEX20K_TECHNOLOGY_MAPPER                      ; LUT          ; TECH_MAPPER_APEX20K ;
+; DEDICATED_MULTIPLIER_CIRCUITRY                 ; AUTO         ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_INPUT_WIDTH_FOR_AUTO  ; 0            ; Untyped             ;
+; DEDICATED_MULTIPLIER_MIN_OUTPUT_WIDTH_FOR_AUTO ; 0            ; Untyped             ;
+; CBXI_PARAMETER                                 ; NOTHING      ; Untyped             ;
+; INPUT_A_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; INPUT_B_FIXED_VALUE                            ; Bx           ; Untyped             ;
+; USE_AHDL_IMPLEMENTATION                        ; OFF          ; Untyped             ;
++------------------------------------------------+--------------+---------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: signedMod:mod0|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                               ;
+; LPM_WIDTHD             ; 10             ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_9km ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: signedMod:mod1|lpm_divide:Div0 ;
++------------------------+----------------+---------------------------------------+
+; Parameter Name         ; Value          ; Type                                  ;
++------------------------+----------------+---------------------------------------+
+; LPM_WIDTHN             ; 10             ; Untyped                               ;
+; LPM_WIDTHD             ; 10             ; Untyped                               ;
+; LPM_NREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_DREPRESENTATION    ; UNSIGNED       ; Untyped                               ;
+; LPM_PIPELINE           ; 0              ; Untyped                               ;
+; LPM_REMAINDERPOSITIVE  ; TRUE           ; Untyped                               ;
+; MAXIMIZE_SPEED         ; 5              ; Untyped                               ;
+; CBXI_PARAMETER         ; lpm_divide_9km ; Untyped                               ;
+; CARRY_CHAIN            ; MANUAL         ; Untyped                               ;
+; OPTIMIZE_FOR_SPEED     ; 5              ; Untyped                               ;
+; AUTO_CARRY_CHAINS      ; ON             ; AUTO_CARRY                            ;
+; IGNORE_CARRY_BUFFERS   ; OFF            ; IGNORE_CARRY                          ;
+; AUTO_CASCADE_CHAINS    ; ON             ; AUTO_CASCADE                          ;
+; IGNORE_CASCADE_BUFFERS ; OFF            ; IGNORE_CASCADE                        ;
++------------------------+----------------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +----------------------------------------------------------------------------+
 ; lpm_mult Parameter Settings by Entity Instance                             ;
 +---------------------------------------+------------------------------------+
 ; Name                                  ; Value                              ;
 +---------------------------------------+------------------------------------+
-; Number of entity instances            ; 1                                  ;
+; Number of entity instances            ; 3                                  ;
 ; Entity Instance                       ; signedMult:multInst|lpm_mult:Mult0 ;
 ;     -- LPM_WIDTHA                     ; 32                                 ;
 ;     -- LPM_WIDTHB                     ; 32                                 ;
@@ -387,16 +713,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                               ;
 ;     -- INPUT_A_FIXED_VALUE            ; Bx                                 ;
 ;     -- INPUT_B_FIXED_VALUE            ; Bx                                 ;
+; Entity Instance                       ; signedMod:mod0|lpm_mult:Mult0      ;
+;     -- LPM_WIDTHA                     ; 9                                  ;
+;     -- LPM_WIDTHB                     ; 6                                  ;
+;     -- LPM_WIDTHP                     ; 15                                 ;
+;     -- LPM_REPRESENTATION             ; SIGNED                             ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                 ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                ;
+;     -- USE_EAB                        ; OFF                                ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                               ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                 ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                 ;
+; Entity Instance                       ; signedMod:mod1|lpm_mult:Mult0      ;
+;     -- LPM_WIDTHA                     ; 9                                  ;
+;     -- LPM_WIDTHB                     ; 6                                  ;
+;     -- LPM_WIDTHP                     ; 15                                 ;
+;     -- LPM_REPRESENTATION             ; SIGNED                             ;
+;     -- INPUT_A_IS_CONSTANT            ; NO                                 ;
+;     -- INPUT_B_IS_CONSTANT            ; YES                                ;
+;     -- USE_EAB                        ; OFF                                ;
+;     -- DEDICATED_MULTIPLIER_CIRCUITRY ; AUTO                               ;
+;     -- INPUT_A_FIXED_VALUE            ; Bx                                 ;
+;     -- INPUT_B_FIXED_VALUE            ; Bx                                 ;
 +---------------------------------------+------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "convolutionSM:smInst"                                                               ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "signedMod:mod1"                                                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; base[8..5] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; base[4..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; base[9]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; result[9]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "signedMod:mod0"                                                                           ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; base[8..5] ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; base[4..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; base[9]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; result[9]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -404,26 +767,27 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 83462                       ;
-; cycloneiii_ff         ; 68185                       ;
-;     ENA               ; 68097                       ;
-;     ENA SCLR          ; 81                          ;
-;     plain             ; 7                           ;
-; cycloneiii_lcell_comb ; 22105                       ;
-;     arith             ; 326                         ;
-;         2 data inputs ; 40                          ;
-;         3 data inputs ; 286                         ;
-;     normal            ; 21779                       ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 63                          ;
-;         3 data inputs ; 430                         ;
-;         4 data inputs ; 21280                       ;
+; boundary_port         ; 15387                       ;
+; cycloneiii_ff         ; 34677                       ;
+;     ENA               ; 34570                       ;
+;     ENA SCLR          ; 92                          ;
+;     ENA SLD           ; 10                          ;
+;     plain             ; 5                           ;
+; cycloneiii_lcell_comb ; 45103                       ;
+;     arith             ; 549                         ;
+;         2 data inputs ; 169                         ;
+;         3 data inputs ; 380                         ;
+;     normal            ; 44554                       ;
+;         0 data inputs ; 24                          ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 109                         ;
+;         3 data inputs ; 438                         ;
+;         4 data inputs ; 43967                       ;
 ; cycloneiii_mac_mult   ; 4                           ;
 ; cycloneiii_mac_out    ; 4                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 21.70                       ;
-; Average LUT depth     ; 4.21                        ;
+; Max LUT depth         ; 35.30                       ;
+; Average LUT depth     ; 14.17                       ;
 +-----------------------+-----------------------------+
 
 
@@ -432,7 +796,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:01:18     ;
+; Top            ; 00:06:10     ;
 +----------------+--------------+
 
 
@@ -442,27 +806,68 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
-    Info: Processing started: Sun Apr 21 19:32:55 2019
+    Info: Processing started: Thu Apr 25 11:01:54 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off test -c test
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file signedmod.sv
+    Info (12023): Found entity 1: signedMod File: E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file findmaxidx.sv
+    Info (12023): Found entity 1: findMaxIdx File: E:/My_Document/ECE385/Final/autoConvTest/findMaxIdx.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file convolutionsm.sv
-    Info (12023): Found entity 1: convolutionSM File: H:/Final/autoConvTest/convolutionSM.sv Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file /final/tianhao6/lab8_provided/hexdriver.sv
+    Info (12023): Found entity 1: convolutionSM File: E:/My_Document/ECE385/Final/autoConvTest/convolutionSM.sv Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file h:/final/tianhao6/lab8_provided/hexdriver.sv
     Info (12023): Found entity 1: HexDriver File: H:/Final/tianhao6/Lab8_provided/HexDriver.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file testbench2.sv
-    Info (12023): Found entity 1: testbench2 File: H:/Final/autoConvTest/testbench2.sv Line: 1
+    Info (12023): Found entity 1: testbench2 File: E:/My_Document/ECE385/Final/autoConvTest/testbench2.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file autoconvolution.sv
-    Info (12023): Found entity 1: autoConvolution File: H:/Final/autoConvTest/autoConvolution.sv Line: 1
+    Info (12023): Found entity 1: autoConvolution File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 53
 Info (12021): Found 1 design units, including 1 entities, in source file signedmult.sv
-    Info (12023): Found entity 1: signedMult File: H:/Final/autoConvTest/signedMult.sv Line: 1
+    Info (12023): Found entity 1: signedMult File: E:/My_Document/ECE385/Final/autoConvTest/signedMult.sv Line: 1
 Info (12127): Elaborating entity "autoConvolution" for the top level hierarchy
-Info (12128): Elaborating entity "signedMult" for hierarchy "signedMult:multInst" File: H:/Final/autoConvTest/autoConvolution.sv Line: 17
-Info (12128): Elaborating entity "convolutionSM" for hierarchy "convolutionSM:smInst" File: H:/Final/autoConvTest/autoConvolution.sv Line: 46
-Info (278001): Inferred 1 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "signedMult:multInst|Mult0" File: H:/Final/autoConvTest/signedMult.sv Line: 13
-Info (12130): Elaborated megafunction instantiation "signedMult:multInst|lpm_mult:Mult0" File: H:/Final/autoConvTest/signedMult.sv Line: 13
-Info (12133): Instantiated megafunction "signedMult:multInst|lpm_mult:Mult0" with the following parameter: File: H:/Final/autoConvTest/signedMult.sv Line: 13
+Info (12128): Elaborating entity "signedMod" for hierarchy "signedMod:mod0" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 71
+Info (12128): Elaborating entity "signedMult" for hierarchy "signedMult:multInst" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 75
+Info (12128): Elaborating entity "convolutionSM" for hierarchy "convolutionSM:smInst" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 104
+Info (12128): Elaborating entity "findMaxIdx" for hierarchy "findMaxIdx:findMaxInst" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 106
+Info (278001): Inferred 8 megafunctions from design logic
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "findMaxIdx:findMaxInst|Div0" File: E:/My_Document/ECE385/Final/autoConvTest/findMaxIdx.sv Line: 26
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "signedMod:mod0|Mod0" File: E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv Line: 11
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "signedMod:mod1|Mod0" File: E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv Line: 11
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "signedMult:multInst|Mult0" File: E:/My_Document/ECE385/Final/autoConvTest/signedMult.sv Line: 13
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "signedMod:mod0|Mult0" File: E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv Line: 8
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "signedMod:mod1|Mult0" File: E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv Line: 8
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "signedMod:mod0|Div0" File: E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv Line: 8
+    Info (278004): Inferred divider/modulo megafunction ("lpm_divide") from the following logic: "signedMod:mod1|Div0" File: E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv Line: 8
+Info (12130): Elaborated megafunction instantiation "findMaxIdx:findMaxInst|lpm_divide:Div0" File: E:/My_Document/ECE385/Final/autoConvTest/findMaxIdx.sv Line: 26
+Info (12133): Instantiated megafunction "findMaxIdx:findMaxInst|lpm_divide:Div0" with the following parameter: File: E:/My_Document/ECE385/Final/autoConvTest/findMaxIdx.sv Line: 26
+    Info (12134): Parameter "LPM_WIDTHN" = "14"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_dkm.tdf
+    Info (12023): Found entity 1: lpm_divide_dkm File: E:/My_Document/ECE385/Final/autoConvTest/db/lpm_divide_dkm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_5nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_5nh File: E:/My_Document/ECE385/Final/autoConvTest/db/sign_div_unsign_5nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_u9f.tdf
+    Info (12023): Found entity 1: alt_u_div_u9f File: E:/My_Document/ECE385/Final/autoConvTest/db/alt_u_div_u9f.tdf Line: 26
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_7pc.tdf
+    Info (12023): Found entity 1: add_sub_7pc File: E:/My_Document/ECE385/Final/autoConvTest/db/add_sub_7pc.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_8pc.tdf
+    Info (12023): Found entity 1: add_sub_8pc File: E:/My_Document/ECE385/Final/autoConvTest/db/add_sub_8pc.tdf Line: 22
+Info (12130): Elaborated megafunction instantiation "signedMod:mod0|lpm_divide:Mod0" File: E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv Line: 11
+Info (12133): Instantiated megafunction "signedMod:mod0|lpm_divide:Mod0" with the following parameter: File: E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv Line: 11
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_ccm.tdf
+    Info (12023): Found entity 1: lpm_divide_ccm File: E:/My_Document/ECE385/Final/autoConvTest/db/lpm_divide_ccm.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/sign_div_unsign_1nh.tdf
+    Info (12023): Found entity 1: sign_div_unsign_1nh File: E:/My_Document/ECE385/Final/autoConvTest/db/sign_div_unsign_1nh.tdf Line: 24
+Info (12021): Found 1 design units, including 1 entities, in source file db/alt_u_div_m9f.tdf
+    Info (12023): Found entity 1: alt_u_div_m9f File: E:/My_Document/ECE385/Final/autoConvTest/db/alt_u_div_m9f.tdf Line: 26
+Info (12130): Elaborated megafunction instantiation "signedMult:multInst|lpm_mult:Mult0" File: E:/My_Document/ECE385/Final/autoConvTest/signedMult.sv Line: 13
+Info (12133): Instantiated megafunction "signedMult:multInst|lpm_mult:Mult0" with the following parameter: File: E:/My_Document/ECE385/Final/autoConvTest/signedMult.sv Line: 13
     Info (12134): Parameter "LPM_WIDTHA" = "32"
     Info (12134): Parameter "LPM_WIDTHB" = "32"
     Info (12134): Parameter "LPM_WIDTHP" = "64"
@@ -473,40 +878,76 @@ Info (12133): Instantiated megafunction "signedMult:multInst|lpm_mult:Mult0" wit
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
 Info (12021): Found 1 design units, including 1 entities, in source file db/mult_7dt.tdf
-    Info (12023): Found entity 1: mult_7dt File: H:/Final/autoConvTest/db/mult_7dt.tdf Line: 30
+    Info (12023): Found entity 1: mult_7dt File: E:/My_Document/ECE385/Final/autoConvTest/db/mult_7dt.tdf Line: 30
+Info (12130): Elaborated megafunction instantiation "signedMod:mod0|lpm_mult:Mult0" File: E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv Line: 8
+Info (12133): Instantiated megafunction "signedMod:mod0|lpm_mult:Mult0" with the following parameter: File: E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv Line: 8
+    Info (12134): Parameter "LPM_WIDTHA" = "9"
+    Info (12134): Parameter "LPM_WIDTHB" = "6"
+    Info (12134): Parameter "LPM_WIDTHP" = "15"
+    Info (12134): Parameter "LPM_WIDTHR" = "15"
+    Info (12134): Parameter "LPM_WIDTHS" = "1"
+    Info (12134): Parameter "LPM_REPRESENTATION" = "SIGNED"
+    Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
+    Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "YES"
+    Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
+Info (12131): Elaborated megafunction instantiation "signedMod:mod0|lpm_mult:Mult0|multcore:mult_core", which is child of megafunction instantiation "signedMod:mod0|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 308
+Info (12131): Elaborated megafunction instantiation "signedMod:mod0|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder", which is child of megafunction instantiation "signedMod:mod0|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/multcore.tdf Line: 228
+Info (12131): Elaborated megafunction instantiation "signedMod:mod0|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|lpm_add_sub:adder[0]", which is child of megafunction instantiation "signedMod:mod0|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_g9h.tdf
+    Info (12023): Found entity 1: add_sub_g9h File: E:/My_Document/ECE385/Final/autoConvTest/db/add_sub_g9h.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "signedMod:mod0|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add", which is child of megafunction instantiation "signedMod:mod0|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 138
+Info (12131): Elaborated megafunction instantiation "signedMod:mod0|lpm_mult:Mult0|multcore:mult_core|mpar_add:padder|mpar_add:sub_par_add|lpm_add_sub:adder[0]", which is child of megafunction instantiation "signedMod:mod0|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/mpar_add.tdf Line: 115
+Info (12021): Found 1 design units, including 1 entities, in source file db/add_sub_ekh.tdf
+    Info (12023): Found entity 1: add_sub_ekh File: E:/My_Document/ECE385/Final/autoConvTest/db/add_sub_ekh.tdf Line: 22
+Info (12131): Elaborated megafunction instantiation "signedMod:mod0|lpm_mult:Mult0|altshift:external_latency_ffs", which is child of megafunction instantiation "signedMod:mod0|lpm_mult:Mult0" File: c:/intelfpga_lite/18.0/quartus/libraries/megafunctions/lpm_mult.tdf Line: 351
+Info (12130): Elaborated megafunction instantiation "signedMod:mod0|lpm_divide:Div0" File: E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv Line: 8
+Info (12133): Instantiated megafunction "signedMod:mod0|lpm_divide:Div0" with the following parameter: File: E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv Line: 8
+    Info (12134): Parameter "LPM_WIDTHN" = "10"
+    Info (12134): Parameter "LPM_WIDTHD" = "10"
+    Info (12134): Parameter "LPM_NREPRESENTATION" = "UNSIGNED"
+    Info (12134): Parameter "LPM_DREPRESENTATION" = "UNSIGNED"
+Info (12021): Found 1 design units, including 1 entities, in source file db/lpm_divide_9km.tdf
+    Info (12023): Found entity 1: lpm_divide_9km File: E:/My_Document/ECE385/Final/autoConvTest/db/lpm_divide_9km.tdf Line: 24
 Info (13014): Ignored 220 buffer(s)
     Info (13019): Ignored 220 SOFT buffer(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 31 registers lost all their fanouts during netlist optimizations.
-Info (144001): Generated suppressed messages file H:/Final/autoConvTest/output_files/test.map.smsg
+Info (17016): Found the following redundant logic cells in design
+    Info (17048): Logic cell "findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_2_result_int[0]~6" File: E:/My_Document/ECE385/Final/autoConvTest/db/alt_u_div_u9f.tdf Line: 56
+    Info (17048): Logic cell "findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_3_result_int[0]~8" File: E:/My_Document/ECE385/Final/autoConvTest/db/alt_u_div_u9f.tdf Line: 61
+    Info (17048): Logic cell "findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_4_result_int[0]~10" File: E:/My_Document/ECE385/Final/autoConvTest/db/alt_u_div_u9f.tdf Line: 66
+    Info (17048): Logic cell "findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_6_result_int[0]~14" File: E:/My_Document/ECE385/Final/autoConvTest/db/alt_u_div_u9f.tdf Line: 76
+    Info (17048): Logic cell "findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_7_result_int[0]~16" File: E:/My_Document/ECE385/Final/autoConvTest/db/alt_u_div_u9f.tdf Line: 81
+    Info (17048): Logic cell "findMaxIdx:findMaxInst|lpm_divide:Div0|lpm_divide_dkm:auto_generated|sign_div_unsign_5nh:divider|alt_u_div_u9f:divider|add_sub_8_result_int[0]~18" File: E:/My_Document/ECE385/Final/autoConvTest/db/alt_u_div_u9f.tdf Line: 86
+Info (144001): Generated suppressed messages file E:/My_Document/ECE385/Final/autoConvTest/output_files/test.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 10 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "BCLK4" File: H:/Final/autoConvTest/autoConvolution.sv Line: 2
-    Warning (15610): No output dependent on input pin "bclkCnt[0]" File: H:/Final/autoConvTest/autoConvolution.sv Line: 3
-    Warning (15610): No output dependent on input pin "bclkCnt[1]" File: H:/Final/autoConvTest/autoConvolution.sv Line: 3
-    Warning (15610): No output dependent on input pin "bclkCnt[2]" File: H:/Final/autoConvTest/autoConvolution.sv Line: 3
-    Warning (15610): No output dependent on input pin "bclkCnt[3]" File: H:/Final/autoConvTest/autoConvolution.sv Line: 3
-    Warning (15610): No output dependent on input pin "bclkCnt[4]" File: H:/Final/autoConvTest/autoConvolution.sv Line: 3
-    Warning (15610): No output dependent on input pin "bclkCnt[5]" File: H:/Final/autoConvTest/autoConvolution.sv Line: 3
-    Warning (15610): No output dependent on input pin "bclkCnt[6]" File: H:/Final/autoConvTest/autoConvolution.sv Line: 3
-    Warning (15610): No output dependent on input pin "bclkCnt[7]" File: H:/Final/autoConvTest/autoConvolution.sv Line: 3
-    Warning (15610): No output dependent on input pin "bclkCnt[8]" File: H:/Final/autoConvTest/autoConvolution.sv Line: 3
-Info (21057): Implemented 173664 device resources after synthesis - the final resource count might be different
+    Warning (15610): No output dependent on input pin "BCLK4" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 54
+    Warning (15610): No output dependent on input pin "bclkCnt[0]" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 55
+    Warning (15610): No output dependent on input pin "bclkCnt[1]" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 55
+    Warning (15610): No output dependent on input pin "bclkCnt[2]" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 55
+    Warning (15610): No output dependent on input pin "bclkCnt[3]" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 55
+    Warning (15610): No output dependent on input pin "bclkCnt[4]" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 55
+    Warning (15610): No output dependent on input pin "bclkCnt[5]" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 55
+    Warning (15610): No output dependent on input pin "bclkCnt[6]" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 55
+    Warning (15610): No output dependent on input pin "bclkCnt[7]" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 55
+    Warning (15610): No output dependent on input pin "bclkCnt[8]" File: E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv Line: 55
+Info (21057): Implemented 94986 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 15373 input pins
-    Info (21059): Implemented 68089 output pins
-    Info (21061): Implemented 90194 logic cells
+    Info (21059): Implemented 14 output pins
+    Info (21061): Implemented 79591 logic cells
     Info (21062): Implemented 8 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 12 warnings
-    Info: Peak virtual memory: 1285 megabytes
-    Info: Processing ended: Sun Apr 21 19:38:32 2019
-    Info: Elapsed time: 00:05:37
-    Info: Total CPU time (on all processors): 00:05:21
+    Info: Peak virtual memory: 1042 megabytes
+    Info: Processing ended: Thu Apr 25 11:08:45 2019
+    Info: Elapsed time: 00:06:51
+    Info: Total CPU time (on all processors): 00:07:11
 
 
 +------------------------------------------+
 ; Analysis & Synthesis Suppressed Messages ;
 +------------------------------------------+
-The suppressed messages can be found in H:/Final/autoConvTest/output_files/test.map.smsg.
+The suppressed messages can be found in E:/My_Document/ECE385/Final/autoConvTest/output_files/test.map.smsg.
 
 

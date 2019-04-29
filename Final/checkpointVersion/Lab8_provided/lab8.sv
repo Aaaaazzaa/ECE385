@@ -15,7 +15,7 @@
 
 module lab8( input               CLOCK_50,
              input        [3:0]  KEY,          //bit 0 is set up as Reset
-             output logic [6:0]  HEX0, HEX1,
+             output logic [6:0]  HEX0, HEX1, HEX2, HEX3, HEX4, HEX5, HEX6, HEX7,
              // VGA Interface
              output logic [7:0]  VGA_R,        //VGA Red
                                  VGA_G,        //VGA Green
@@ -51,9 +51,9 @@ module lab8( input               CLOCK_50,
     logic [9:0] sky = 10'd100;
     logic [9:0] ground = 10'd400;
     logic [9:0] gravity = 10'd1;
-    logic [7:0] keycode;
+    logic [31:0] keycode;
     logic xFlag, xDirection, stopDirection;
-    logic [9:0] Ball_X_Pos, Ball_Y_Pos;
+    logic [9:0] Ball_X_Pos, Ball_Y_Pos, progress;
     assign Clk = CLOCK_50;
     always_ff @ (posedge Clk) begin
         Reset_h <= ~(KEY[0]);        // The push buttons are active low
@@ -62,7 +62,7 @@ module lab8( input               CLOCK_50,
     logic [1:0] hpi_addr;
     logic [15:0] hpi_data_in, hpi_data_out;
     logic hpi_r, hpi_w, hpi_cs, hpi_reset;
-
+    logic die;
     // Interface between NIOS II and EZ-OTG chip
     hpi_io_intf hpi_io_inst(
                             .Clk(Clk),
@@ -119,7 +119,7 @@ module lab8( input               CLOCK_50,
     logic frame_clk; // register
     logic is_avatar;
     logic[9:0] DrawX, DrawY;
-
+    //logic die;
     always_ff @ (posedge VGA_VS) begin
       if (~Reset_h)
         frame_clk = ~frame_clk;
@@ -127,13 +127,19 @@ module lab8( input               CLOCK_50,
         frame_clk = 1'b0;
     end
 
-    avatar avatar_instance(.Clk, .Reset(Reset_h), .frame_clk, .DrawX, .DrawY, .is_avatar, .keycode, .sky, .ground, .gravity, .xFlag, .xDirection, .Ball_X_Pos, .Ball_Y_Pos, .stopDirection);
+    avatar avatar_instance(.Clk, .Reset(Reset_h), .frame_clk, .DrawX, .DrawY, .is_avatar, .keycode, .sky, .ground, .gravity, .xFlag, .xDirection, .Ball_X_Pos, .Ball_Y_Pos, .stopDirection, .progress, .die);
 
-    color_mapper color_instance(.is_avatar, .DrawX, .DrawY, .VGA_R, .VGA_G, .VGA_B, .sky, .ground, .xFlag, .xDirection, .Ball_X_Pos, .Ball_Y_Pos, .stopDirection); // DrawX not sure
+    color_mapper color_instance(.is_avatar, .DrawX, .DrawY, .VGA_R, .VGA_G, .VGA_B, .sky, .ground, .xFlag, .xDirection, .Ball_X_Pos, .Ball_Y_Pos, .stopDirection, .progress); // DrawX not sure
 
     // Display keycode on hex display
     HexDriver hex_inst_0 (keycode[3:0], HEX0);
     HexDriver hex_inst_1 (keycode[7:4], HEX1);
+    HexDriver hex_inst_2 (keycode[11:8], HEX2);
+    HexDriver hex_inst_3 (keycode[15:12], HEX3);
+    HexDriver hex_inst_4 (keycode[19:16], HEX4);
+    HexDriver hex_inst_5 (keycode[23:20], HEX5);
+    HexDriver hex_inst_6 (keycode[27:24], HEX6);
+    HexDriver hex_inst_7 (keycode[31:28], HEX7);
 
     /**************************************************************************************
         ATTENTION! Please answer the following quesiton in your lab report! Points will be allocated for the answers!

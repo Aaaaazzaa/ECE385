@@ -1,4 +1,5 @@
 # Reading C:/intelFPGA_lite/18.0/modelsim_ase/tcl/vsim/pref.tcl
+# ERROR: No extended dataflow license exists
 # do test_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -10,511 +11,185 @@
 # Copying C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/convolutionSM.sv}
+# vlog -sv -work work +incdir+E:/My_Document/ECE385/Final/autoConvTest {E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:39:33 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/convolutionSM.sv 
+# Start time: 11:09:04 on Apr 25,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My_Document/ECE385/Final/autoConvTest" E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv 
+# -- Compiling module signedMod
+# 
+# Top level modules:
+# 	signedMod
+# End time: 11:09:04 on Apr 25,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/My_Document/ECE385/Final/autoConvTest {E:/My_Document/ECE385/Final/autoConvTest/findMaxIdx.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:09:04 on Apr 25,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My_Document/ECE385/Final/autoConvTest" E:/My_Document/ECE385/Final/autoConvTest/findMaxIdx.sv 
+# -- Compiling module findMaxIdx
+# 
+# Top level modules:
+# 	findMaxIdx
+# End time: 11:09:04 on Apr 25,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/My_Document/ECE385/Final/autoConvTest {E:/My_Document/ECE385/Final/autoConvTest/convolutionSM.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:09:04 on Apr 25,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My_Document/ECE385/Final/autoConvTest" E:/My_Document/ECE385/Final/autoConvTest/convolutionSM.sv 
 # -- Compiling module convolutionSM
 # 
 # Top level modules:
 # 	convolutionSM
-# End time: 19:39:34 on Apr 21,2019, Elapsed time: 0:00:01
+# End time: 11:09:04 on Apr 25,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/signedMult.sv}
+# vlog -sv -work work +incdir+E:/My_Document/ECE385/Final/autoConvTest {E:/My_Document/ECE385/Final/autoConvTest/signedMult.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:39:34 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/signedMult.sv 
+# Start time: 11:09:04 on Apr 25,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My_Document/ECE385/Final/autoConvTest" E:/My_Document/ECE385/Final/autoConvTest/signedMult.sv 
 # -- Compiling module signedMult
 # 
 # Top level modules:
 # 	signedMult
-# End time: 19:39:34 on Apr 21,2019, Elapsed time: 0:00:00
+# End time: 11:09:04 on Apr 25,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/autoConvolution.sv}
+# vlog -sv -work work +incdir+E:/My_Document/ECE385/Final/autoConvTest {E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:39:34 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/autoConvolution.sv 
+# Start time: 11:09:04 on Apr 25,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My_Document/ECE385/Final/autoConvTest" E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv 
 # -- Compiling module autoConvolution
 # 
 # Top level modules:
 # 	autoConvolution
-# End time: 19:39:35 on Apr 21,2019, Elapsed time: 0:00:01
+# End time: 11:09:05 on Apr 25,2019, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/testbench2.sv}
+# vlog -sv -work work +incdir+E:/My_Document/ECE385/Final/autoConvTest {E:/My_Document/ECE385/Final/autoConvTest/testbench2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:39:35 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/testbench2.sv 
-# -- Compiling module testbench2
-# ** Error: H:/Final/autoConvTest/testbench2.sv(17): (vlog-2730) Undefined variable: 'soundIn'.
-# End time: 19:39:35 on Apr 21,2019, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/vlog failed.
-# Error in macro ./test_run_msim_rtl_verilog.do line 12
-# C:/intelFPGA_lite/18.0/modelsim_ase/win32aloem/vlog failed.
-#     while executing
-# "vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/testbench2.sv}"
-do test_run_msim_rtl_verilog.do
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/convolutionSM.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:40:44 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/convolutionSM.sv 
-# -- Compiling module convolutionSM
-# 
-# Top level modules:
-# 	convolutionSM
-# End time: 19:40:44 on Apr 21,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/signedMult.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:40:45 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/signedMult.sv 
-# -- Compiling module signedMult
-# 
-# Top level modules:
-# 	signedMult
-# End time: 19:40:45 on Apr 21,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/autoConvolution.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:40:45 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/autoConvolution.sv 
-# -- Compiling module autoConvolution
-# 
-# Top level modules:
-# 	autoConvolution
-# End time: 19:40:46 on Apr 21,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/testbench2.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:40:46 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/testbench2.sv 
+# Start time: 11:09:05 on Apr 25,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My_Document/ECE385/Final/autoConvTest" E:/My_Document/ECE385/Final/autoConvTest/testbench2.sv 
 # -- Compiling module testbench2
 # 
 # Top level modules:
 # 	testbench2
-# End time: 19:40:46 on Apr 21,2019, Elapsed time: 0:00:00
+# End time: 11:09:05 on Apr 25,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench2
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench2 
-# Start time: 19:40:47 on Apr 21,2019
+# Start time: 11:09:05 on Apr 25,2019
 # Loading sv_std.std
 # Loading work.testbench2
 # Loading work.autoConvolution
+# Loading work.signedMod
 # Loading work.signedMult
 # Loading work.convolutionSM
-# ** Error: (vsim-3906) H:/Final/autoConvTest/testbench2.sv(47): Connection type 'reg[72:0]$[0:958]' is incompatible with 'reg[70:0]$[0:958]' for  port (fout):  Array elem. widths 71 & 73 don't match.
-#    Time: 0 ps  Iteration: 0  Instance: /testbench2/inst File: H:/Final/autoConvTest/autoConvolution.sv
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./test_run_msim_rtl_verilog.do PAUSED at line 14
-do test_run_msim_rtl_verilog.do
-# transcript on
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# vlib rtl_work
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/convolutionSM.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:41:23 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/convolutionSM.sv 
-# -- Compiling module convolutionSM
-# 
-# Top level modules:
-# 	convolutionSM
-# End time: 19:41:23 on Apr 21,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/signedMult.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:41:23 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/signedMult.sv 
-# -- Compiling module signedMult
-# 
-# Top level modules:
-# 	signedMult
-# End time: 19:41:24 on Apr 21,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/autoConvolution.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:41:24 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/autoConvolution.sv 
-# -- Compiling module autoConvolution
-# 
-# Top level modules:
-# 	autoConvolution
-# End time: 19:41:25 on Apr 21,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/testbench2.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:41:25 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/testbench2.sv 
-# -- Compiling module testbench2
-# 
-# Top level modules:
-# 	testbench2
-# End time: 19:41:25 on Apr 21,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench2
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench2 
-# Start time: 19:40:47 on Apr 21,2019
-# Loading sv_std.std
-# Loading work.testbench2
-# Loading work.autoConvolution
-# Loading work.signedMult
-# Loading work.convolutionSM
+# Loading work.findMaxIdx
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Administrator  Hostname: RP7YXKPRY5IB25S  ProcessID: 105324
-#           Attempting to use alternate WLF file "./wlftv7dbrt".
+#           Attempting to use alternate WLF file "./wlftj995da".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftv7dbrt
+#           Using alternate file: ./wlftj995da
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 100 ns
 do test_run_msim_rtl_verilog.do
-# transcript on
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
 # }
-# Error 31: Unable to unlink file "H:/Final/autoConvTest/simulation/modelsim/rtl_work/_lib.qdb".
-# Error 133: Unable to remove directory "H:/Final/autoConvTest/simulation/modelsim/rtl_work".
 # vlib rtl_work
-# ** Error: (vlib-35) Failed to create directory "rtl_work".
-# File exists. (errno = EEXIST)
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap work rtl_work 
 # Modifying modelsim.ini
 # 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/convolutionSM.sv}
+# vlog -sv -work work +incdir+E:/My_Document/ECE385/Final/autoConvTest {E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:47:36 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/convolutionSM.sv 
+# Start time: 11:09:12 on Apr 25,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My_Document/ECE385/Final/autoConvTest" E:/My_Document/ECE385/Final/autoConvTest/signedMod.sv 
+# -- Compiling module signedMod
+# 
+# Top level modules:
+# 	signedMod
+# End time: 11:09:12 on Apr 25,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/My_Document/ECE385/Final/autoConvTest {E:/My_Document/ECE385/Final/autoConvTest/findMaxIdx.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:09:12 on Apr 25,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My_Document/ECE385/Final/autoConvTest" E:/My_Document/ECE385/Final/autoConvTest/findMaxIdx.sv 
+# -- Compiling module findMaxIdx
+# 
+# Top level modules:
+# 	findMaxIdx
+# End time: 11:09:12 on Apr 25,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+E:/My_Document/ECE385/Final/autoConvTest {E:/My_Document/ECE385/Final/autoConvTest/convolutionSM.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 11:09:13 on Apr 25,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My_Document/ECE385/Final/autoConvTest" E:/My_Document/ECE385/Final/autoConvTest/convolutionSM.sv 
 # -- Compiling module convolutionSM
 # 
 # Top level modules:
 # 	convolutionSM
-# End time: 19:47:37 on Apr 21,2019, Elapsed time: 0:00:01
+# End time: 11:09:13 on Apr 25,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/signedMult.sv}
+# vlog -sv -work work +incdir+E:/My_Document/ECE385/Final/autoConvTest {E:/My_Document/ECE385/Final/autoConvTest/signedMult.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:47:37 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/signedMult.sv 
+# Start time: 11:09:13 on Apr 25,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My_Document/ECE385/Final/autoConvTest" E:/My_Document/ECE385/Final/autoConvTest/signedMult.sv 
 # -- Compiling module signedMult
 # 
 # Top level modules:
 # 	signedMult
-# End time: 19:47:37 on Apr 21,2019, Elapsed time: 0:00:00
+# End time: 11:09:13 on Apr 25,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/autoConvolution.sv}
+# vlog -sv -work work +incdir+E:/My_Document/ECE385/Final/autoConvTest {E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:47:37 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/autoConvolution.sv 
+# Start time: 11:09:13 on Apr 25,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My_Document/ECE385/Final/autoConvTest" E:/My_Document/ECE385/Final/autoConvTest/autoConvolution.sv 
 # -- Compiling module autoConvolution
 # 
 # Top level modules:
 # 	autoConvolution
-# End time: 19:47:38 on Apr 21,2019, Elapsed time: 0:00:01
+# End time: 11:09:13 on Apr 25,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/testbench2.sv}
+# vlog -sv -work work +incdir+E:/My_Document/ECE385/Final/autoConvTest {E:/My_Document/ECE385/Final/autoConvTest/testbench2.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 19:47:38 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/testbench2.sv 
+# Start time: 11:09:13 on Apr 25,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+E:/My_Document/ECE385/Final/autoConvTest" E:/My_Document/ECE385/Final/autoConvTest/testbench2.sv 
 # -- Compiling module testbench2
 # 
 # Top level modules:
 # 	testbench2
-# End time: 19:47:38 on Apr 21,2019, Elapsed time: 0:00:00
+# End time: 11:09:13 on Apr 25,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench2
-# End time: 19:47:44 on Apr 21,2019, Elapsed time: 0:06:57
-# Errors: 1, Warnings: 2
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench2 
-# Start time: 19:47:44 on Apr 21,2019
-# Loading sv_std.std
-# Loading work.testbench2
-# Loading work.autoConvolution
-# Loading work.signedMult
-# Loading work.convolutionSM
-# 
-# add wave *
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Administrator  Hostname: RP7YXKPRY5IB25S  ProcessID: 105324
-#           Attempting to use alternate WLF file "./wlfty7jn3q".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlfty7jn3q
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 100 ns
-restart -f; run 10ms
-restart -f; run 40ms
-restart -f; run 40ms
-do test_run_msim_rtl_verilog.do
-# transcript on
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# Error 31: Unable to unlink file "H:/Final/autoConvTest/simulation/modelsim/rtl_work/_lib1_0.qpg".
-# Error 31: Unable to unlink file "H:/Final/autoConvTest/simulation/modelsim/rtl_work/_lib1_0.qtl".
-# Error 133: Unable to remove directory "H:/Final/autoConvTest/simulation/modelsim/rtl_work".
-# vlib rtl_work
-# ** Error: (vlib-35) Failed to create directory "rtl_work".
-# File exists. (errno = EEXIST)
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/convolutionSM.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:02 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/convolutionSM.sv 
-# -- Compiling module convolutionSM
-# 
-# Top level modules:
-# 	convolutionSM
-# End time: 20:04:03 on Apr 21,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/signedMult.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:03 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/signedMult.sv 
-# -- Compiling module signedMult
-# 
-# Top level modules:
-# 	signedMult
-# End time: 20:04:03 on Apr 21,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/autoConvolution.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:03 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/autoConvolution.sv 
-# -- Compiling module autoConvolution
-# 
-# Top level modules:
-# 	autoConvolution
-# End time: 20:04:04 on Apr 21,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/testbench2.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:04:04 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/testbench2.sv 
-# -- Compiling module testbench2
-# 
-# Top level modules:
-# 	testbench2
-# End time: 20:04:04 on Apr 21,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench2
-# End time: 20:04:06 on Apr 21,2019, Elapsed time: 0:16:22
+# End time: 11:09:14 on Apr 25,2019, Elapsed time: 0:00:09
 # Errors: 0, Warnings: 2
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench2 
-# Start time: 20:04:06 on Apr 21,2019
+# Start time: 11:09:14 on Apr 25,2019
 # Loading sv_std.std
 # Loading work.testbench2
 # Loading work.autoConvolution
+# Loading work.signedMod
 # Loading work.signedMult
 # Loading work.convolutionSM
+# Loading work.findMaxIdx
+# WARNING: No extended dataflow license exists
 # 
 # add wave *
 # ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
 #           File in use by: Administrator  Hostname: RP7YXKPRY5IB25S  ProcessID: 105324
-#           Attempting to use alternate WLF file "./wlftit96sr".
+#           Attempting to use alternate WLF file "./wlftvr5bfd".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftit96sr
+#           Using alternate file: ./wlftvr5bfd
 # view structure
 # .main_pane.structure.interior.cs.body.struct
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run 100 ns
-restart -f; run 40ms
-do test_run_msim_rtl_verilog.do
-# transcript on
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# Error 31: Unable to unlink file "H:/Final/autoConvTest/simulation/modelsim/rtl_work/_lib1_0.qpg".
-# Error 31: Unable to unlink file "H:/Final/autoConvTest/simulation/modelsim/rtl_work/_lib1_0.qtl".
-# Error 133: Unable to remove directory "H:/Final/autoConvTest/simulation/modelsim/rtl_work".
-# vlib rtl_work
-# ** Error: (vlib-35) Failed to create directory "rtl_work".
-# File exists. (errno = EEXIST)
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/convolutionSM.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:20:54 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/convolutionSM.sv 
-# -- Compiling module convolutionSM
-# 
-# Top level modules:
-# 	convolutionSM
-# End time: 20:20:54 on Apr 21,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/signedMult.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:20:54 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/signedMult.sv 
-# -- Compiling module signedMult
-# 
-# Top level modules:
-# 	signedMult
-# End time: 20:20:55 on Apr 21,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/autoConvolution.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:20:55 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/autoConvolution.sv 
-# -- Compiling module autoConvolution
-# 
-# Top level modules:
-# 	autoConvolution
-# End time: 20:20:55 on Apr 21,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/testbench2.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:20:56 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/testbench2.sv 
-# -- Compiling module testbench2
-# 
-# Top level modules:
-# 	testbench2
-# End time: 20:20:56 on Apr 21,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench2
-# End time: 20:20:57 on Apr 21,2019, Elapsed time: 0:16:51
-# Errors: 0, Warnings: 2
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench2 
-# Start time: 20:20:58 on Apr 21,2019
-# Loading sv_std.std
-# Loading work.testbench2
-# Loading work.autoConvolution
-# Loading work.signedMult
-# Loading work.convolutionSM
-# 
-# add wave *
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Administrator  Hostname: RP7YXKPRY5IB25S  ProcessID: 105324
-#           Attempting to use alternate WLF file "./wlft51w3kj".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlft51w3kj
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 100 ns
-restart -f; run 40ms
-do test_run_msim_rtl_verilog.do
-# transcript on
-# if {[file exists rtl_work]} {
-# 	vdel -lib rtl_work -all
-# }
-# Error 31: Unable to unlink file "H:/Final/autoConvTest/simulation/modelsim/rtl_work/_lib1_0.qpg".
-# Error 31: Unable to unlink file "H:/Final/autoConvTest/simulation/modelsim/rtl_work/_lib1_0.qtl".
-# Error 133: Unable to remove directory "H:/Final/autoConvTest/simulation/modelsim/rtl_work".
-# vlib rtl_work
-# ** Error: (vlib-35) Failed to create directory "rtl_work".
-# File exists. (errno = EEXIST)
-# vmap work rtl_work
-# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
-# vmap work rtl_work 
-# Modifying modelsim.ini
-# 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/convolutionSM.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:24:14 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/convolutionSM.sv 
-# -- Compiling module convolutionSM
-# 
-# Top level modules:
-# 	convolutionSM
-# End time: 20:24:15 on Apr 21,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/signedMult.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:24:15 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/signedMult.sv 
-# -- Compiling module signedMult
-# 
-# Top level modules:
-# 	signedMult
-# End time: 20:24:15 on Apr 21,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/autoConvolution.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:24:15 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/autoConvolution.sv 
-# -- Compiling module autoConvolution
-# 
-# Top level modules:
-# 	autoConvolution
-# End time: 20:24:16 on Apr 21,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# 
-# vlog -sv -work work +incdir+H:/Final/autoConvTest {H:/Final/autoConvTest/testbench2.sv}
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 20:24:16 on Apr 21,2019
-# vlog -reportprogress 300 -sv -work work "+incdir+H:/Final/autoConvTest" H:/Final/autoConvTest/testbench2.sv 
-# -- Compiling module testbench2
-# 
-# Top level modules:
-# 	testbench2
-# End time: 20:24:16 on Apr 21,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# 
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench2
-# End time: 20:24:18 on Apr 21,2019, Elapsed time: 0:03:20
-# Errors: 0, Warnings: 2
-# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench2 
-# Start time: 20:24:18 on Apr 21,2019
-# Loading sv_std.std
-# Loading work.testbench2
-# Loading work.autoConvolution
-# Loading work.signedMult
-# Loading work.convolutionSM
-# 
-# add wave *
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-#           File in use by: Administrator  Hostname: RP7YXKPRY5IB25S  ProcessID: 105324
-#           Attempting to use alternate WLF file "./wlftg14hwc".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-#           Using alternate file: ./wlftg14hwc
-# view structure
-# .main_pane.structure.interior.cs.body.struct
-# view signals
-# .main_pane.objects.interior.cs.body.tree
-# run 100 ns
-restart -f; run 40ms
+restart -f; run 20ms
