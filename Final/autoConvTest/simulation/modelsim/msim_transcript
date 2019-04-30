@@ -193,3 +193,5 @@ do test_run_msim_rtl_verilog.do
 # .main_pane.objects.interior.cs.body.tree
 # run 100 ns
 restart -f; run 20ms
+# End time: 18:08:53 on Apr 29,2019, Elapsed time: 102:59:39
+# Errors: 0, Warnings: 3

@@ -4,8 +4,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define INPUT_FILE "sprite_bytes/Char1.txt"			// Input filename
-#define OUTPUT_FILE "Char0.ram"		// Name of file to output to
+#define INPUT_FILE "sprite_bytes/music.txt.txt"			// Input filename
+#define OUTPUT_FILE "music.ram"		// Name of file to output to
 #define NUM_COLORS 	16								// Total number of different colors
 #define WIDTH		8
 #define DEPTH		3072
